@@ -54,7 +54,6 @@ module user_project_wrapper (user_clock2,
  input [3:0] wbs_sel_i;
 
  sar_adc u_adc (.analog_dac_out(analog_dac_out),
-    .analog_din(analog_io[0]),
     .clk(wbd_clk_int),
     .pulse1m_mclk(pulse1m_mclk),
     .reg_ack(wbd_adc_ack_i),
