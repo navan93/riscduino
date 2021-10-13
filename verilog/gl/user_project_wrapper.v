@@ -1,18 +1,18 @@
 module user_project_wrapper (user_clock2,
+    vccd1,
+    vccd2,
+    vdda1,
+    vdda2,
+    vssa1,
+    vssa2,
+    vssd1,
+    vssd2,
     wb_clk_i,
     wb_rst_i,
     wbs_ack_o,
     wbs_cyc_i,
     wbs_stb_i,
     wbs_we_i,
-    vccd1,
-    vssd1,
-    vccd2,
-    vssd2,
-    vdda1,
-    vssa1,
-    vdda2,
-    vssa2,
     analog_io,
     io_in,
     io_oeb,
@@ -26,20 +26,20 @@ module user_project_wrapper (user_clock2,
     wbs_dat_o,
     wbs_sel_i);
  input user_clock2;
+ input vccd1;
+ input vccd2;
+ input vdda1;
+ input vdda2;
+ input vssa1;
+ input vssa2;
+ input vssd1;
+ input vssd2;
  input wb_clk_i;
  input wb_rst_i;
  output wbs_ack_o;
  input wbs_cyc_i;
  input wbs_stb_i;
  input wbs_we_i;
- input vccd1;
- input vssd1;
- input vccd2;
- input vssd2;
- input vdda1;
- input vssa1;
- input vdda2;
- input vssa2;
  inout [28:0] analog_io;
  input [37:0] io_in;
  output [37:0] io_oeb;
@@ -53,7 +53,980 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
- sar_adc u_adc (.analog_dac_out(analog_dac_out),
+ wire _0_;
+ wire _1_;
+ wire _2_;
+ wire \cfg_clk_ctrl1[0] ;
+ wire \cfg_clk_ctrl1[10] ;
+ wire \cfg_clk_ctrl1[11] ;
+ wire \cfg_clk_ctrl1[12] ;
+ wire \cfg_clk_ctrl1[13] ;
+ wire \cfg_clk_ctrl1[14] ;
+ wire \cfg_clk_ctrl1[15] ;
+ wire \cfg_clk_ctrl1[16] ;
+ wire \cfg_clk_ctrl1[17] ;
+ wire \cfg_clk_ctrl1[18] ;
+ wire \cfg_clk_ctrl1[19] ;
+ wire \cfg_clk_ctrl1[1] ;
+ wire \cfg_clk_ctrl1[20] ;
+ wire \cfg_clk_ctrl1[21] ;
+ wire \cfg_clk_ctrl1[22] ;
+ wire \cfg_clk_ctrl1[23] ;
+ wire \cfg_clk_ctrl1[24] ;
+ wire \cfg_clk_ctrl1[25] ;
+ wire \cfg_clk_ctrl1[26] ;
+ wire \cfg_clk_ctrl1[27] ;
+ wire \cfg_clk_ctrl1[28] ;
+ wire \cfg_clk_ctrl1[29] ;
+ wire \cfg_clk_ctrl1[2] ;
+ wire \cfg_clk_ctrl1[30] ;
+ wire \cfg_clk_ctrl1[31] ;
+ wire \cfg_clk_ctrl1[3] ;
+ wire \cfg_clk_ctrl1[4] ;
+ wire \cfg_clk_ctrl1[5] ;
+ wire \cfg_clk_ctrl1[6] ;
+ wire \cfg_clk_ctrl1[7] ;
+ wire \cfg_clk_ctrl1[8] ;
+ wire \cfg_clk_ctrl1[9] ;
+ wire \cfg_clk_ctrl2[0] ;
+ wire \cfg_clk_ctrl2[10] ;
+ wire \cfg_clk_ctrl2[11] ;
+ wire \cfg_clk_ctrl2[12] ;
+ wire \cfg_clk_ctrl2[13] ;
+ wire \cfg_clk_ctrl2[14] ;
+ wire \cfg_clk_ctrl2[15] ;
+ wire \cfg_clk_ctrl2[16] ;
+ wire \cfg_clk_ctrl2[17] ;
+ wire \cfg_clk_ctrl2[18] ;
+ wire \cfg_clk_ctrl2[19] ;
+ wire \cfg_clk_ctrl2[1] ;
+ wire \cfg_clk_ctrl2[20] ;
+ wire \cfg_clk_ctrl2[21] ;
+ wire \cfg_clk_ctrl2[22] ;
+ wire \cfg_clk_ctrl2[23] ;
+ wire \cfg_clk_ctrl2[24] ;
+ wire \cfg_clk_ctrl2[25] ;
+ wire \cfg_clk_ctrl2[26] ;
+ wire \cfg_clk_ctrl2[27] ;
+ wire \cfg_clk_ctrl2[28] ;
+ wire \cfg_clk_ctrl2[29] ;
+ wire \cfg_clk_ctrl2[2] ;
+ wire \cfg_clk_ctrl2[30] ;
+ wire \cfg_clk_ctrl2[31] ;
+ wire \cfg_clk_ctrl2[3] ;
+ wire \cfg_clk_ctrl2[4] ;
+ wire \cfg_clk_ctrl2[5] ;
+ wire \cfg_clk_ctrl2[6] ;
+ wire \cfg_clk_ctrl2[7] ;
+ wire \cfg_clk_ctrl2[8] ;
+ wire \cfg_clk_ctrl2[9] ;
+ wire cpu_clk;
+ wire cpu_rst_n;
+ wire \fuse_mhartid[0] ;
+ wire \fuse_mhartid[10] ;
+ wire \fuse_mhartid[11] ;
+ wire \fuse_mhartid[12] ;
+ wire \fuse_mhartid[13] ;
+ wire \fuse_mhartid[14] ;
+ wire \fuse_mhartid[15] ;
+ wire \fuse_mhartid[16] ;
+ wire \fuse_mhartid[17] ;
+ wire \fuse_mhartid[18] ;
+ wire \fuse_mhartid[19] ;
+ wire \fuse_mhartid[1] ;
+ wire \fuse_mhartid[20] ;
+ wire \fuse_mhartid[21] ;
+ wire \fuse_mhartid[22] ;
+ wire \fuse_mhartid[23] ;
+ wire \fuse_mhartid[24] ;
+ wire \fuse_mhartid[25] ;
+ wire \fuse_mhartid[26] ;
+ wire \fuse_mhartid[27] ;
+ wire \fuse_mhartid[28] ;
+ wire \fuse_mhartid[29] ;
+ wire \fuse_mhartid[2] ;
+ wire \fuse_mhartid[30] ;
+ wire \fuse_mhartid[31] ;
+ wire \fuse_mhartid[3] ;
+ wire \fuse_mhartid[4] ;
+ wire \fuse_mhartid[5] ;
+ wire \fuse_mhartid[6] ;
+ wire \fuse_mhartid[7] ;
+ wire \fuse_mhartid[8] ;
+ wire \fuse_mhartid[9] ;
+ wire i2c_rst_n;
+ wire i2cm_clk_i;
+ wire i2cm_clk_o;
+ wire i2cm_clk_oen;
+ wire i2cm_data_i;
+ wire i2cm_data_o;
+ wire i2cm_data_oen;
+ wire i2cm_intr_o;
+ wire \irq_lines[0] ;
+ wire \irq_lines[10] ;
+ wire \irq_lines[11] ;
+ wire \irq_lines[12] ;
+ wire \irq_lines[13] ;
+ wire \irq_lines[14] ;
+ wire \irq_lines[15] ;
+ wire \irq_lines[1] ;
+ wire \irq_lines[2] ;
+ wire \irq_lines[3] ;
+ wire \irq_lines[4] ;
+ wire \irq_lines[5] ;
+ wire \irq_lines[6] ;
+ wire \irq_lines[7] ;
+ wire \irq_lines[8] ;
+ wire \irq_lines[9] ;
+ wire pulse1m_mclk;
+ wire qspim_rst_n;
+ wire rtc_clk;
+ wire \sar2dac[0] ;
+ wire \sar2dac[1] ;
+ wire \sar2dac[2] ;
+ wire \sar2dac[3] ;
+ wire \sar2dac[4] ;
+ wire \sar2dac[5] ;
+ wire \sar2dac[6] ;
+ wire \sar2dac[7] ;
+ wire sdram_clk;
+ wire \sflash_di[0] ;
+ wire \sflash_di[1] ;
+ wire \sflash_di[2] ;
+ wire \sflash_di[3] ;
+ wire \sflash_do[0] ;
+ wire \sflash_do[1] ;
+ wire \sflash_do[2] ;
+ wire \sflash_do[3] ;
+ wire \sflash_oen[0] ;
+ wire \sflash_oen[1] ;
+ wire \sflash_oen[2] ;
+ wire \sflash_oen[3] ;
+ wire sflash_sck;
+ wire sflash_ss;
+ wire soft_irq;
+ wire \sram_addr0[0] ;
+ wire \sram_addr0[1] ;
+ wire \sram_addr0[2] ;
+ wire \sram_addr0[3] ;
+ wire \sram_addr0[4] ;
+ wire \sram_addr0[5] ;
+ wire \sram_addr0[6] ;
+ wire \sram_addr0[7] ;
+ wire \sram_addr0[8] ;
+ wire \sram_addr1[0] ;
+ wire \sram_addr1[1] ;
+ wire \sram_addr1[2] ;
+ wire \sram_addr1[3] ;
+ wire \sram_addr1[4] ;
+ wire \sram_addr1[5] ;
+ wire \sram_addr1[6] ;
+ wire \sram_addr1[7] ;
+ wire \sram_addr1[8] ;
+ wire sram_csb0;
+ wire sram_csb1;
+ wire \sram_din0[0] ;
+ wire \sram_din0[10] ;
+ wire \sram_din0[11] ;
+ wire \sram_din0[12] ;
+ wire \sram_din0[13] ;
+ wire \sram_din0[14] ;
+ wire \sram_din0[15] ;
+ wire \sram_din0[16] ;
+ wire \sram_din0[17] ;
+ wire \sram_din0[18] ;
+ wire \sram_din0[19] ;
+ wire \sram_din0[1] ;
+ wire \sram_din0[20] ;
+ wire \sram_din0[21] ;
+ wire \sram_din0[22] ;
+ wire \sram_din0[23] ;
+ wire \sram_din0[24] ;
+ wire \sram_din0[25] ;
+ wire \sram_din0[26] ;
+ wire \sram_din0[27] ;
+ wire \sram_din0[28] ;
+ wire \sram_din0[29] ;
+ wire \sram_din0[2] ;
+ wire \sram_din0[30] ;
+ wire \sram_din0[31] ;
+ wire \sram_din0[3] ;
+ wire \sram_din0[4] ;
+ wire \sram_din0[5] ;
+ wire \sram_din0[6] ;
+ wire \sram_din0[7] ;
+ wire \sram_din0[8] ;
+ wire \sram_din0[9] ;
+ wire \sram_dout0[0] ;
+ wire \sram_dout0[10] ;
+ wire \sram_dout0[11] ;
+ wire \sram_dout0[12] ;
+ wire \sram_dout0[13] ;
+ wire \sram_dout0[14] ;
+ wire \sram_dout0[15] ;
+ wire \sram_dout0[16] ;
+ wire \sram_dout0[17] ;
+ wire \sram_dout0[18] ;
+ wire \sram_dout0[19] ;
+ wire \sram_dout0[1] ;
+ wire \sram_dout0[20] ;
+ wire \sram_dout0[21] ;
+ wire \sram_dout0[22] ;
+ wire \sram_dout0[23] ;
+ wire \sram_dout0[24] ;
+ wire \sram_dout0[25] ;
+ wire \sram_dout0[26] ;
+ wire \sram_dout0[27] ;
+ wire \sram_dout0[28] ;
+ wire \sram_dout0[29] ;
+ wire \sram_dout0[2] ;
+ wire \sram_dout0[30] ;
+ wire \sram_dout0[31] ;
+ wire \sram_dout0[3] ;
+ wire \sram_dout0[4] ;
+ wire \sram_dout0[5] ;
+ wire \sram_dout0[6] ;
+ wire \sram_dout0[7] ;
+ wire \sram_dout0[8] ;
+ wire \sram_dout0[9] ;
+ wire \sram_dout1[0] ;
+ wire \sram_dout1[10] ;
+ wire \sram_dout1[11] ;
+ wire \sram_dout1[12] ;
+ wire \sram_dout1[13] ;
+ wire \sram_dout1[14] ;
+ wire \sram_dout1[15] ;
+ wire \sram_dout1[16] ;
+ wire \sram_dout1[17] ;
+ wire \sram_dout1[18] ;
+ wire \sram_dout1[19] ;
+ wire \sram_dout1[1] ;
+ wire \sram_dout1[20] ;
+ wire \sram_dout1[21] ;
+ wire \sram_dout1[22] ;
+ wire \sram_dout1[23] ;
+ wire \sram_dout1[24] ;
+ wire \sram_dout1[25] ;
+ wire \sram_dout1[26] ;
+ wire \sram_dout1[27] ;
+ wire \sram_dout1[28] ;
+ wire \sram_dout1[29] ;
+ wire \sram_dout1[2] ;
+ wire \sram_dout1[30] ;
+ wire \sram_dout1[31] ;
+ wire \sram_dout1[3] ;
+ wire \sram_dout1[4] ;
+ wire \sram_dout1[5] ;
+ wire \sram_dout1[6] ;
+ wire \sram_dout1[7] ;
+ wire \sram_dout1[8] ;
+ wire \sram_dout1[9] ;
+ wire sram_web0;
+ wire \sram_wmask0[0] ;
+ wire \sram_wmask0[1] ;
+ wire \sram_wmask0[2] ;
+ wire \sram_wmask0[3] ;
+ wire sspim_rst_n;
+ wire sspim_sck;
+ wire sspim_si;
+ wire sspim_so;
+ wire sspim_ssn;
+ wire \uart_i2c_usb_sel[0] ;
+ wire \uart_i2c_usb_sel[1] ;
+ wire uart_rst_n;
+ wire uart_rxd;
+ wire uart_txd;
+ wire usb_clk;
+ wire usb_dn_i;
+ wire usb_dn_o;
+ wire usb_dp_i;
+ wire usb_dp_o;
+ wire usb_intr_o;
+ wire usb_oen;
+ wire usb_rst_n;
+ wire wbd_adc_ack_i;
+ wire \wbd_adc_adr_o[0] ;
+ wire \wbd_adc_adr_o[1] ;
+ wire \wbd_adc_adr_o[2] ;
+ wire \wbd_adc_adr_o[3] ;
+ wire \wbd_adc_adr_o[4] ;
+ wire \wbd_adc_adr_o[5] ;
+ wire \wbd_adc_adr_o[6] ;
+ wire \wbd_adc_adr_o[7] ;
+ wire wbd_adc_cyc_o;
+ wire \wbd_adc_dat_i[0] ;
+ wire \wbd_adc_dat_i[10] ;
+ wire \wbd_adc_dat_i[11] ;
+ wire \wbd_adc_dat_i[12] ;
+ wire \wbd_adc_dat_i[13] ;
+ wire \wbd_adc_dat_i[14] ;
+ wire \wbd_adc_dat_i[15] ;
+ wire \wbd_adc_dat_i[16] ;
+ wire \wbd_adc_dat_i[17] ;
+ wire \wbd_adc_dat_i[18] ;
+ wire \wbd_adc_dat_i[19] ;
+ wire \wbd_adc_dat_i[1] ;
+ wire \wbd_adc_dat_i[20] ;
+ wire \wbd_adc_dat_i[21] ;
+ wire \wbd_adc_dat_i[22] ;
+ wire \wbd_adc_dat_i[23] ;
+ wire \wbd_adc_dat_i[24] ;
+ wire \wbd_adc_dat_i[25] ;
+ wire \wbd_adc_dat_i[26] ;
+ wire \wbd_adc_dat_i[27] ;
+ wire \wbd_adc_dat_i[28] ;
+ wire \wbd_adc_dat_i[29] ;
+ wire \wbd_adc_dat_i[2] ;
+ wire \wbd_adc_dat_i[30] ;
+ wire \wbd_adc_dat_i[31] ;
+ wire \wbd_adc_dat_i[3] ;
+ wire \wbd_adc_dat_i[4] ;
+ wire \wbd_adc_dat_i[5] ;
+ wire \wbd_adc_dat_i[6] ;
+ wire \wbd_adc_dat_i[7] ;
+ wire \wbd_adc_dat_i[8] ;
+ wire \wbd_adc_dat_i[9] ;
+ wire \wbd_adc_dat_o[0] ;
+ wire \wbd_adc_dat_o[10] ;
+ wire \wbd_adc_dat_o[11] ;
+ wire \wbd_adc_dat_o[12] ;
+ wire \wbd_adc_dat_o[13] ;
+ wire \wbd_adc_dat_o[14] ;
+ wire \wbd_adc_dat_o[15] ;
+ wire \wbd_adc_dat_o[16] ;
+ wire \wbd_adc_dat_o[17] ;
+ wire \wbd_adc_dat_o[18] ;
+ wire \wbd_adc_dat_o[19] ;
+ wire \wbd_adc_dat_o[1] ;
+ wire \wbd_adc_dat_o[20] ;
+ wire \wbd_adc_dat_o[21] ;
+ wire \wbd_adc_dat_o[22] ;
+ wire \wbd_adc_dat_o[23] ;
+ wire \wbd_adc_dat_o[24] ;
+ wire \wbd_adc_dat_o[25] ;
+ wire \wbd_adc_dat_o[26] ;
+ wire \wbd_adc_dat_o[27] ;
+ wire \wbd_adc_dat_o[28] ;
+ wire \wbd_adc_dat_o[29] ;
+ wire \wbd_adc_dat_o[2] ;
+ wire \wbd_adc_dat_o[30] ;
+ wire \wbd_adc_dat_o[31] ;
+ wire \wbd_adc_dat_o[3] ;
+ wire \wbd_adc_dat_o[4] ;
+ wire \wbd_adc_dat_o[5] ;
+ wire \wbd_adc_dat_o[6] ;
+ wire \wbd_adc_dat_o[7] ;
+ wire \wbd_adc_dat_o[8] ;
+ wire \wbd_adc_dat_o[9] ;
+ wire \wbd_adc_sel_o[0] ;
+ wire \wbd_adc_sel_o[1] ;
+ wire \wbd_adc_sel_o[2] ;
+ wire \wbd_adc_sel_o[3] ;
+ wire wbd_adc_stb_o;
+ wire wbd_adc_we_o;
+ wire wbd_clk_int;
+ wire wbd_glbl_ack_i;
+ wire \wbd_glbl_adr_o[0] ;
+ wire \wbd_glbl_adr_o[1] ;
+ wire \wbd_glbl_adr_o[2] ;
+ wire \wbd_glbl_adr_o[3] ;
+ wire \wbd_glbl_adr_o[4] ;
+ wire \wbd_glbl_adr_o[5] ;
+ wire \wbd_glbl_adr_o[6] ;
+ wire \wbd_glbl_adr_o[7] ;
+ wire wbd_glbl_cyc_o;
+ wire \wbd_glbl_dat_i[0] ;
+ wire \wbd_glbl_dat_i[10] ;
+ wire \wbd_glbl_dat_i[11] ;
+ wire \wbd_glbl_dat_i[12] ;
+ wire \wbd_glbl_dat_i[13] ;
+ wire \wbd_glbl_dat_i[14] ;
+ wire \wbd_glbl_dat_i[15] ;
+ wire \wbd_glbl_dat_i[16] ;
+ wire \wbd_glbl_dat_i[17] ;
+ wire \wbd_glbl_dat_i[18] ;
+ wire \wbd_glbl_dat_i[19] ;
+ wire \wbd_glbl_dat_i[1] ;
+ wire \wbd_glbl_dat_i[20] ;
+ wire \wbd_glbl_dat_i[21] ;
+ wire \wbd_glbl_dat_i[22] ;
+ wire \wbd_glbl_dat_i[23] ;
+ wire \wbd_glbl_dat_i[24] ;
+ wire \wbd_glbl_dat_i[25] ;
+ wire \wbd_glbl_dat_i[26] ;
+ wire \wbd_glbl_dat_i[27] ;
+ wire \wbd_glbl_dat_i[28] ;
+ wire \wbd_glbl_dat_i[29] ;
+ wire \wbd_glbl_dat_i[2] ;
+ wire \wbd_glbl_dat_i[30] ;
+ wire \wbd_glbl_dat_i[31] ;
+ wire \wbd_glbl_dat_i[3] ;
+ wire \wbd_glbl_dat_i[4] ;
+ wire \wbd_glbl_dat_i[5] ;
+ wire \wbd_glbl_dat_i[6] ;
+ wire \wbd_glbl_dat_i[7] ;
+ wire \wbd_glbl_dat_i[8] ;
+ wire \wbd_glbl_dat_i[9] ;
+ wire \wbd_glbl_dat_o[0] ;
+ wire \wbd_glbl_dat_o[10] ;
+ wire \wbd_glbl_dat_o[11] ;
+ wire \wbd_glbl_dat_o[12] ;
+ wire \wbd_glbl_dat_o[13] ;
+ wire \wbd_glbl_dat_o[14] ;
+ wire \wbd_glbl_dat_o[15] ;
+ wire \wbd_glbl_dat_o[16] ;
+ wire \wbd_glbl_dat_o[17] ;
+ wire \wbd_glbl_dat_o[18] ;
+ wire \wbd_glbl_dat_o[19] ;
+ wire \wbd_glbl_dat_o[1] ;
+ wire \wbd_glbl_dat_o[20] ;
+ wire \wbd_glbl_dat_o[21] ;
+ wire \wbd_glbl_dat_o[22] ;
+ wire \wbd_glbl_dat_o[23] ;
+ wire \wbd_glbl_dat_o[24] ;
+ wire \wbd_glbl_dat_o[25] ;
+ wire \wbd_glbl_dat_o[26] ;
+ wire \wbd_glbl_dat_o[27] ;
+ wire \wbd_glbl_dat_o[28] ;
+ wire \wbd_glbl_dat_o[29] ;
+ wire \wbd_glbl_dat_o[2] ;
+ wire \wbd_glbl_dat_o[30] ;
+ wire \wbd_glbl_dat_o[31] ;
+ wire \wbd_glbl_dat_o[3] ;
+ wire \wbd_glbl_dat_o[4] ;
+ wire \wbd_glbl_dat_o[5] ;
+ wire \wbd_glbl_dat_o[6] ;
+ wire \wbd_glbl_dat_o[7] ;
+ wire \wbd_glbl_dat_o[8] ;
+ wire \wbd_glbl_dat_o[9] ;
+ wire \wbd_glbl_sel_o[0] ;
+ wire \wbd_glbl_sel_o[1] ;
+ wire \wbd_glbl_sel_o[2] ;
+ wire \wbd_glbl_sel_o[3] ;
+ wire wbd_glbl_stb_o;
+ wire wbd_glbl_we_o;
+ wire wbd_int_ack_o;
+ wire \wbd_int_adr_i[0] ;
+ wire \wbd_int_adr_i[10] ;
+ wire \wbd_int_adr_i[11] ;
+ wire \wbd_int_adr_i[12] ;
+ wire \wbd_int_adr_i[13] ;
+ wire \wbd_int_adr_i[14] ;
+ wire \wbd_int_adr_i[15] ;
+ wire \wbd_int_adr_i[16] ;
+ wire \wbd_int_adr_i[17] ;
+ wire \wbd_int_adr_i[18] ;
+ wire \wbd_int_adr_i[19] ;
+ wire \wbd_int_adr_i[1] ;
+ wire \wbd_int_adr_i[20] ;
+ wire \wbd_int_adr_i[21] ;
+ wire \wbd_int_adr_i[22] ;
+ wire \wbd_int_adr_i[23] ;
+ wire \wbd_int_adr_i[24] ;
+ wire \wbd_int_adr_i[25] ;
+ wire \wbd_int_adr_i[26] ;
+ wire \wbd_int_adr_i[27] ;
+ wire \wbd_int_adr_i[28] ;
+ wire \wbd_int_adr_i[29] ;
+ wire \wbd_int_adr_i[2] ;
+ wire \wbd_int_adr_i[30] ;
+ wire \wbd_int_adr_i[31] ;
+ wire \wbd_int_adr_i[3] ;
+ wire \wbd_int_adr_i[4] ;
+ wire \wbd_int_adr_i[5] ;
+ wire \wbd_int_adr_i[6] ;
+ wire \wbd_int_adr_i[7] ;
+ wire \wbd_int_adr_i[8] ;
+ wire \wbd_int_adr_i[9] ;
+ wire wbd_int_cyc_i;
+ wire \wbd_int_dat_i[0] ;
+ wire \wbd_int_dat_i[10] ;
+ wire \wbd_int_dat_i[11] ;
+ wire \wbd_int_dat_i[12] ;
+ wire \wbd_int_dat_i[13] ;
+ wire \wbd_int_dat_i[14] ;
+ wire \wbd_int_dat_i[15] ;
+ wire \wbd_int_dat_i[16] ;
+ wire \wbd_int_dat_i[17] ;
+ wire \wbd_int_dat_i[18] ;
+ wire \wbd_int_dat_i[19] ;
+ wire \wbd_int_dat_i[1] ;
+ wire \wbd_int_dat_i[20] ;
+ wire \wbd_int_dat_i[21] ;
+ wire \wbd_int_dat_i[22] ;
+ wire \wbd_int_dat_i[23] ;
+ wire \wbd_int_dat_i[24] ;
+ wire \wbd_int_dat_i[25] ;
+ wire \wbd_int_dat_i[26] ;
+ wire \wbd_int_dat_i[27] ;
+ wire \wbd_int_dat_i[28] ;
+ wire \wbd_int_dat_i[29] ;
+ wire \wbd_int_dat_i[2] ;
+ wire \wbd_int_dat_i[30] ;
+ wire \wbd_int_dat_i[31] ;
+ wire \wbd_int_dat_i[3] ;
+ wire \wbd_int_dat_i[4] ;
+ wire \wbd_int_dat_i[5] ;
+ wire \wbd_int_dat_i[6] ;
+ wire \wbd_int_dat_i[7] ;
+ wire \wbd_int_dat_i[8] ;
+ wire \wbd_int_dat_i[9] ;
+ wire \wbd_int_dat_o[0] ;
+ wire \wbd_int_dat_o[10] ;
+ wire \wbd_int_dat_o[11] ;
+ wire \wbd_int_dat_o[12] ;
+ wire \wbd_int_dat_o[13] ;
+ wire \wbd_int_dat_o[14] ;
+ wire \wbd_int_dat_o[15] ;
+ wire \wbd_int_dat_o[16] ;
+ wire \wbd_int_dat_o[17] ;
+ wire \wbd_int_dat_o[18] ;
+ wire \wbd_int_dat_o[19] ;
+ wire \wbd_int_dat_o[1] ;
+ wire \wbd_int_dat_o[20] ;
+ wire \wbd_int_dat_o[21] ;
+ wire \wbd_int_dat_o[22] ;
+ wire \wbd_int_dat_o[23] ;
+ wire \wbd_int_dat_o[24] ;
+ wire \wbd_int_dat_o[25] ;
+ wire \wbd_int_dat_o[26] ;
+ wire \wbd_int_dat_o[27] ;
+ wire \wbd_int_dat_o[28] ;
+ wire \wbd_int_dat_o[29] ;
+ wire \wbd_int_dat_o[2] ;
+ wire \wbd_int_dat_o[30] ;
+ wire \wbd_int_dat_o[31] ;
+ wire \wbd_int_dat_o[3] ;
+ wire \wbd_int_dat_o[4] ;
+ wire \wbd_int_dat_o[5] ;
+ wire \wbd_int_dat_o[6] ;
+ wire \wbd_int_dat_o[7] ;
+ wire \wbd_int_dat_o[8] ;
+ wire \wbd_int_dat_o[9] ;
+ wire wbd_int_err_o;
+ wire wbd_int_rst_n;
+ wire \wbd_int_sel_i[0] ;
+ wire \wbd_int_sel_i[1] ;
+ wire \wbd_int_sel_i[2] ;
+ wire \wbd_int_sel_i[3] ;
+ wire wbd_int_stb_i;
+ wire wbd_int_we_i;
+ wire wbd_riscv_dmem_ack_o;
+ wire \wbd_riscv_dmem_adr_i[0] ;
+ wire \wbd_riscv_dmem_adr_i[10] ;
+ wire \wbd_riscv_dmem_adr_i[11] ;
+ wire \wbd_riscv_dmem_adr_i[12] ;
+ wire \wbd_riscv_dmem_adr_i[13] ;
+ wire \wbd_riscv_dmem_adr_i[14] ;
+ wire \wbd_riscv_dmem_adr_i[15] ;
+ wire \wbd_riscv_dmem_adr_i[16] ;
+ wire \wbd_riscv_dmem_adr_i[17] ;
+ wire \wbd_riscv_dmem_adr_i[18] ;
+ wire \wbd_riscv_dmem_adr_i[19] ;
+ wire \wbd_riscv_dmem_adr_i[1] ;
+ wire \wbd_riscv_dmem_adr_i[20] ;
+ wire \wbd_riscv_dmem_adr_i[21] ;
+ wire \wbd_riscv_dmem_adr_i[22] ;
+ wire \wbd_riscv_dmem_adr_i[23] ;
+ wire \wbd_riscv_dmem_adr_i[24] ;
+ wire \wbd_riscv_dmem_adr_i[25] ;
+ wire \wbd_riscv_dmem_adr_i[26] ;
+ wire \wbd_riscv_dmem_adr_i[27] ;
+ wire \wbd_riscv_dmem_adr_i[28] ;
+ wire \wbd_riscv_dmem_adr_i[29] ;
+ wire \wbd_riscv_dmem_adr_i[2] ;
+ wire \wbd_riscv_dmem_adr_i[30] ;
+ wire \wbd_riscv_dmem_adr_i[31] ;
+ wire \wbd_riscv_dmem_adr_i[3] ;
+ wire \wbd_riscv_dmem_adr_i[4] ;
+ wire \wbd_riscv_dmem_adr_i[5] ;
+ wire \wbd_riscv_dmem_adr_i[6] ;
+ wire \wbd_riscv_dmem_adr_i[7] ;
+ wire \wbd_riscv_dmem_adr_i[8] ;
+ wire \wbd_riscv_dmem_adr_i[9] ;
+ wire \wbd_riscv_dmem_dat_i[0] ;
+ wire \wbd_riscv_dmem_dat_i[10] ;
+ wire \wbd_riscv_dmem_dat_i[11] ;
+ wire \wbd_riscv_dmem_dat_i[12] ;
+ wire \wbd_riscv_dmem_dat_i[13] ;
+ wire \wbd_riscv_dmem_dat_i[14] ;
+ wire \wbd_riscv_dmem_dat_i[15] ;
+ wire \wbd_riscv_dmem_dat_i[16] ;
+ wire \wbd_riscv_dmem_dat_i[17] ;
+ wire \wbd_riscv_dmem_dat_i[18] ;
+ wire \wbd_riscv_dmem_dat_i[19] ;
+ wire \wbd_riscv_dmem_dat_i[1] ;
+ wire \wbd_riscv_dmem_dat_i[20] ;
+ wire \wbd_riscv_dmem_dat_i[21] ;
+ wire \wbd_riscv_dmem_dat_i[22] ;
+ wire \wbd_riscv_dmem_dat_i[23] ;
+ wire \wbd_riscv_dmem_dat_i[24] ;
+ wire \wbd_riscv_dmem_dat_i[25] ;
+ wire \wbd_riscv_dmem_dat_i[26] ;
+ wire \wbd_riscv_dmem_dat_i[27] ;
+ wire \wbd_riscv_dmem_dat_i[28] ;
+ wire \wbd_riscv_dmem_dat_i[29] ;
+ wire \wbd_riscv_dmem_dat_i[2] ;
+ wire \wbd_riscv_dmem_dat_i[30] ;
+ wire \wbd_riscv_dmem_dat_i[31] ;
+ wire \wbd_riscv_dmem_dat_i[3] ;
+ wire \wbd_riscv_dmem_dat_i[4] ;
+ wire \wbd_riscv_dmem_dat_i[5] ;
+ wire \wbd_riscv_dmem_dat_i[6] ;
+ wire \wbd_riscv_dmem_dat_i[7] ;
+ wire \wbd_riscv_dmem_dat_i[8] ;
+ wire \wbd_riscv_dmem_dat_i[9] ;
+ wire \wbd_riscv_dmem_dat_o[0] ;
+ wire \wbd_riscv_dmem_dat_o[10] ;
+ wire \wbd_riscv_dmem_dat_o[11] ;
+ wire \wbd_riscv_dmem_dat_o[12] ;
+ wire \wbd_riscv_dmem_dat_o[13] ;
+ wire \wbd_riscv_dmem_dat_o[14] ;
+ wire \wbd_riscv_dmem_dat_o[15] ;
+ wire \wbd_riscv_dmem_dat_o[16] ;
+ wire \wbd_riscv_dmem_dat_o[17] ;
+ wire \wbd_riscv_dmem_dat_o[18] ;
+ wire \wbd_riscv_dmem_dat_o[19] ;
+ wire \wbd_riscv_dmem_dat_o[1] ;
+ wire \wbd_riscv_dmem_dat_o[20] ;
+ wire \wbd_riscv_dmem_dat_o[21] ;
+ wire \wbd_riscv_dmem_dat_o[22] ;
+ wire \wbd_riscv_dmem_dat_o[23] ;
+ wire \wbd_riscv_dmem_dat_o[24] ;
+ wire \wbd_riscv_dmem_dat_o[25] ;
+ wire \wbd_riscv_dmem_dat_o[26] ;
+ wire \wbd_riscv_dmem_dat_o[27] ;
+ wire \wbd_riscv_dmem_dat_o[28] ;
+ wire \wbd_riscv_dmem_dat_o[29] ;
+ wire \wbd_riscv_dmem_dat_o[2] ;
+ wire \wbd_riscv_dmem_dat_o[30] ;
+ wire \wbd_riscv_dmem_dat_o[31] ;
+ wire \wbd_riscv_dmem_dat_o[3] ;
+ wire \wbd_riscv_dmem_dat_o[4] ;
+ wire \wbd_riscv_dmem_dat_o[5] ;
+ wire \wbd_riscv_dmem_dat_o[6] ;
+ wire \wbd_riscv_dmem_dat_o[7] ;
+ wire \wbd_riscv_dmem_dat_o[8] ;
+ wire \wbd_riscv_dmem_dat_o[9] ;
+ wire wbd_riscv_dmem_err_o;
+ wire \wbd_riscv_dmem_sel_i[0] ;
+ wire \wbd_riscv_dmem_sel_i[1] ;
+ wire \wbd_riscv_dmem_sel_i[2] ;
+ wire \wbd_riscv_dmem_sel_i[3] ;
+ wire wbd_riscv_dmem_stb_i;
+ wire wbd_riscv_dmem_we_i;
+ wire wbd_riscv_imem_ack_o;
+ wire \wbd_riscv_imem_adr_i[0] ;
+ wire \wbd_riscv_imem_adr_i[10] ;
+ wire \wbd_riscv_imem_adr_i[11] ;
+ wire \wbd_riscv_imem_adr_i[12] ;
+ wire \wbd_riscv_imem_adr_i[13] ;
+ wire \wbd_riscv_imem_adr_i[14] ;
+ wire \wbd_riscv_imem_adr_i[15] ;
+ wire \wbd_riscv_imem_adr_i[16] ;
+ wire \wbd_riscv_imem_adr_i[17] ;
+ wire \wbd_riscv_imem_adr_i[18] ;
+ wire \wbd_riscv_imem_adr_i[19] ;
+ wire \wbd_riscv_imem_adr_i[1] ;
+ wire \wbd_riscv_imem_adr_i[20] ;
+ wire \wbd_riscv_imem_adr_i[21] ;
+ wire \wbd_riscv_imem_adr_i[22] ;
+ wire \wbd_riscv_imem_adr_i[23] ;
+ wire \wbd_riscv_imem_adr_i[24] ;
+ wire \wbd_riscv_imem_adr_i[25] ;
+ wire \wbd_riscv_imem_adr_i[26] ;
+ wire \wbd_riscv_imem_adr_i[27] ;
+ wire \wbd_riscv_imem_adr_i[28] ;
+ wire \wbd_riscv_imem_adr_i[29] ;
+ wire \wbd_riscv_imem_adr_i[2] ;
+ wire \wbd_riscv_imem_adr_i[30] ;
+ wire \wbd_riscv_imem_adr_i[31] ;
+ wire \wbd_riscv_imem_adr_i[3] ;
+ wire \wbd_riscv_imem_adr_i[4] ;
+ wire \wbd_riscv_imem_adr_i[5] ;
+ wire \wbd_riscv_imem_adr_i[6] ;
+ wire \wbd_riscv_imem_adr_i[7] ;
+ wire \wbd_riscv_imem_adr_i[8] ;
+ wire \wbd_riscv_imem_adr_i[9] ;
+ wire \wbd_riscv_imem_dat_i[0] ;
+ wire \wbd_riscv_imem_dat_i[10] ;
+ wire \wbd_riscv_imem_dat_i[11] ;
+ wire \wbd_riscv_imem_dat_i[12] ;
+ wire \wbd_riscv_imem_dat_i[13] ;
+ wire \wbd_riscv_imem_dat_i[14] ;
+ wire \wbd_riscv_imem_dat_i[15] ;
+ wire \wbd_riscv_imem_dat_i[16] ;
+ wire \wbd_riscv_imem_dat_i[17] ;
+ wire \wbd_riscv_imem_dat_i[18] ;
+ wire \wbd_riscv_imem_dat_i[19] ;
+ wire \wbd_riscv_imem_dat_i[1] ;
+ wire \wbd_riscv_imem_dat_i[20] ;
+ wire \wbd_riscv_imem_dat_i[21] ;
+ wire \wbd_riscv_imem_dat_i[22] ;
+ wire \wbd_riscv_imem_dat_i[23] ;
+ wire \wbd_riscv_imem_dat_i[24] ;
+ wire \wbd_riscv_imem_dat_i[25] ;
+ wire \wbd_riscv_imem_dat_i[26] ;
+ wire \wbd_riscv_imem_dat_i[27] ;
+ wire \wbd_riscv_imem_dat_i[28] ;
+ wire \wbd_riscv_imem_dat_i[29] ;
+ wire \wbd_riscv_imem_dat_i[2] ;
+ wire \wbd_riscv_imem_dat_i[30] ;
+ wire \wbd_riscv_imem_dat_i[31] ;
+ wire \wbd_riscv_imem_dat_i[3] ;
+ wire \wbd_riscv_imem_dat_i[4] ;
+ wire \wbd_riscv_imem_dat_i[5] ;
+ wire \wbd_riscv_imem_dat_i[6] ;
+ wire \wbd_riscv_imem_dat_i[7] ;
+ wire \wbd_riscv_imem_dat_i[8] ;
+ wire \wbd_riscv_imem_dat_i[9] ;
+ wire \wbd_riscv_imem_dat_o[0] ;
+ wire \wbd_riscv_imem_dat_o[10] ;
+ wire \wbd_riscv_imem_dat_o[11] ;
+ wire \wbd_riscv_imem_dat_o[12] ;
+ wire \wbd_riscv_imem_dat_o[13] ;
+ wire \wbd_riscv_imem_dat_o[14] ;
+ wire \wbd_riscv_imem_dat_o[15] ;
+ wire \wbd_riscv_imem_dat_o[16] ;
+ wire \wbd_riscv_imem_dat_o[17] ;
+ wire \wbd_riscv_imem_dat_o[18] ;
+ wire \wbd_riscv_imem_dat_o[19] ;
+ wire \wbd_riscv_imem_dat_o[1] ;
+ wire \wbd_riscv_imem_dat_o[20] ;
+ wire \wbd_riscv_imem_dat_o[21] ;
+ wire \wbd_riscv_imem_dat_o[22] ;
+ wire \wbd_riscv_imem_dat_o[23] ;
+ wire \wbd_riscv_imem_dat_o[24] ;
+ wire \wbd_riscv_imem_dat_o[25] ;
+ wire \wbd_riscv_imem_dat_o[26] ;
+ wire \wbd_riscv_imem_dat_o[27] ;
+ wire \wbd_riscv_imem_dat_o[28] ;
+ wire \wbd_riscv_imem_dat_o[29] ;
+ wire \wbd_riscv_imem_dat_o[2] ;
+ wire \wbd_riscv_imem_dat_o[30] ;
+ wire \wbd_riscv_imem_dat_o[31] ;
+ wire \wbd_riscv_imem_dat_o[3] ;
+ wire \wbd_riscv_imem_dat_o[4] ;
+ wire \wbd_riscv_imem_dat_o[5] ;
+ wire \wbd_riscv_imem_dat_o[6] ;
+ wire \wbd_riscv_imem_dat_o[7] ;
+ wire \wbd_riscv_imem_dat_o[8] ;
+ wire \wbd_riscv_imem_dat_o[9] ;
+ wire wbd_riscv_imem_err_o;
+ wire \wbd_riscv_imem_sel_i[0] ;
+ wire \wbd_riscv_imem_sel_i[1] ;
+ wire \wbd_riscv_imem_sel_i[2] ;
+ wire \wbd_riscv_imem_sel_i[3] ;
+ wire wbd_riscv_imem_stb_i;
+ wire wbd_riscv_imem_we_i;
+ wire wbd_spim_ack_i;
+ wire \wbd_spim_adr_o[0] ;
+ wire \wbd_spim_adr_o[10] ;
+ wire \wbd_spim_adr_o[11] ;
+ wire \wbd_spim_adr_o[12] ;
+ wire \wbd_spim_adr_o[13] ;
+ wire \wbd_spim_adr_o[14] ;
+ wire \wbd_spim_adr_o[15] ;
+ wire \wbd_spim_adr_o[16] ;
+ wire \wbd_spim_adr_o[17] ;
+ wire \wbd_spim_adr_o[18] ;
+ wire \wbd_spim_adr_o[19] ;
+ wire \wbd_spim_adr_o[1] ;
+ wire \wbd_spim_adr_o[20] ;
+ wire \wbd_spim_adr_o[21] ;
+ wire \wbd_spim_adr_o[22] ;
+ wire \wbd_spim_adr_o[23] ;
+ wire \wbd_spim_adr_o[24] ;
+ wire \wbd_spim_adr_o[25] ;
+ wire \wbd_spim_adr_o[26] ;
+ wire \wbd_spim_adr_o[27] ;
+ wire \wbd_spim_adr_o[28] ;
+ wire \wbd_spim_adr_o[29] ;
+ wire \wbd_spim_adr_o[2] ;
+ wire \wbd_spim_adr_o[30] ;
+ wire \wbd_spim_adr_o[31] ;
+ wire \wbd_spim_adr_o[3] ;
+ wire \wbd_spim_adr_o[4] ;
+ wire \wbd_spim_adr_o[5] ;
+ wire \wbd_spim_adr_o[6] ;
+ wire \wbd_spim_adr_o[7] ;
+ wire \wbd_spim_adr_o[8] ;
+ wire \wbd_spim_adr_o[9] ;
+ wire wbd_spim_cyc_o;
+ wire \wbd_spim_dat_i[0] ;
+ wire \wbd_spim_dat_i[10] ;
+ wire \wbd_spim_dat_i[11] ;
+ wire \wbd_spim_dat_i[12] ;
+ wire \wbd_spim_dat_i[13] ;
+ wire \wbd_spim_dat_i[14] ;
+ wire \wbd_spim_dat_i[15] ;
+ wire \wbd_spim_dat_i[16] ;
+ wire \wbd_spim_dat_i[17] ;
+ wire \wbd_spim_dat_i[18] ;
+ wire \wbd_spim_dat_i[19] ;
+ wire \wbd_spim_dat_i[1] ;
+ wire \wbd_spim_dat_i[20] ;
+ wire \wbd_spim_dat_i[21] ;
+ wire \wbd_spim_dat_i[22] ;
+ wire \wbd_spim_dat_i[23] ;
+ wire \wbd_spim_dat_i[24] ;
+ wire \wbd_spim_dat_i[25] ;
+ wire \wbd_spim_dat_i[26] ;
+ wire \wbd_spim_dat_i[27] ;
+ wire \wbd_spim_dat_i[28] ;
+ wire \wbd_spim_dat_i[29] ;
+ wire \wbd_spim_dat_i[2] ;
+ wire \wbd_spim_dat_i[30] ;
+ wire \wbd_spim_dat_i[31] ;
+ wire \wbd_spim_dat_i[3] ;
+ wire \wbd_spim_dat_i[4] ;
+ wire \wbd_spim_dat_i[5] ;
+ wire \wbd_spim_dat_i[6] ;
+ wire \wbd_spim_dat_i[7] ;
+ wire \wbd_spim_dat_i[8] ;
+ wire \wbd_spim_dat_i[9] ;
+ wire \wbd_spim_dat_o[0] ;
+ wire \wbd_spim_dat_o[10] ;
+ wire \wbd_spim_dat_o[11] ;
+ wire \wbd_spim_dat_o[12] ;
+ wire \wbd_spim_dat_o[13] ;
+ wire \wbd_spim_dat_o[14] ;
+ wire \wbd_spim_dat_o[15] ;
+ wire \wbd_spim_dat_o[16] ;
+ wire \wbd_spim_dat_o[17] ;
+ wire \wbd_spim_dat_o[18] ;
+ wire \wbd_spim_dat_o[19] ;
+ wire \wbd_spim_dat_o[1] ;
+ wire \wbd_spim_dat_o[20] ;
+ wire \wbd_spim_dat_o[21] ;
+ wire \wbd_spim_dat_o[22] ;
+ wire \wbd_spim_dat_o[23] ;
+ wire \wbd_spim_dat_o[24] ;
+ wire \wbd_spim_dat_o[25] ;
+ wire \wbd_spim_dat_o[26] ;
+ wire \wbd_spim_dat_o[27] ;
+ wire \wbd_spim_dat_o[28] ;
+ wire \wbd_spim_dat_o[29] ;
+ wire \wbd_spim_dat_o[2] ;
+ wire \wbd_spim_dat_o[30] ;
+ wire \wbd_spim_dat_o[31] ;
+ wire \wbd_spim_dat_o[3] ;
+ wire \wbd_spim_dat_o[4] ;
+ wire \wbd_spim_dat_o[5] ;
+ wire \wbd_spim_dat_o[6] ;
+ wire \wbd_spim_dat_o[7] ;
+ wire \wbd_spim_dat_o[8] ;
+ wire \wbd_spim_dat_o[9] ;
+ wire wbd_spim_err_i;
+ wire \wbd_spim_sel_o[0] ;
+ wire \wbd_spim_sel_o[1] ;
+ wire \wbd_spim_sel_o[2] ;
+ wire \wbd_spim_sel_o[3] ;
+ wire wbd_spim_stb_o;
+ wire wbd_spim_we_o;
+ wire wbd_uart_ack_i;
+ wire \wbd_uart_adr_o[0] ;
+ wire \wbd_uart_adr_o[10] ;
+ wire \wbd_uart_adr_o[11] ;
+ wire \wbd_uart_adr_o[12] ;
+ wire \wbd_uart_adr_o[13] ;
+ wire \wbd_uart_adr_o[14] ;
+ wire \wbd_uart_adr_o[15] ;
+ wire \wbd_uart_adr_o[16] ;
+ wire \wbd_uart_adr_o[17] ;
+ wire \wbd_uart_adr_o[18] ;
+ wire \wbd_uart_adr_o[19] ;
+ wire \wbd_uart_adr_o[1] ;
+ wire \wbd_uart_adr_o[20] ;
+ wire \wbd_uart_adr_o[21] ;
+ wire \wbd_uart_adr_o[22] ;
+ wire \wbd_uart_adr_o[23] ;
+ wire \wbd_uart_adr_o[24] ;
+ wire \wbd_uart_adr_o[25] ;
+ wire \wbd_uart_adr_o[26] ;
+ wire \wbd_uart_adr_o[27] ;
+ wire \wbd_uart_adr_o[28] ;
+ wire \wbd_uart_adr_o[29] ;
+ wire \wbd_uart_adr_o[2] ;
+ wire \wbd_uart_adr_o[30] ;
+ wire \wbd_uart_adr_o[31] ;
+ wire \wbd_uart_adr_o[3] ;
+ wire \wbd_uart_adr_o[4] ;
+ wire \wbd_uart_adr_o[5] ;
+ wire \wbd_uart_adr_o[6] ;
+ wire \wbd_uart_adr_o[7] ;
+ wire \wbd_uart_adr_o[8] ;
+ wire \wbd_uart_adr_o[9] ;
+ wire wbd_uart_cyc_o;
+ wire \wbd_uart_dat_i[0] ;
+ wire \wbd_uart_dat_i[10] ;
+ wire \wbd_uart_dat_i[11] ;
+ wire \wbd_uart_dat_i[12] ;
+ wire \wbd_uart_dat_i[13] ;
+ wire \wbd_uart_dat_i[14] ;
+ wire \wbd_uart_dat_i[15] ;
+ wire \wbd_uart_dat_i[16] ;
+ wire \wbd_uart_dat_i[17] ;
+ wire \wbd_uart_dat_i[18] ;
+ wire \wbd_uart_dat_i[19] ;
+ wire \wbd_uart_dat_i[1] ;
+ wire \wbd_uart_dat_i[20] ;
+ wire \wbd_uart_dat_i[21] ;
+ wire \wbd_uart_dat_i[22] ;
+ wire \wbd_uart_dat_i[23] ;
+ wire \wbd_uart_dat_i[24] ;
+ wire \wbd_uart_dat_i[25] ;
+ wire \wbd_uart_dat_i[26] ;
+ wire \wbd_uart_dat_i[27] ;
+ wire \wbd_uart_dat_i[28] ;
+ wire \wbd_uart_dat_i[29] ;
+ wire \wbd_uart_dat_i[2] ;
+ wire \wbd_uart_dat_i[30] ;
+ wire \wbd_uart_dat_i[31] ;
+ wire \wbd_uart_dat_i[3] ;
+ wire \wbd_uart_dat_i[4] ;
+ wire \wbd_uart_dat_i[5] ;
+ wire \wbd_uart_dat_i[6] ;
+ wire \wbd_uart_dat_i[7] ;
+ wire \wbd_uart_dat_i[8] ;
+ wire \wbd_uart_dat_i[9] ;
+ wire \wbd_uart_dat_o[0] ;
+ wire \wbd_uart_dat_o[10] ;
+ wire \wbd_uart_dat_o[11] ;
+ wire \wbd_uart_dat_o[12] ;
+ wire \wbd_uart_dat_o[13] ;
+ wire \wbd_uart_dat_o[14] ;
+ wire \wbd_uart_dat_o[15] ;
+ wire \wbd_uart_dat_o[16] ;
+ wire \wbd_uart_dat_o[17] ;
+ wire \wbd_uart_dat_o[18] ;
+ wire \wbd_uart_dat_o[19] ;
+ wire \wbd_uart_dat_o[1] ;
+ wire \wbd_uart_dat_o[20] ;
+ wire \wbd_uart_dat_o[21] ;
+ wire \wbd_uart_dat_o[22] ;
+ wire \wbd_uart_dat_o[23] ;
+ wire \wbd_uart_dat_o[24] ;
+ wire \wbd_uart_dat_o[25] ;
+ wire \wbd_uart_dat_o[26] ;
+ wire \wbd_uart_dat_o[27] ;
+ wire \wbd_uart_dat_o[28] ;
+ wire \wbd_uart_dat_o[29] ;
+ wire \wbd_uart_dat_o[2] ;
+ wire \wbd_uart_dat_o[30] ;
+ wire \wbd_uart_dat_o[31] ;
+ wire \wbd_uart_dat_o[3] ;
+ wire \wbd_uart_dat_o[4] ;
+ wire \wbd_uart_dat_o[5] ;
+ wire \wbd_uart_dat_o[6] ;
+ wire \wbd_uart_dat_o[7] ;
+ wire \wbd_uart_dat_o[8] ;
+ wire \wbd_uart_dat_o[9] ;
+ wire wbd_uart_sel_o;
+ wire wbd_uart_stb_o;
+ wire wbd_uart_we_o;
+
+ sar_adc u_adc (.analog_dac_out(analog_io[6]),
     .clk(wbd_clk_int),
     .pulse1m_mclk(pulse1m_mclk),
     .reg_ack(wbd_adc_ack_i),
@@ -148,18 +1121,6 @@ module user_project_wrapper (user_clock2,
     \sar2dac[2] ,
     \sar2dac[1] ,
     \sar2dac[0] }));
- DAC_8BIT u_dac (.d0(\sar2dac[0] ),
-    .d1(\sar2dac[1] ),
-    .d2(\sar2dac[2] ),
-    .d3(\sar2dac[3] ),
-    .d4(\sar2dac[4] ),
-    .d5(\sar2dac[5] ),
-    .d6(\sar2dac[6] ),
-    .out_v(analog_dac_out),
-    .d7(\sar2dac[7] ),
-    .inp1(analog_io[6]),
-    .gnd(vssd2),
-    .vdd(vccd2));
  wb_interconnect u_intercon (.clk_i(wbd_clk_int),
     .m0_wbd_ack_o(wbd_int_ack_o),
     .m0_wbd_cyc_i(wbd_int_cyc_i),
@@ -854,6 +1815,7 @@ module user_project_wrapper (user_clock2,
     .i2cm_data_i(i2cm_data_i),
     .i2cm_data_o(i2cm_data_o),
     .i2cm_data_oen(i2cm_data_oen),
+    .i2cm_intr(i2cm_intr_o),
     .mclk(wbd_clk_int),
     .pulse1m_mclk(pulse1m_mclk),
     .reg_ack(wbd_glbl_ack_i),
@@ -862,9 +1824,10 @@ module user_project_wrapper (user_clock2,
     .sflash_sck(sflash_sck),
     .sflash_ss(sflash_ss),
     .soft_irq(soft_irq),
-    .spim_miso(\sflash_do[0] ),
-    .spim_sck(sflash_sck),
-    .spim_ss(sflash_ss),
+    .spim_miso(sspim_so),
+    .spim_mosi(sspim_si),
+    .spim_sck(sspim_sck),
+    .spim_ss(sspim_ssn),
     .ssram_sck(sflash_sck),
     .ssram_ss(sflash_ss),
     .uart_rxd(uart_rxd),
@@ -873,6 +1836,7 @@ module user_project_wrapper (user_clock2,
     .usb_dn_o(usb_dn_o),
     .usb_dp_i(usb_dp_i),
     .usb_dp_o(usb_dp_o),
+    .usb_intr(usb_intr_o),
     .usb_oen(usb_oen),
     .vccd1(vccd1),
     .vssd1(vssd1),
@@ -1173,6 +2137,160 @@ module user_project_wrapper (user_clock2,
     .user_irq({user_irq[2],
     user_irq[1],
     user_irq[0]}));
+ qspim_top u_qspi_master (.mclk(wbd_clk_int),
+    .rst_n(qspim_rst_n),
+    .spi_clk(sflash_sck),
+    .spi_csn0(sflash_ss),
+    .wbd_ack_o(wbd_spim_ack_i),
+    .wbd_err_o(wbd_spim_err_i),
+    .wbd_stb_i(wbd_spim_stb_o),
+    .wbd_we_i(wbd_spim_we_o),
+    .vccd1(vccd1),
+    .vssd1(vssd1),
+    .spi_debug({la_data_out[95],
+    la_data_out[94],
+    la_data_out[93],
+    la_data_out[92],
+    la_data_out[91],
+    la_data_out[90],
+    la_data_out[89],
+    la_data_out[88],
+    la_data_out[87],
+    la_data_out[86],
+    la_data_out[85],
+    la_data_out[84],
+    la_data_out[83],
+    la_data_out[82],
+    la_data_out[81],
+    la_data_out[80],
+    la_data_out[79],
+    la_data_out[78],
+    la_data_out[77],
+    la_data_out[76],
+    la_data_out[75],
+    la_data_out[74],
+    la_data_out[73],
+    la_data_out[72],
+    la_data_out[71],
+    la_data_out[70],
+    la_data_out[69],
+    la_data_out[68],
+    la_data_out[67],
+    la_data_out[66],
+    la_data_out[65],
+    la_data_out[64]}),
+    .spi_oen({\sflash_oen[3] ,
+    \sflash_oen[2] ,
+    \sflash_oen[1] ,
+    \sflash_oen[0] }),
+    .spi_sdi({\sflash_di[3] ,
+    \sflash_di[2] ,
+    \sflash_di[1] ,
+    \sflash_di[0] }),
+    .spi_sdo({\sflash_do[3] ,
+    \sflash_do[2] ,
+    \sflash_do[1] ,
+    \sflash_do[0] }),
+    .wbd_adr_i({\wbd_spim_adr_o[31] ,
+    \wbd_spim_adr_o[30] ,
+    \wbd_spim_adr_o[29] ,
+    \wbd_spim_adr_o[28] ,
+    \wbd_spim_adr_o[27] ,
+    \wbd_spim_adr_o[26] ,
+    \wbd_spim_adr_o[25] ,
+    \wbd_spim_adr_o[24] ,
+    \wbd_spim_adr_o[23] ,
+    \wbd_spim_adr_o[22] ,
+    \wbd_spim_adr_o[21] ,
+    \wbd_spim_adr_o[20] ,
+    \wbd_spim_adr_o[19] ,
+    \wbd_spim_adr_o[18] ,
+    \wbd_spim_adr_o[17] ,
+    \wbd_spim_adr_o[16] ,
+    \wbd_spim_adr_o[15] ,
+    \wbd_spim_adr_o[14] ,
+    \wbd_spim_adr_o[13] ,
+    \wbd_spim_adr_o[12] ,
+    \wbd_spim_adr_o[11] ,
+    \wbd_spim_adr_o[10] ,
+    \wbd_spim_adr_o[9] ,
+    \wbd_spim_adr_o[8] ,
+    \wbd_spim_adr_o[7] ,
+    \wbd_spim_adr_o[6] ,
+    \wbd_spim_adr_o[5] ,
+    \wbd_spim_adr_o[4] ,
+    \wbd_spim_adr_o[3] ,
+    \wbd_spim_adr_o[2] ,
+    \wbd_spim_adr_o[1] ,
+    \wbd_spim_adr_o[0] }),
+    .wbd_dat_i({\wbd_spim_dat_o[31] ,
+    \wbd_spim_dat_o[30] ,
+    \wbd_spim_dat_o[29] ,
+    \wbd_spim_dat_o[28] ,
+    \wbd_spim_dat_o[27] ,
+    \wbd_spim_dat_o[26] ,
+    \wbd_spim_dat_o[25] ,
+    \wbd_spim_dat_o[24] ,
+    \wbd_spim_dat_o[23] ,
+    \wbd_spim_dat_o[22] ,
+    \wbd_spim_dat_o[21] ,
+    \wbd_spim_dat_o[20] ,
+    \wbd_spim_dat_o[19] ,
+    \wbd_spim_dat_o[18] ,
+    \wbd_spim_dat_o[17] ,
+    \wbd_spim_dat_o[16] ,
+    \wbd_spim_dat_o[15] ,
+    \wbd_spim_dat_o[14] ,
+    \wbd_spim_dat_o[13] ,
+    \wbd_spim_dat_o[12] ,
+    \wbd_spim_dat_o[11] ,
+    \wbd_spim_dat_o[10] ,
+    \wbd_spim_dat_o[9] ,
+    \wbd_spim_dat_o[8] ,
+    \wbd_spim_dat_o[7] ,
+    \wbd_spim_dat_o[6] ,
+    \wbd_spim_dat_o[5] ,
+    \wbd_spim_dat_o[4] ,
+    \wbd_spim_dat_o[3] ,
+    \wbd_spim_dat_o[2] ,
+    \wbd_spim_dat_o[1] ,
+    \wbd_spim_dat_o[0] }),
+    .wbd_dat_o({\wbd_spim_dat_i[31] ,
+    \wbd_spim_dat_i[30] ,
+    \wbd_spim_dat_i[29] ,
+    \wbd_spim_dat_i[28] ,
+    \wbd_spim_dat_i[27] ,
+    \wbd_spim_dat_i[26] ,
+    \wbd_spim_dat_i[25] ,
+    \wbd_spim_dat_i[24] ,
+    \wbd_spim_dat_i[23] ,
+    \wbd_spim_dat_i[22] ,
+    \wbd_spim_dat_i[21] ,
+    \wbd_spim_dat_i[20] ,
+    \wbd_spim_dat_i[19] ,
+    \wbd_spim_dat_i[18] ,
+    \wbd_spim_dat_i[17] ,
+    \wbd_spim_dat_i[16] ,
+    \wbd_spim_dat_i[15] ,
+    \wbd_spim_dat_i[14] ,
+    \wbd_spim_dat_i[13] ,
+    \wbd_spim_dat_i[12] ,
+    \wbd_spim_dat_i[11] ,
+    \wbd_spim_dat_i[10] ,
+    \wbd_spim_dat_i[9] ,
+    \wbd_spim_dat_i[8] ,
+    \wbd_spim_dat_i[7] ,
+    \wbd_spim_dat_i[6] ,
+    \wbd_spim_dat_i[5] ,
+    \wbd_spim_dat_i[4] ,
+    \wbd_spim_dat_i[3] ,
+    \wbd_spim_dat_i[2] ,
+    \wbd_spim_dat_i[1] ,
+    \wbd_spim_dat_i[0] }),
+    .wbd_sel_i({\wbd_spim_sel_o[3] ,
+    \wbd_spim_sel_o[2] ,
+    \wbd_spim_sel_o[1] ,
+    \wbd_spim_sel_o[0] }));
  scr1_top_wb u_riscv_top (.core_clk(cpu_clk),
     .cpu_rst_n(cpu_rst_n),
     .pwrup_rst_n(wbd_int_rst_n),
@@ -1182,6 +2300,8 @@ module user_project_wrapper (user_clock2,
     .sram_csb0(sram_csb0),
     .sram_csb1(sram_csb1),
     .sram_web0(sram_web0),
+    .vccd1(vccd1),
+    .vssd1(vssd1),
     .wb_clk(wbd_clk_int),
     .wb_rst_n(wbd_int_rst_n),
     .wbd_dmem_ack_i(wbd_riscv_dmem_ack_o),
@@ -1192,8 +2312,6 @@ module user_project_wrapper (user_clock2,
     .wbd_imem_err_i(wbd_riscv_imem_err_o),
     .wbd_imem_stb_o(wbd_riscv_imem_stb_i),
     .wbd_imem_we_o(wbd_riscv_imem_we_i),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .fuse_mhartid({\fuse_mhartid[31] ,
     \fuse_mhartid[30] ,
     \fuse_mhartid[29] ,
@@ -1624,160 +2742,6 @@ module user_project_wrapper (user_clock2,
     \wbd_riscv_imem_sel_i[2] ,
     \wbd_riscv_imem_sel_i[1] ,
     \wbd_riscv_imem_sel_i[0] }));
- spim_top u_spi_master (.mclk(wbd_clk_int),
-    .rst_n(spi_rst_n),
-    .spi_clk(sflash_sck),
-    .spi_csn0(sflash_ss),
-    .wbd_ack_o(wbd_spim_ack_i),
-    .wbd_err_o(wbd_spim_err_i),
-    .wbd_stb_i(wbd_spim_stb_o),
-    .wbd_we_i(wbd_spim_we_o),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
-    .spi_debug({la_data_out[95],
-    la_data_out[94],
-    la_data_out[93],
-    la_data_out[92],
-    la_data_out[91],
-    la_data_out[90],
-    la_data_out[89],
-    la_data_out[88],
-    la_data_out[87],
-    la_data_out[86],
-    la_data_out[85],
-    la_data_out[84],
-    la_data_out[83],
-    la_data_out[82],
-    la_data_out[81],
-    la_data_out[80],
-    la_data_out[79],
-    la_data_out[78],
-    la_data_out[77],
-    la_data_out[76],
-    la_data_out[75],
-    la_data_out[74],
-    la_data_out[73],
-    la_data_out[72],
-    la_data_out[71],
-    la_data_out[70],
-    la_data_out[69],
-    la_data_out[68],
-    la_data_out[67],
-    la_data_out[66],
-    la_data_out[65],
-    la_data_out[64]}),
-    .spi_oen({\sflash_oen[3] ,
-    \sflash_oen[2] ,
-    \sflash_oen[1] ,
-    \sflash_oen[0] }),
-    .spi_sdi({\sflash_di[3] ,
-    \sflash_di[2] ,
-    \sflash_di[1] ,
-    \sflash_di[0] }),
-    .spi_sdo({\sflash_do[3] ,
-    \sflash_do[2] ,
-    \sflash_do[1] ,
-    \sflash_do[0] }),
-    .wbd_adr_i({\wbd_spim_adr_o[31] ,
-    \wbd_spim_adr_o[30] ,
-    \wbd_spim_adr_o[29] ,
-    \wbd_spim_adr_o[28] ,
-    \wbd_spim_adr_o[27] ,
-    \wbd_spim_adr_o[26] ,
-    \wbd_spim_adr_o[25] ,
-    \wbd_spim_adr_o[24] ,
-    \wbd_spim_adr_o[23] ,
-    \wbd_spim_adr_o[22] ,
-    \wbd_spim_adr_o[21] ,
-    \wbd_spim_adr_o[20] ,
-    \wbd_spim_adr_o[19] ,
-    \wbd_spim_adr_o[18] ,
-    \wbd_spim_adr_o[17] ,
-    \wbd_spim_adr_o[16] ,
-    \wbd_spim_adr_o[15] ,
-    \wbd_spim_adr_o[14] ,
-    \wbd_spim_adr_o[13] ,
-    \wbd_spim_adr_o[12] ,
-    \wbd_spim_adr_o[11] ,
-    \wbd_spim_adr_o[10] ,
-    \wbd_spim_adr_o[9] ,
-    \wbd_spim_adr_o[8] ,
-    \wbd_spim_adr_o[7] ,
-    \wbd_spim_adr_o[6] ,
-    \wbd_spim_adr_o[5] ,
-    \wbd_spim_adr_o[4] ,
-    \wbd_spim_adr_o[3] ,
-    \wbd_spim_adr_o[2] ,
-    \wbd_spim_adr_o[1] ,
-    \wbd_spim_adr_o[0] }),
-    .wbd_dat_i({\wbd_spim_dat_o[31] ,
-    \wbd_spim_dat_o[30] ,
-    \wbd_spim_dat_o[29] ,
-    \wbd_spim_dat_o[28] ,
-    \wbd_spim_dat_o[27] ,
-    \wbd_spim_dat_o[26] ,
-    \wbd_spim_dat_o[25] ,
-    \wbd_spim_dat_o[24] ,
-    \wbd_spim_dat_o[23] ,
-    \wbd_spim_dat_o[22] ,
-    \wbd_spim_dat_o[21] ,
-    \wbd_spim_dat_o[20] ,
-    \wbd_spim_dat_o[19] ,
-    \wbd_spim_dat_o[18] ,
-    \wbd_spim_dat_o[17] ,
-    \wbd_spim_dat_o[16] ,
-    \wbd_spim_dat_o[15] ,
-    \wbd_spim_dat_o[14] ,
-    \wbd_spim_dat_o[13] ,
-    \wbd_spim_dat_o[12] ,
-    \wbd_spim_dat_o[11] ,
-    \wbd_spim_dat_o[10] ,
-    \wbd_spim_dat_o[9] ,
-    \wbd_spim_dat_o[8] ,
-    \wbd_spim_dat_o[7] ,
-    \wbd_spim_dat_o[6] ,
-    \wbd_spim_dat_o[5] ,
-    \wbd_spim_dat_o[4] ,
-    \wbd_spim_dat_o[3] ,
-    \wbd_spim_dat_o[2] ,
-    \wbd_spim_dat_o[1] ,
-    \wbd_spim_dat_o[0] }),
-    .wbd_dat_o({\wbd_spim_dat_i[31] ,
-    \wbd_spim_dat_i[30] ,
-    \wbd_spim_dat_i[29] ,
-    \wbd_spim_dat_i[28] ,
-    \wbd_spim_dat_i[27] ,
-    \wbd_spim_dat_i[26] ,
-    \wbd_spim_dat_i[25] ,
-    \wbd_spim_dat_i[24] ,
-    \wbd_spim_dat_i[23] ,
-    \wbd_spim_dat_i[22] ,
-    \wbd_spim_dat_i[21] ,
-    \wbd_spim_dat_i[20] ,
-    \wbd_spim_dat_i[19] ,
-    \wbd_spim_dat_i[18] ,
-    \wbd_spim_dat_i[17] ,
-    \wbd_spim_dat_i[16] ,
-    \wbd_spim_dat_i[15] ,
-    \wbd_spim_dat_i[14] ,
-    \wbd_spim_dat_i[13] ,
-    \wbd_spim_dat_i[12] ,
-    \wbd_spim_dat_i[11] ,
-    \wbd_spim_dat_i[10] ,
-    \wbd_spim_dat_i[9] ,
-    \wbd_spim_dat_i[8] ,
-    \wbd_spim_dat_i[7] ,
-    \wbd_spim_dat_i[6] ,
-    \wbd_spim_dat_i[5] ,
-    \wbd_spim_dat_i[4] ,
-    \wbd_spim_dat_i[3] ,
-    \wbd_spim_dat_i[2] ,
-    \wbd_spim_dat_i[1] ,
-    \wbd_spim_dat_i[0] }),
-    .wbd_sel_i({\wbd_spim_sel_o[3] ,
-    \wbd_spim_sel_o[2] ,
-    \wbd_spim_sel_o[1] ,
-    \wbd_spim_sel_o[0] }));
  sky130_sram_2kbyte_1rw1r_32x512_8 u_sram_2kb (.csb0(sram_csb0),
     .csb1(sram_csb1),
     .web0(sram_web0),
@@ -1903,8 +2867,9 @@ module user_project_wrapper (user_clock2,
     \sram_wmask0[2] ,
     \sram_wmask0[1] ,
     \sram_wmask0[0] }));
- uart_i2c_usb_top u_uart_i2c_usb (.app_clk(wbd_clk_int),
+ uart_i2c_usb_spi_top u_uart_i2c_usb_spi (.app_clk(wbd_clk_int),
     .i2c_rstn(i2c_rst_n),
+    .i2cm_intr_o(i2cm_intr_o),
     .reg_ack(wbd_uart_ack_i),
     .reg_be(wbd_uart_sel_o),
     .reg_cs(wbd_uart_stb_o),
@@ -1915,12 +2880,18 @@ module user_project_wrapper (user_clock2,
     .sda_pad_i(i2cm_data_i),
     .sda_pad_o(i2cm_data_o),
     .sda_padoen_o(i2cm_data_oen),
+    .spi_rstn(sspim_rst_n),
+    .sspim_sck(sspim_sck),
+    .sspim_si(sspim_si),
+    .sspim_so(sspim_so),
+    .sspim_ssn(sspim_ssn),
     .uart_rstn(uart_rst_n),
     .uart_rxd(uart_rxd),
     .uart_txd(uart_txd),
     .usb_clk(usb_clk),
     .usb_in_dn(usb_dn_i),
     .usb_in_dp(usb_dp_i),
+    .usb_intr_o(usb_intr_o),
     .usb_out_dn(usb_dn_o),
     .usb_out_dp(usb_dp_o),
     .usb_out_tx_oen(usb_oen),
@@ -2002,15 +2973,17 @@ module user_project_wrapper (user_clock2,
  wb_host u_wb_host (.cpu_clk(cpu_clk),
     .cpu_rst_n(cpu_rst_n),
     .i2cm_rst_n(i2c_rst_n),
+    .qspim_rst_n(qspim_rst_n),
     .rtc_clk(rtc_clk),
     .sdram_clk(sdram_clk),
-    .sdram_rst_n(sdram_rst_n),
-    .spi_rst_n(spi_rst_n),
+    .sspim_rst_n(sspim_rst_n),
     .uart_rst_n(uart_rst_n),
     .usb_clk(usb_clk),
     .usb_rst_n(usb_rst_n),
     .user_clock1(wb_clk_i),
     .user_clock2(user_clock2),
+    .vccd1(vccd1),
+    .vssd1(vssd1),
     .wbd_int_rst_n(wbd_int_rst_n),
     .wbm_ack_o(wbs_ack_o),
     .wbm_clk_i(wb_clk_i),
@@ -2025,8 +2998,6 @@ module user_project_wrapper (user_clock2,
     .wbs_err_i(wbd_int_err_o),
     .wbs_stb_o(wbd_int_stb_i),
     .wbs_we_o(wbd_int_we_i),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .cfg_clk_ctrl1({\cfg_clk_ctrl1[31] ,
     \cfg_clk_ctrl1[30] ,
     \cfg_clk_ctrl1[29] ,
