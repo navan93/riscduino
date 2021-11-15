@@ -186,7 +186,6 @@ module user_project_wrapper (user_clock2,
  wire \sar2dac[5] ;
  wire \sar2dac[6] ;
  wire \sar2dac[7] ;
- wire sdram_clk;
  wire \sflash_di[0] ;
  wire \sflash_di[1] ;
  wire \sflash_di[2] ;
@@ -3004,7 +3003,6 @@ module user_project_wrapper (user_clock2,
     .i2cm_rst_n(i2c_rst_n),
     .qspim_rst_n(qspim_rst_n),
     .rtc_clk(rtc_clk),
-    .sdram_clk(sdram_clk),
     .sspim_rst_n(sspim_rst_n),
     .uart_rst_n(uart_rst_n),
     .usb_clk(usb_clk),
