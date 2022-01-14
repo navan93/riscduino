@@ -3583,7 +3583,7 @@ module user_project_wrapper (user_clock2,
     \wbd_spim_sel_o[2] ,
     \wbd_spim_sel_o[1] ,
     \wbd_spim_sel_o[0] }));
- scr1_top_wb u_riscv_top (.core_clk(cpu_clk),
+ ycr1_top_wb u_riscv_top (.core_clk(cpu_clk),
     .cpu_rst_n(cpu_rst_n),
     .pwrup_rst_n(wbd_int_rst_n),
     .rst_n(wbd_int_rst_n),
