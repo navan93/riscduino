@@ -702,9 +702,12 @@ module user_project_wrapper (user_clock2,
  wire \sflash_oen[2] ;
  wire \sflash_oen[3] ;
  wire sflash_sck;
- wire sflash_ss;
  wire soft_irq;
  wire soft_irq_rp;
+ wire \spi_csn[0] ;
+ wire \spi_csn[1] ;
+ wire \spi_csn[2] ;
+ wire \spi_csn[3] ;
  wire \sram0_addr0[0] ;
  wire \sram0_addr0[1] ;
  wire \sram0_addr0[2] ;
@@ -3086,7 +3089,7 @@ module user_project_wrapper (user_clock2,
     .reg_cs(wbd_glbl_stb_o),
     .reg_wr(wbd_glbl_we_o),
     .sflash_sck(sflash_sck),
-    .sflash_ss(sflash_ss),
+    .sflash_ss(\spi_csn[0] ),
     .soft_irq(soft_irq),
     .spim_miso(sspim_so),
     .spim_mosi(sspim_si),
@@ -3422,7 +3425,6 @@ module user_project_wrapper (user_clock2,
  qspim_top u_qspi_master (.mclk(wbd_clk_spi),
     .rst_n(qspim_rst_n),
     .spi_clk(sflash_sck),
-    .spi_csn0(sflash_ss),
     .vccd1(vccd1),
     .vssd1(vssd1),
     .wbd_ack_o(wbd_spim_ack_i),
@@ -3439,6 +3441,10 @@ module user_project_wrapper (user_clock2,
     \cfg_cska_qspi_rp[2] ,
     \cfg_cska_qspi_rp[1] ,
     \cfg_cska_qspi_rp[0] }),
+    .spi_csn({\spi_csn[3] ,
+    \spi_csn[2] ,
+    \spi_csn[1] ,
+    \spi_csn[0] }),
     .spi_debug({la_data_out[95],
     la_data_out[94],
     la_data_out[93],
