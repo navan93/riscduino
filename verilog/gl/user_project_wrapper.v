@@ -218,6 +218,129 @@ module user_project_wrapper (user_clock2,
  wire \cfg_cska_uart_rp[3] ;
  wire cpu_clk;
  wire cpu_rst_n;
+ wire \dcache_mem_addr0[0] ;
+ wire \dcache_mem_addr0[1] ;
+ wire \dcache_mem_addr0[2] ;
+ wire \dcache_mem_addr0[3] ;
+ wire \dcache_mem_addr0[4] ;
+ wire \dcache_mem_addr0[5] ;
+ wire \dcache_mem_addr0[6] ;
+ wire \dcache_mem_addr0[7] ;
+ wire \dcache_mem_addr0[8] ;
+ wire \dcache_mem_addr1[0] ;
+ wire \dcache_mem_addr1[1] ;
+ wire \dcache_mem_addr1[2] ;
+ wire \dcache_mem_addr1[3] ;
+ wire \dcache_mem_addr1[4] ;
+ wire \dcache_mem_addr1[5] ;
+ wire \dcache_mem_addr1[6] ;
+ wire \dcache_mem_addr1[7] ;
+ wire \dcache_mem_addr1[8] ;
+ wire dcache_mem_clk0;
+ wire dcache_mem_clk1;
+ wire dcache_mem_csb0;
+ wire dcache_mem_csb1;
+ wire \dcache_mem_din0[0] ;
+ wire \dcache_mem_din0[10] ;
+ wire \dcache_mem_din0[11] ;
+ wire \dcache_mem_din0[12] ;
+ wire \dcache_mem_din0[13] ;
+ wire \dcache_mem_din0[14] ;
+ wire \dcache_mem_din0[15] ;
+ wire \dcache_mem_din0[16] ;
+ wire \dcache_mem_din0[17] ;
+ wire \dcache_mem_din0[18] ;
+ wire \dcache_mem_din0[19] ;
+ wire \dcache_mem_din0[1] ;
+ wire \dcache_mem_din0[20] ;
+ wire \dcache_mem_din0[21] ;
+ wire \dcache_mem_din0[22] ;
+ wire \dcache_mem_din0[23] ;
+ wire \dcache_mem_din0[24] ;
+ wire \dcache_mem_din0[25] ;
+ wire \dcache_mem_din0[26] ;
+ wire \dcache_mem_din0[27] ;
+ wire \dcache_mem_din0[28] ;
+ wire \dcache_mem_din0[29] ;
+ wire \dcache_mem_din0[2] ;
+ wire \dcache_mem_din0[30] ;
+ wire \dcache_mem_din0[31] ;
+ wire \dcache_mem_din0[3] ;
+ wire \dcache_mem_din0[4] ;
+ wire \dcache_mem_din0[5] ;
+ wire \dcache_mem_din0[6] ;
+ wire \dcache_mem_din0[7] ;
+ wire \dcache_mem_din0[8] ;
+ wire \dcache_mem_din0[9] ;
+ wire \dcache_mem_dout0[0] ;
+ wire \dcache_mem_dout0[10] ;
+ wire \dcache_mem_dout0[11] ;
+ wire \dcache_mem_dout0[12] ;
+ wire \dcache_mem_dout0[13] ;
+ wire \dcache_mem_dout0[14] ;
+ wire \dcache_mem_dout0[15] ;
+ wire \dcache_mem_dout0[16] ;
+ wire \dcache_mem_dout0[17] ;
+ wire \dcache_mem_dout0[18] ;
+ wire \dcache_mem_dout0[19] ;
+ wire \dcache_mem_dout0[1] ;
+ wire \dcache_mem_dout0[20] ;
+ wire \dcache_mem_dout0[21] ;
+ wire \dcache_mem_dout0[22] ;
+ wire \dcache_mem_dout0[23] ;
+ wire \dcache_mem_dout0[24] ;
+ wire \dcache_mem_dout0[25] ;
+ wire \dcache_mem_dout0[26] ;
+ wire \dcache_mem_dout0[27] ;
+ wire \dcache_mem_dout0[28] ;
+ wire \dcache_mem_dout0[29] ;
+ wire \dcache_mem_dout0[2] ;
+ wire \dcache_mem_dout0[30] ;
+ wire \dcache_mem_dout0[31] ;
+ wire \dcache_mem_dout0[3] ;
+ wire \dcache_mem_dout0[4] ;
+ wire \dcache_mem_dout0[5] ;
+ wire \dcache_mem_dout0[6] ;
+ wire \dcache_mem_dout0[7] ;
+ wire \dcache_mem_dout0[8] ;
+ wire \dcache_mem_dout0[9] ;
+ wire \dcache_mem_dout1[0] ;
+ wire \dcache_mem_dout1[10] ;
+ wire \dcache_mem_dout1[11] ;
+ wire \dcache_mem_dout1[12] ;
+ wire \dcache_mem_dout1[13] ;
+ wire \dcache_mem_dout1[14] ;
+ wire \dcache_mem_dout1[15] ;
+ wire \dcache_mem_dout1[16] ;
+ wire \dcache_mem_dout1[17] ;
+ wire \dcache_mem_dout1[18] ;
+ wire \dcache_mem_dout1[19] ;
+ wire \dcache_mem_dout1[1] ;
+ wire \dcache_mem_dout1[20] ;
+ wire \dcache_mem_dout1[21] ;
+ wire \dcache_mem_dout1[22] ;
+ wire \dcache_mem_dout1[23] ;
+ wire \dcache_mem_dout1[24] ;
+ wire \dcache_mem_dout1[25] ;
+ wire \dcache_mem_dout1[26] ;
+ wire \dcache_mem_dout1[27] ;
+ wire \dcache_mem_dout1[28] ;
+ wire \dcache_mem_dout1[29] ;
+ wire \dcache_mem_dout1[2] ;
+ wire \dcache_mem_dout1[30] ;
+ wire \dcache_mem_dout1[31] ;
+ wire \dcache_mem_dout1[3] ;
+ wire \dcache_mem_dout1[4] ;
+ wire \dcache_mem_dout1[5] ;
+ wire \dcache_mem_dout1[6] ;
+ wire \dcache_mem_dout1[7] ;
+ wire \dcache_mem_dout1[8] ;
+ wire \dcache_mem_dout1[9] ;
+ wire dcache_mem_web0;
+ wire \dcache_mem_wmask0[0] ;
+ wire \dcache_mem_wmask0[1] ;
+ wire \dcache_mem_wmask0[2] ;
+ wire \dcache_mem_wmask0[3] ;
  wire \fuse_mhartid[0] ;
  wire \fuse_mhartid[10] ;
  wire \fuse_mhartid[11] ;
@@ -290,6 +413,97 @@ module user_project_wrapper (user_clock2,
  wire i2cm_data_o;
  wire i2cm_data_oen;
  wire i2cm_intr_o;
+ wire \icache_mem_addr0[0] ;
+ wire \icache_mem_addr0[1] ;
+ wire \icache_mem_addr0[2] ;
+ wire \icache_mem_addr0[3] ;
+ wire \icache_mem_addr0[4] ;
+ wire \icache_mem_addr0[5] ;
+ wire \icache_mem_addr0[6] ;
+ wire \icache_mem_addr0[7] ;
+ wire \icache_mem_addr0[8] ;
+ wire \icache_mem_addr1[0] ;
+ wire \icache_mem_addr1[1] ;
+ wire \icache_mem_addr1[2] ;
+ wire \icache_mem_addr1[3] ;
+ wire \icache_mem_addr1[4] ;
+ wire \icache_mem_addr1[5] ;
+ wire \icache_mem_addr1[6] ;
+ wire \icache_mem_addr1[7] ;
+ wire \icache_mem_addr1[8] ;
+ wire icache_mem_clk0;
+ wire icache_mem_clk1;
+ wire icache_mem_csb0;
+ wire icache_mem_csb1;
+ wire \icache_mem_din0[0] ;
+ wire \icache_mem_din0[10] ;
+ wire \icache_mem_din0[11] ;
+ wire \icache_mem_din0[12] ;
+ wire \icache_mem_din0[13] ;
+ wire \icache_mem_din0[14] ;
+ wire \icache_mem_din0[15] ;
+ wire \icache_mem_din0[16] ;
+ wire \icache_mem_din0[17] ;
+ wire \icache_mem_din0[18] ;
+ wire \icache_mem_din0[19] ;
+ wire \icache_mem_din0[1] ;
+ wire \icache_mem_din0[20] ;
+ wire \icache_mem_din0[21] ;
+ wire \icache_mem_din0[22] ;
+ wire \icache_mem_din0[23] ;
+ wire \icache_mem_din0[24] ;
+ wire \icache_mem_din0[25] ;
+ wire \icache_mem_din0[26] ;
+ wire \icache_mem_din0[27] ;
+ wire \icache_mem_din0[28] ;
+ wire \icache_mem_din0[29] ;
+ wire \icache_mem_din0[2] ;
+ wire \icache_mem_din0[30] ;
+ wire \icache_mem_din0[31] ;
+ wire \icache_mem_din0[3] ;
+ wire \icache_mem_din0[4] ;
+ wire \icache_mem_din0[5] ;
+ wire \icache_mem_din0[6] ;
+ wire \icache_mem_din0[7] ;
+ wire \icache_mem_din0[8] ;
+ wire \icache_mem_din0[9] ;
+ wire \icache_mem_dout1[0] ;
+ wire \icache_mem_dout1[10] ;
+ wire \icache_mem_dout1[11] ;
+ wire \icache_mem_dout1[12] ;
+ wire \icache_mem_dout1[13] ;
+ wire \icache_mem_dout1[14] ;
+ wire \icache_mem_dout1[15] ;
+ wire \icache_mem_dout1[16] ;
+ wire \icache_mem_dout1[17] ;
+ wire \icache_mem_dout1[18] ;
+ wire \icache_mem_dout1[19] ;
+ wire \icache_mem_dout1[1] ;
+ wire \icache_mem_dout1[20] ;
+ wire \icache_mem_dout1[21] ;
+ wire \icache_mem_dout1[22] ;
+ wire \icache_mem_dout1[23] ;
+ wire \icache_mem_dout1[24] ;
+ wire \icache_mem_dout1[25] ;
+ wire \icache_mem_dout1[26] ;
+ wire \icache_mem_dout1[27] ;
+ wire \icache_mem_dout1[28] ;
+ wire \icache_mem_dout1[29] ;
+ wire \icache_mem_dout1[2] ;
+ wire \icache_mem_dout1[30] ;
+ wire \icache_mem_dout1[31] ;
+ wire \icache_mem_dout1[3] ;
+ wire \icache_mem_dout1[4] ;
+ wire \icache_mem_dout1[5] ;
+ wire \icache_mem_dout1[6] ;
+ wire \icache_mem_dout1[7] ;
+ wire \icache_mem_dout1[8] ;
+ wire \icache_mem_dout1[9] ;
+ wire icache_mem_web0;
+ wire \icache_mem_wmask0[0] ;
+ wire \icache_mem_wmask0[1] ;
+ wire \icache_mem_wmask0[2] ;
+ wire \icache_mem_wmask0[3] ;
  wire \irq_lines[0] ;
  wire \irq_lines[10] ;
  wire \irq_lines[11] ;
@@ -831,129 +1045,6 @@ module user_project_wrapper (user_clock2,
  wire \sram0_wmask0[1] ;
  wire \sram0_wmask0[2] ;
  wire \sram0_wmask0[3] ;
- wire \sram1_addr0[0] ;
- wire \sram1_addr0[1] ;
- wire \sram1_addr0[2] ;
- wire \sram1_addr0[3] ;
- wire \sram1_addr0[4] ;
- wire \sram1_addr0[5] ;
- wire \sram1_addr0[6] ;
- wire \sram1_addr0[7] ;
- wire \sram1_addr0[8] ;
- wire \sram1_addr1[0] ;
- wire \sram1_addr1[1] ;
- wire \sram1_addr1[2] ;
- wire \sram1_addr1[3] ;
- wire \sram1_addr1[4] ;
- wire \sram1_addr1[5] ;
- wire \sram1_addr1[6] ;
- wire \sram1_addr1[7] ;
- wire \sram1_addr1[8] ;
- wire sram1_clk0;
- wire sram1_clk1;
- wire sram1_csb0;
- wire sram1_csb1;
- wire \sram1_din0[0] ;
- wire \sram1_din0[10] ;
- wire \sram1_din0[11] ;
- wire \sram1_din0[12] ;
- wire \sram1_din0[13] ;
- wire \sram1_din0[14] ;
- wire \sram1_din0[15] ;
- wire \sram1_din0[16] ;
- wire \sram1_din0[17] ;
- wire \sram1_din0[18] ;
- wire \sram1_din0[19] ;
- wire \sram1_din0[1] ;
- wire \sram1_din0[20] ;
- wire \sram1_din0[21] ;
- wire \sram1_din0[22] ;
- wire \sram1_din0[23] ;
- wire \sram1_din0[24] ;
- wire \sram1_din0[25] ;
- wire \sram1_din0[26] ;
- wire \sram1_din0[27] ;
- wire \sram1_din0[28] ;
- wire \sram1_din0[29] ;
- wire \sram1_din0[2] ;
- wire \sram1_din0[30] ;
- wire \sram1_din0[31] ;
- wire \sram1_din0[3] ;
- wire \sram1_din0[4] ;
- wire \sram1_din0[5] ;
- wire \sram1_din0[6] ;
- wire \sram1_din0[7] ;
- wire \sram1_din0[8] ;
- wire \sram1_din0[9] ;
- wire \sram1_dout0[0] ;
- wire \sram1_dout0[10] ;
- wire \sram1_dout0[11] ;
- wire \sram1_dout0[12] ;
- wire \sram1_dout0[13] ;
- wire \sram1_dout0[14] ;
- wire \sram1_dout0[15] ;
- wire \sram1_dout0[16] ;
- wire \sram1_dout0[17] ;
- wire \sram1_dout0[18] ;
- wire \sram1_dout0[19] ;
- wire \sram1_dout0[1] ;
- wire \sram1_dout0[20] ;
- wire \sram1_dout0[21] ;
- wire \sram1_dout0[22] ;
- wire \sram1_dout0[23] ;
- wire \sram1_dout0[24] ;
- wire \sram1_dout0[25] ;
- wire \sram1_dout0[26] ;
- wire \sram1_dout0[27] ;
- wire \sram1_dout0[28] ;
- wire \sram1_dout0[29] ;
- wire \sram1_dout0[2] ;
- wire \sram1_dout0[30] ;
- wire \sram1_dout0[31] ;
- wire \sram1_dout0[3] ;
- wire \sram1_dout0[4] ;
- wire \sram1_dout0[5] ;
- wire \sram1_dout0[6] ;
- wire \sram1_dout0[7] ;
- wire \sram1_dout0[8] ;
- wire \sram1_dout0[9] ;
- wire \sram1_dout1[0] ;
- wire \sram1_dout1[10] ;
- wire \sram1_dout1[11] ;
- wire \sram1_dout1[12] ;
- wire \sram1_dout1[13] ;
- wire \sram1_dout1[14] ;
- wire \sram1_dout1[15] ;
- wire \sram1_dout1[16] ;
- wire \sram1_dout1[17] ;
- wire \sram1_dout1[18] ;
- wire \sram1_dout1[19] ;
- wire \sram1_dout1[1] ;
- wire \sram1_dout1[20] ;
- wire \sram1_dout1[21] ;
- wire \sram1_dout1[22] ;
- wire \sram1_dout1[23] ;
- wire \sram1_dout1[24] ;
- wire \sram1_dout1[25] ;
- wire \sram1_dout1[26] ;
- wire \sram1_dout1[27] ;
- wire \sram1_dout1[28] ;
- wire \sram1_dout1[29] ;
- wire \sram1_dout1[2] ;
- wire \sram1_dout1[30] ;
- wire \sram1_dout1[31] ;
- wire \sram1_dout1[3] ;
- wire \sram1_dout1[4] ;
- wire \sram1_dout1[5] ;
- wire \sram1_dout1[6] ;
- wire \sram1_dout1[7] ;
- wire \sram1_dout1[8] ;
- wire \sram1_dout1[9] ;
- wire sram1_web0;
- wire \sram1_wmask0[0] ;
- wire \sram1_wmask0[1] ;
- wire \sram1_wmask0[2] ;
- wire \sram1_wmask0[3] ;
  wire sspim_rst_n;
  wire sspim_sck;
  wire sspim_si;
@@ -1188,6 +1279,17 @@ module user_project_wrapper (user_clock2,
  wire \wbd_mbist_adr_o[7] ;
  wire \wbd_mbist_adr_o[8] ;
  wire \wbd_mbist_adr_o[9] ;
+ wire \wbd_mbist_bl_o[0] ;
+ wire \wbd_mbist_bl_o[1] ;
+ wire \wbd_mbist_bl_o[2] ;
+ wire \wbd_mbist_bl_o[3] ;
+ wire \wbd_mbist_bl_o[4] ;
+ wire \wbd_mbist_bl_o[5] ;
+ wire \wbd_mbist_bl_o[6] ;
+ wire \wbd_mbist_bl_o[7] ;
+ wire \wbd_mbist_bl_o[8] ;
+ wire \wbd_mbist_bl_o[9] ;
+ wire wbd_mbist_bry_o;
  wire wbd_mbist_cyc_o;
  wire \wbd_mbist_dat_i[0] ;
  wire \wbd_mbist_dat_i[10] ;
@@ -1253,12 +1355,129 @@ module user_project_wrapper (user_clock2,
  wire \wbd_mbist_dat_o[7] ;
  wire \wbd_mbist_dat_o[8] ;
  wire \wbd_mbist_dat_o[9] ;
+ wire wbd_mbist_lack_i;
  wire \wbd_mbist_sel_o[0] ;
  wire \wbd_mbist_sel_o[1] ;
  wire \wbd_mbist_sel_o[2] ;
  wire \wbd_mbist_sel_o[3] ;
  wire wbd_mbist_stb_o;
  wire wbd_mbist_we_o;
+ wire wbd_riscv_dcache_ack_o;
+ wire \wbd_riscv_dcache_adr_i[0] ;
+ wire \wbd_riscv_dcache_adr_i[10] ;
+ wire \wbd_riscv_dcache_adr_i[11] ;
+ wire \wbd_riscv_dcache_adr_i[12] ;
+ wire \wbd_riscv_dcache_adr_i[13] ;
+ wire \wbd_riscv_dcache_adr_i[14] ;
+ wire \wbd_riscv_dcache_adr_i[15] ;
+ wire \wbd_riscv_dcache_adr_i[16] ;
+ wire \wbd_riscv_dcache_adr_i[17] ;
+ wire \wbd_riscv_dcache_adr_i[18] ;
+ wire \wbd_riscv_dcache_adr_i[19] ;
+ wire \wbd_riscv_dcache_adr_i[1] ;
+ wire \wbd_riscv_dcache_adr_i[20] ;
+ wire \wbd_riscv_dcache_adr_i[21] ;
+ wire \wbd_riscv_dcache_adr_i[22] ;
+ wire \wbd_riscv_dcache_adr_i[23] ;
+ wire \wbd_riscv_dcache_adr_i[24] ;
+ wire \wbd_riscv_dcache_adr_i[25] ;
+ wire \wbd_riscv_dcache_adr_i[26] ;
+ wire \wbd_riscv_dcache_adr_i[27] ;
+ wire \wbd_riscv_dcache_adr_i[28] ;
+ wire \wbd_riscv_dcache_adr_i[29] ;
+ wire \wbd_riscv_dcache_adr_i[2] ;
+ wire \wbd_riscv_dcache_adr_i[30] ;
+ wire \wbd_riscv_dcache_adr_i[31] ;
+ wire \wbd_riscv_dcache_adr_i[3] ;
+ wire \wbd_riscv_dcache_adr_i[4] ;
+ wire \wbd_riscv_dcache_adr_i[5] ;
+ wire \wbd_riscv_dcache_adr_i[6] ;
+ wire \wbd_riscv_dcache_adr_i[7] ;
+ wire \wbd_riscv_dcache_adr_i[8] ;
+ wire \wbd_riscv_dcache_adr_i[9] ;
+ wire \wbd_riscv_dcache_bl_i[0] ;
+ wire \wbd_riscv_dcache_bl_i[1] ;
+ wire \wbd_riscv_dcache_bl_i[2] ;
+ wire \wbd_riscv_dcache_bl_i[3] ;
+ wire \wbd_riscv_dcache_bl_i[4] ;
+ wire \wbd_riscv_dcache_bl_i[5] ;
+ wire \wbd_riscv_dcache_bl_i[6] ;
+ wire \wbd_riscv_dcache_bl_i[7] ;
+ wire \wbd_riscv_dcache_bl_i[8] ;
+ wire \wbd_riscv_dcache_bl_i[9] ;
+ wire wbd_riscv_dcache_bry_i;
+ wire \wbd_riscv_dcache_dat_i[0] ;
+ wire \wbd_riscv_dcache_dat_i[10] ;
+ wire \wbd_riscv_dcache_dat_i[11] ;
+ wire \wbd_riscv_dcache_dat_i[12] ;
+ wire \wbd_riscv_dcache_dat_i[13] ;
+ wire \wbd_riscv_dcache_dat_i[14] ;
+ wire \wbd_riscv_dcache_dat_i[15] ;
+ wire \wbd_riscv_dcache_dat_i[16] ;
+ wire \wbd_riscv_dcache_dat_i[17] ;
+ wire \wbd_riscv_dcache_dat_i[18] ;
+ wire \wbd_riscv_dcache_dat_i[19] ;
+ wire \wbd_riscv_dcache_dat_i[1] ;
+ wire \wbd_riscv_dcache_dat_i[20] ;
+ wire \wbd_riscv_dcache_dat_i[21] ;
+ wire \wbd_riscv_dcache_dat_i[22] ;
+ wire \wbd_riscv_dcache_dat_i[23] ;
+ wire \wbd_riscv_dcache_dat_i[24] ;
+ wire \wbd_riscv_dcache_dat_i[25] ;
+ wire \wbd_riscv_dcache_dat_i[26] ;
+ wire \wbd_riscv_dcache_dat_i[27] ;
+ wire \wbd_riscv_dcache_dat_i[28] ;
+ wire \wbd_riscv_dcache_dat_i[29] ;
+ wire \wbd_riscv_dcache_dat_i[2] ;
+ wire \wbd_riscv_dcache_dat_i[30] ;
+ wire \wbd_riscv_dcache_dat_i[31] ;
+ wire \wbd_riscv_dcache_dat_i[3] ;
+ wire \wbd_riscv_dcache_dat_i[4] ;
+ wire \wbd_riscv_dcache_dat_i[5] ;
+ wire \wbd_riscv_dcache_dat_i[6] ;
+ wire \wbd_riscv_dcache_dat_i[7] ;
+ wire \wbd_riscv_dcache_dat_i[8] ;
+ wire \wbd_riscv_dcache_dat_i[9] ;
+ wire \wbd_riscv_dcache_dat_o[0] ;
+ wire \wbd_riscv_dcache_dat_o[10] ;
+ wire \wbd_riscv_dcache_dat_o[11] ;
+ wire \wbd_riscv_dcache_dat_o[12] ;
+ wire \wbd_riscv_dcache_dat_o[13] ;
+ wire \wbd_riscv_dcache_dat_o[14] ;
+ wire \wbd_riscv_dcache_dat_o[15] ;
+ wire \wbd_riscv_dcache_dat_o[16] ;
+ wire \wbd_riscv_dcache_dat_o[17] ;
+ wire \wbd_riscv_dcache_dat_o[18] ;
+ wire \wbd_riscv_dcache_dat_o[19] ;
+ wire \wbd_riscv_dcache_dat_o[1] ;
+ wire \wbd_riscv_dcache_dat_o[20] ;
+ wire \wbd_riscv_dcache_dat_o[21] ;
+ wire \wbd_riscv_dcache_dat_o[22] ;
+ wire \wbd_riscv_dcache_dat_o[23] ;
+ wire \wbd_riscv_dcache_dat_o[24] ;
+ wire \wbd_riscv_dcache_dat_o[25] ;
+ wire \wbd_riscv_dcache_dat_o[26] ;
+ wire \wbd_riscv_dcache_dat_o[27] ;
+ wire \wbd_riscv_dcache_dat_o[28] ;
+ wire \wbd_riscv_dcache_dat_o[29] ;
+ wire \wbd_riscv_dcache_dat_o[2] ;
+ wire \wbd_riscv_dcache_dat_o[30] ;
+ wire \wbd_riscv_dcache_dat_o[31] ;
+ wire \wbd_riscv_dcache_dat_o[3] ;
+ wire \wbd_riscv_dcache_dat_o[4] ;
+ wire \wbd_riscv_dcache_dat_o[5] ;
+ wire \wbd_riscv_dcache_dat_o[6] ;
+ wire \wbd_riscv_dcache_dat_o[7] ;
+ wire \wbd_riscv_dcache_dat_o[8] ;
+ wire \wbd_riscv_dcache_dat_o[9] ;
+ wire wbd_riscv_dcache_err_o;
+ wire wbd_riscv_dcache_lack_o;
+ wire \wbd_riscv_dcache_sel_i[0] ;
+ wire \wbd_riscv_dcache_sel_i[1] ;
+ wire \wbd_riscv_dcache_sel_i[2] ;
+ wire \wbd_riscv_dcache_sel_i[3] ;
+ wire wbd_riscv_dcache_stb_i;
+ wire wbd_riscv_dcache_we_i;
  wire wbd_riscv_dmem_ack_o;
  wire \wbd_riscv_dmem_adr_i[0] ;
  wire \wbd_riscv_dmem_adr_i[10] ;
@@ -1363,110 +1582,90 @@ module user_project_wrapper (user_clock2,
  wire \wbd_riscv_dmem_sel_i[3] ;
  wire wbd_riscv_dmem_stb_i;
  wire wbd_riscv_dmem_we_i;
- wire wbd_riscv_imem_ack_o;
- wire \wbd_riscv_imem_adr_i[0] ;
- wire \wbd_riscv_imem_adr_i[10] ;
- wire \wbd_riscv_imem_adr_i[11] ;
- wire \wbd_riscv_imem_adr_i[12] ;
- wire \wbd_riscv_imem_adr_i[13] ;
- wire \wbd_riscv_imem_adr_i[14] ;
- wire \wbd_riscv_imem_adr_i[15] ;
- wire \wbd_riscv_imem_adr_i[16] ;
- wire \wbd_riscv_imem_adr_i[17] ;
- wire \wbd_riscv_imem_adr_i[18] ;
- wire \wbd_riscv_imem_adr_i[19] ;
- wire \wbd_riscv_imem_adr_i[1] ;
- wire \wbd_riscv_imem_adr_i[20] ;
- wire \wbd_riscv_imem_adr_i[21] ;
- wire \wbd_riscv_imem_adr_i[22] ;
- wire \wbd_riscv_imem_adr_i[23] ;
- wire \wbd_riscv_imem_adr_i[24] ;
- wire \wbd_riscv_imem_adr_i[25] ;
- wire \wbd_riscv_imem_adr_i[26] ;
- wire \wbd_riscv_imem_adr_i[27] ;
- wire \wbd_riscv_imem_adr_i[28] ;
- wire \wbd_riscv_imem_adr_i[29] ;
- wire \wbd_riscv_imem_adr_i[2] ;
- wire \wbd_riscv_imem_adr_i[30] ;
- wire \wbd_riscv_imem_adr_i[31] ;
- wire \wbd_riscv_imem_adr_i[3] ;
- wire \wbd_riscv_imem_adr_i[4] ;
- wire \wbd_riscv_imem_adr_i[5] ;
- wire \wbd_riscv_imem_adr_i[6] ;
- wire \wbd_riscv_imem_adr_i[7] ;
- wire \wbd_riscv_imem_adr_i[8] ;
- wire \wbd_riscv_imem_adr_i[9] ;
- wire \wbd_riscv_imem_dat_i[0] ;
- wire \wbd_riscv_imem_dat_i[10] ;
- wire \wbd_riscv_imem_dat_i[11] ;
- wire \wbd_riscv_imem_dat_i[12] ;
- wire \wbd_riscv_imem_dat_i[13] ;
- wire \wbd_riscv_imem_dat_i[14] ;
- wire \wbd_riscv_imem_dat_i[15] ;
- wire \wbd_riscv_imem_dat_i[16] ;
- wire \wbd_riscv_imem_dat_i[17] ;
- wire \wbd_riscv_imem_dat_i[18] ;
- wire \wbd_riscv_imem_dat_i[19] ;
- wire \wbd_riscv_imem_dat_i[1] ;
- wire \wbd_riscv_imem_dat_i[20] ;
- wire \wbd_riscv_imem_dat_i[21] ;
- wire \wbd_riscv_imem_dat_i[22] ;
- wire \wbd_riscv_imem_dat_i[23] ;
- wire \wbd_riscv_imem_dat_i[24] ;
- wire \wbd_riscv_imem_dat_i[25] ;
- wire \wbd_riscv_imem_dat_i[26] ;
- wire \wbd_riscv_imem_dat_i[27] ;
- wire \wbd_riscv_imem_dat_i[28] ;
- wire \wbd_riscv_imem_dat_i[29] ;
- wire \wbd_riscv_imem_dat_i[2] ;
- wire \wbd_riscv_imem_dat_i[30] ;
- wire \wbd_riscv_imem_dat_i[31] ;
- wire \wbd_riscv_imem_dat_i[3] ;
- wire \wbd_riscv_imem_dat_i[4] ;
- wire \wbd_riscv_imem_dat_i[5] ;
- wire \wbd_riscv_imem_dat_i[6] ;
- wire \wbd_riscv_imem_dat_i[7] ;
- wire \wbd_riscv_imem_dat_i[8] ;
- wire \wbd_riscv_imem_dat_i[9] ;
- wire \wbd_riscv_imem_dat_o[0] ;
- wire \wbd_riscv_imem_dat_o[10] ;
- wire \wbd_riscv_imem_dat_o[11] ;
- wire \wbd_riscv_imem_dat_o[12] ;
- wire \wbd_riscv_imem_dat_o[13] ;
- wire \wbd_riscv_imem_dat_o[14] ;
- wire \wbd_riscv_imem_dat_o[15] ;
- wire \wbd_riscv_imem_dat_o[16] ;
- wire \wbd_riscv_imem_dat_o[17] ;
- wire \wbd_riscv_imem_dat_o[18] ;
- wire \wbd_riscv_imem_dat_o[19] ;
- wire \wbd_riscv_imem_dat_o[1] ;
- wire \wbd_riscv_imem_dat_o[20] ;
- wire \wbd_riscv_imem_dat_o[21] ;
- wire \wbd_riscv_imem_dat_o[22] ;
- wire \wbd_riscv_imem_dat_o[23] ;
- wire \wbd_riscv_imem_dat_o[24] ;
- wire \wbd_riscv_imem_dat_o[25] ;
- wire \wbd_riscv_imem_dat_o[26] ;
- wire \wbd_riscv_imem_dat_o[27] ;
- wire \wbd_riscv_imem_dat_o[28] ;
- wire \wbd_riscv_imem_dat_o[29] ;
- wire \wbd_riscv_imem_dat_o[2] ;
- wire \wbd_riscv_imem_dat_o[30] ;
- wire \wbd_riscv_imem_dat_o[31] ;
- wire \wbd_riscv_imem_dat_o[3] ;
- wire \wbd_riscv_imem_dat_o[4] ;
- wire \wbd_riscv_imem_dat_o[5] ;
- wire \wbd_riscv_imem_dat_o[6] ;
- wire \wbd_riscv_imem_dat_o[7] ;
- wire \wbd_riscv_imem_dat_o[8] ;
- wire \wbd_riscv_imem_dat_o[9] ;
- wire wbd_riscv_imem_err_o;
- wire \wbd_riscv_imem_sel_i[0] ;
- wire \wbd_riscv_imem_sel_i[1] ;
- wire \wbd_riscv_imem_sel_i[2] ;
- wire \wbd_riscv_imem_sel_i[3] ;
- wire wbd_riscv_imem_stb_i;
- wire wbd_riscv_imem_we_i;
+ wire wbd_riscv_icache_ack_o;
+ wire \wbd_riscv_icache_adr_i[0] ;
+ wire \wbd_riscv_icache_adr_i[10] ;
+ wire \wbd_riscv_icache_adr_i[11] ;
+ wire \wbd_riscv_icache_adr_i[12] ;
+ wire \wbd_riscv_icache_adr_i[13] ;
+ wire \wbd_riscv_icache_adr_i[14] ;
+ wire \wbd_riscv_icache_adr_i[15] ;
+ wire \wbd_riscv_icache_adr_i[16] ;
+ wire \wbd_riscv_icache_adr_i[17] ;
+ wire \wbd_riscv_icache_adr_i[18] ;
+ wire \wbd_riscv_icache_adr_i[19] ;
+ wire \wbd_riscv_icache_adr_i[1] ;
+ wire \wbd_riscv_icache_adr_i[20] ;
+ wire \wbd_riscv_icache_adr_i[21] ;
+ wire \wbd_riscv_icache_adr_i[22] ;
+ wire \wbd_riscv_icache_adr_i[23] ;
+ wire \wbd_riscv_icache_adr_i[24] ;
+ wire \wbd_riscv_icache_adr_i[25] ;
+ wire \wbd_riscv_icache_adr_i[26] ;
+ wire \wbd_riscv_icache_adr_i[27] ;
+ wire \wbd_riscv_icache_adr_i[28] ;
+ wire \wbd_riscv_icache_adr_i[29] ;
+ wire \wbd_riscv_icache_adr_i[2] ;
+ wire \wbd_riscv_icache_adr_i[30] ;
+ wire \wbd_riscv_icache_adr_i[31] ;
+ wire \wbd_riscv_icache_adr_i[3] ;
+ wire \wbd_riscv_icache_adr_i[4] ;
+ wire \wbd_riscv_icache_adr_i[5] ;
+ wire \wbd_riscv_icache_adr_i[6] ;
+ wire \wbd_riscv_icache_adr_i[7] ;
+ wire \wbd_riscv_icache_adr_i[8] ;
+ wire \wbd_riscv_icache_adr_i[9] ;
+ wire \wbd_riscv_icache_bl_i[0] ;
+ wire \wbd_riscv_icache_bl_i[1] ;
+ wire \wbd_riscv_icache_bl_i[2] ;
+ wire \wbd_riscv_icache_bl_i[3] ;
+ wire \wbd_riscv_icache_bl_i[4] ;
+ wire \wbd_riscv_icache_bl_i[5] ;
+ wire \wbd_riscv_icache_bl_i[6] ;
+ wire \wbd_riscv_icache_bl_i[7] ;
+ wire \wbd_riscv_icache_bl_i[8] ;
+ wire \wbd_riscv_icache_bl_i[9] ;
+ wire wbd_riscv_icache_bry_i;
+ wire \wbd_riscv_icache_dat_o[0] ;
+ wire \wbd_riscv_icache_dat_o[10] ;
+ wire \wbd_riscv_icache_dat_o[11] ;
+ wire \wbd_riscv_icache_dat_o[12] ;
+ wire \wbd_riscv_icache_dat_o[13] ;
+ wire \wbd_riscv_icache_dat_o[14] ;
+ wire \wbd_riscv_icache_dat_o[15] ;
+ wire \wbd_riscv_icache_dat_o[16] ;
+ wire \wbd_riscv_icache_dat_o[17] ;
+ wire \wbd_riscv_icache_dat_o[18] ;
+ wire \wbd_riscv_icache_dat_o[19] ;
+ wire \wbd_riscv_icache_dat_o[1] ;
+ wire \wbd_riscv_icache_dat_o[20] ;
+ wire \wbd_riscv_icache_dat_o[21] ;
+ wire \wbd_riscv_icache_dat_o[22] ;
+ wire \wbd_riscv_icache_dat_o[23] ;
+ wire \wbd_riscv_icache_dat_o[24] ;
+ wire \wbd_riscv_icache_dat_o[25] ;
+ wire \wbd_riscv_icache_dat_o[26] ;
+ wire \wbd_riscv_icache_dat_o[27] ;
+ wire \wbd_riscv_icache_dat_o[28] ;
+ wire \wbd_riscv_icache_dat_o[29] ;
+ wire \wbd_riscv_icache_dat_o[2] ;
+ wire \wbd_riscv_icache_dat_o[30] ;
+ wire \wbd_riscv_icache_dat_o[31] ;
+ wire \wbd_riscv_icache_dat_o[3] ;
+ wire \wbd_riscv_icache_dat_o[4] ;
+ wire \wbd_riscv_icache_dat_o[5] ;
+ wire \wbd_riscv_icache_dat_o[6] ;
+ wire \wbd_riscv_icache_dat_o[7] ;
+ wire \wbd_riscv_icache_dat_o[8] ;
+ wire \wbd_riscv_icache_dat_o[9] ;
+ wire wbd_riscv_icache_err_o;
+ wire wbd_riscv_icache_lack_o;
+ wire \wbd_riscv_icache_sel_i[0] ;
+ wire \wbd_riscv_icache_sel_i[1] ;
+ wire \wbd_riscv_icache_sel_i[2] ;
+ wire \wbd_riscv_icache_sel_i[3] ;
+ wire wbd_riscv_icache_stb_i;
+ wire wbd_riscv_icache_we_i;
  wire wbd_spim_ack_i;
  wire \wbd_spim_adr_o[0] ;
  wire \wbd_spim_adr_o[10] ;
@@ -1500,6 +1699,17 @@ module user_project_wrapper (user_clock2,
  wire \wbd_spim_adr_o[7] ;
  wire \wbd_spim_adr_o[8] ;
  wire \wbd_spim_adr_o[9] ;
+ wire \wbd_spim_bl_o[0] ;
+ wire \wbd_spim_bl_o[1] ;
+ wire \wbd_spim_bl_o[2] ;
+ wire \wbd_spim_bl_o[3] ;
+ wire \wbd_spim_bl_o[4] ;
+ wire \wbd_spim_bl_o[5] ;
+ wire \wbd_spim_bl_o[6] ;
+ wire \wbd_spim_bl_o[7] ;
+ wire \wbd_spim_bl_o[8] ;
+ wire \wbd_spim_bl_o[9] ;
+ wire wbd_spim_bry_o;
  wire wbd_spim_cyc_o;
  wire \wbd_spim_dat_i[0] ;
  wire \wbd_spim_dat_i[10] ;
@@ -1566,6 +1776,7 @@ module user_project_wrapper (user_clock2,
  wire \wbd_spim_dat_o[8] ;
  wire \wbd_spim_dat_o[9] ;
  wire wbd_spim_err_i;
+ wire wbd_spim_lack_i;
  wire \wbd_spim_sel_o[0] ;
  wire \wbd_spim_sel_o[1] ;
  wire \wbd_spim_sel_o[2] ;
@@ -1653,25 +1864,282 @@ module user_project_wrapper (user_clock2,
  wire wbd_uart_stb_o;
  wire wbd_uart_we_o;
 
+ sky130_sram_2kbyte_1rw1r_32x512_8 u_dcache_2kb (.csb0(dcache_mem_csb0),
+    .csb1(dcache_mem_csb1),
+    .web0(dcache_mem_web0),
+    .clk0(dcache_mem_clk0),
+    .clk1(dcache_mem_clk1),
+    .addr0({\dcache_mem_addr0[8] ,
+    \dcache_mem_addr0[7] ,
+    \dcache_mem_addr0[6] ,
+    \dcache_mem_addr0[5] ,
+    \dcache_mem_addr0[4] ,
+    \dcache_mem_addr0[3] ,
+    \dcache_mem_addr0[2] ,
+    \dcache_mem_addr0[1] ,
+    \dcache_mem_addr0[0] }),
+    .addr1({\dcache_mem_addr1[8] ,
+    \dcache_mem_addr1[7] ,
+    \dcache_mem_addr1[6] ,
+    \dcache_mem_addr1[5] ,
+    \dcache_mem_addr1[4] ,
+    \dcache_mem_addr1[3] ,
+    \dcache_mem_addr1[2] ,
+    \dcache_mem_addr1[1] ,
+    \dcache_mem_addr1[0] }),
+    .din0({\dcache_mem_din0[31] ,
+    \dcache_mem_din0[30] ,
+    \dcache_mem_din0[29] ,
+    \dcache_mem_din0[28] ,
+    \dcache_mem_din0[27] ,
+    \dcache_mem_din0[26] ,
+    \dcache_mem_din0[25] ,
+    \dcache_mem_din0[24] ,
+    \dcache_mem_din0[23] ,
+    \dcache_mem_din0[22] ,
+    \dcache_mem_din0[21] ,
+    \dcache_mem_din0[20] ,
+    \dcache_mem_din0[19] ,
+    \dcache_mem_din0[18] ,
+    \dcache_mem_din0[17] ,
+    \dcache_mem_din0[16] ,
+    \dcache_mem_din0[15] ,
+    \dcache_mem_din0[14] ,
+    \dcache_mem_din0[13] ,
+    \dcache_mem_din0[12] ,
+    \dcache_mem_din0[11] ,
+    \dcache_mem_din0[10] ,
+    \dcache_mem_din0[9] ,
+    \dcache_mem_din0[8] ,
+    \dcache_mem_din0[7] ,
+    \dcache_mem_din0[6] ,
+    \dcache_mem_din0[5] ,
+    \dcache_mem_din0[4] ,
+    \dcache_mem_din0[3] ,
+    \dcache_mem_din0[2] ,
+    \dcache_mem_din0[1] ,
+    \dcache_mem_din0[0] }),
+    .dout0({\dcache_mem_dout0[31] ,
+    \dcache_mem_dout0[30] ,
+    \dcache_mem_dout0[29] ,
+    \dcache_mem_dout0[28] ,
+    \dcache_mem_dout0[27] ,
+    \dcache_mem_dout0[26] ,
+    \dcache_mem_dout0[25] ,
+    \dcache_mem_dout0[24] ,
+    \dcache_mem_dout0[23] ,
+    \dcache_mem_dout0[22] ,
+    \dcache_mem_dout0[21] ,
+    \dcache_mem_dout0[20] ,
+    \dcache_mem_dout0[19] ,
+    \dcache_mem_dout0[18] ,
+    \dcache_mem_dout0[17] ,
+    \dcache_mem_dout0[16] ,
+    \dcache_mem_dout0[15] ,
+    \dcache_mem_dout0[14] ,
+    \dcache_mem_dout0[13] ,
+    \dcache_mem_dout0[12] ,
+    \dcache_mem_dout0[11] ,
+    \dcache_mem_dout0[10] ,
+    \dcache_mem_dout0[9] ,
+    \dcache_mem_dout0[8] ,
+    \dcache_mem_dout0[7] ,
+    \dcache_mem_dout0[6] ,
+    \dcache_mem_dout0[5] ,
+    \dcache_mem_dout0[4] ,
+    \dcache_mem_dout0[3] ,
+    \dcache_mem_dout0[2] ,
+    \dcache_mem_dout0[1] ,
+    \dcache_mem_dout0[0] }),
+    .dout1({\dcache_mem_dout1[31] ,
+    \dcache_mem_dout1[30] ,
+    \dcache_mem_dout1[29] ,
+    \dcache_mem_dout1[28] ,
+    \dcache_mem_dout1[27] ,
+    \dcache_mem_dout1[26] ,
+    \dcache_mem_dout1[25] ,
+    \dcache_mem_dout1[24] ,
+    \dcache_mem_dout1[23] ,
+    \dcache_mem_dout1[22] ,
+    \dcache_mem_dout1[21] ,
+    \dcache_mem_dout1[20] ,
+    \dcache_mem_dout1[19] ,
+    \dcache_mem_dout1[18] ,
+    \dcache_mem_dout1[17] ,
+    \dcache_mem_dout1[16] ,
+    \dcache_mem_dout1[15] ,
+    \dcache_mem_dout1[14] ,
+    \dcache_mem_dout1[13] ,
+    \dcache_mem_dout1[12] ,
+    \dcache_mem_dout1[11] ,
+    \dcache_mem_dout1[10] ,
+    \dcache_mem_dout1[9] ,
+    \dcache_mem_dout1[8] ,
+    \dcache_mem_dout1[7] ,
+    \dcache_mem_dout1[6] ,
+    \dcache_mem_dout1[5] ,
+    \dcache_mem_dout1[4] ,
+    \dcache_mem_dout1[3] ,
+    \dcache_mem_dout1[2] ,
+    \dcache_mem_dout1[1] ,
+    \dcache_mem_dout1[0] }),
+    .wmask0({\dcache_mem_wmask0[3] ,
+    \dcache_mem_wmask0[2] ,
+    \dcache_mem_wmask0[1] ,
+    \dcache_mem_wmask0[0] }));
+ sky130_sram_2kbyte_1rw1r_32x512_8 u_icache_2kb (.csb0(icache_mem_csb0),
+    .csb1(icache_mem_csb1),
+    .web0(icache_mem_web0),
+    .clk0(icache_mem_clk0),
+    .clk1(icache_mem_clk1),
+    .addr0({\icache_mem_addr0[8] ,
+    \icache_mem_addr0[7] ,
+    \icache_mem_addr0[6] ,
+    \icache_mem_addr0[5] ,
+    \icache_mem_addr0[4] ,
+    \icache_mem_addr0[3] ,
+    \icache_mem_addr0[2] ,
+    \icache_mem_addr0[1] ,
+    \icache_mem_addr0[0] }),
+    .addr1({\icache_mem_addr1[8] ,
+    \icache_mem_addr1[7] ,
+    \icache_mem_addr1[6] ,
+    \icache_mem_addr1[5] ,
+    \icache_mem_addr1[4] ,
+    \icache_mem_addr1[3] ,
+    \icache_mem_addr1[2] ,
+    \icache_mem_addr1[1] ,
+    \icache_mem_addr1[0] }),
+    .din0({\icache_mem_din0[31] ,
+    \icache_mem_din0[30] ,
+    \icache_mem_din0[29] ,
+    \icache_mem_din0[28] ,
+    \icache_mem_din0[27] ,
+    \icache_mem_din0[26] ,
+    \icache_mem_din0[25] ,
+    \icache_mem_din0[24] ,
+    \icache_mem_din0[23] ,
+    \icache_mem_din0[22] ,
+    \icache_mem_din0[21] ,
+    \icache_mem_din0[20] ,
+    \icache_mem_din0[19] ,
+    \icache_mem_din0[18] ,
+    \icache_mem_din0[17] ,
+    \icache_mem_din0[16] ,
+    \icache_mem_din0[15] ,
+    \icache_mem_din0[14] ,
+    \icache_mem_din0[13] ,
+    \icache_mem_din0[12] ,
+    \icache_mem_din0[11] ,
+    \icache_mem_din0[10] ,
+    \icache_mem_din0[9] ,
+    \icache_mem_din0[8] ,
+    \icache_mem_din0[7] ,
+    \icache_mem_din0[6] ,
+    \icache_mem_din0[5] ,
+    \icache_mem_din0[4] ,
+    \icache_mem_din0[3] ,
+    \icache_mem_din0[2] ,
+    \icache_mem_din0[1] ,
+    \icache_mem_din0[0] }),
+    .dout0({_NC1,
+    _NC2,
+    _NC3,
+    _NC4,
+    _NC5,
+    _NC6,
+    _NC7,
+    _NC8,
+    _NC9,
+    _NC10,
+    _NC11,
+    _NC12,
+    _NC13,
+    _NC14,
+    _NC15,
+    _NC16,
+    _NC17,
+    _NC18,
+    _NC19,
+    _NC20,
+    _NC21,
+    _NC22,
+    _NC23,
+    _NC24,
+    _NC25,
+    _NC26,
+    _NC27,
+    _NC28,
+    _NC29,
+    _NC30,
+    _NC31,
+    _NC32}),
+    .dout1({\icache_mem_dout1[31] ,
+    \icache_mem_dout1[30] ,
+    \icache_mem_dout1[29] ,
+    \icache_mem_dout1[28] ,
+    \icache_mem_dout1[27] ,
+    \icache_mem_dout1[26] ,
+    \icache_mem_dout1[25] ,
+    \icache_mem_dout1[24] ,
+    \icache_mem_dout1[23] ,
+    \icache_mem_dout1[22] ,
+    \icache_mem_dout1[21] ,
+    \icache_mem_dout1[20] ,
+    \icache_mem_dout1[19] ,
+    \icache_mem_dout1[18] ,
+    \icache_mem_dout1[17] ,
+    \icache_mem_dout1[16] ,
+    \icache_mem_dout1[15] ,
+    \icache_mem_dout1[14] ,
+    \icache_mem_dout1[13] ,
+    \icache_mem_dout1[12] ,
+    \icache_mem_dout1[11] ,
+    \icache_mem_dout1[10] ,
+    \icache_mem_dout1[9] ,
+    \icache_mem_dout1[8] ,
+    \icache_mem_dout1[7] ,
+    \icache_mem_dout1[6] ,
+    \icache_mem_dout1[5] ,
+    \icache_mem_dout1[4] ,
+    \icache_mem_dout1[3] ,
+    \icache_mem_dout1[2] ,
+    \icache_mem_dout1[1] ,
+    \icache_mem_dout1[0] }),
+    .wmask0({\icache_mem_wmask0[3] ,
+    \icache_mem_wmask0[2] ,
+    \icache_mem_wmask0[1] ,
+    \icache_mem_wmask0[0] }));
  wb_interconnect u_intercon (.clk_i(wbd_clk_wi_skew),
     .m0_wbd_ack_o(wbd_int_ack_o),
     .m0_wbd_cyc_i(wbd_int_cyc_i),
     .m0_wbd_err_o(wbd_int_err_o),
     .m0_wbd_stb_i(wbd_int_stb_i),
     .m0_wbd_we_i(wbd_int_we_i),
-    .m1_wbd_ack_o(wbd_riscv_imem_ack_o),
-    .m1_wbd_cyc_i(wbd_riscv_imem_stb_i),
-    .m1_wbd_err_o(wbd_riscv_imem_err_o),
-    .m1_wbd_stb_i(wbd_riscv_imem_stb_i),
-    .m1_wbd_we_i(wbd_riscv_imem_we_i),
-    .m2_wbd_ack_o(wbd_riscv_dmem_ack_o),
-    .m2_wbd_cyc_i(wbd_riscv_dmem_stb_i),
-    .m2_wbd_err_o(wbd_riscv_dmem_err_o),
-    .m2_wbd_stb_i(wbd_riscv_dmem_stb_i),
-    .m2_wbd_we_i(wbd_riscv_dmem_we_i),
+    .m1_wbd_ack_o(wbd_riscv_dmem_ack_o),
+    .m1_wbd_cyc_i(wbd_riscv_dmem_stb_i),
+    .m1_wbd_err_o(wbd_riscv_dmem_err_o),
+    .m1_wbd_stb_i(wbd_riscv_dmem_stb_i),
+    .m1_wbd_we_i(wbd_riscv_dmem_we_i),
+    .m2_wbd_ack_o(wbd_riscv_dcache_ack_o),
+    .m2_wbd_bry_i(wbd_riscv_dcache_bry_i),
+    .m2_wbd_cyc_i(wbd_riscv_dcache_stb_i),
+    .m2_wbd_err_o(wbd_riscv_dcache_err_o),
+    .m2_wbd_lack_o(wbd_riscv_dcache_lack_o),
+    .m2_wbd_stb_i(wbd_riscv_dcache_stb_i),
+    .m2_wbd_we_i(wbd_riscv_dcache_we_i),
+    .m3_wbd_ack_o(wbd_riscv_icache_ack_o),
+    .m3_wbd_bry_i(wbd_riscv_icache_bry_i),
+    .m3_wbd_cyc_i(wbd_riscv_icache_stb_i),
+    .m3_wbd_err_o(wbd_riscv_icache_err_o),
+    .m3_wbd_lack_o(wbd_riscv_icache_lack_o),
+    .m3_wbd_stb_i(wbd_riscv_icache_stb_i),
+    .m3_wbd_we_i(wbd_riscv_icache_we_i),
     .rst_n(wbd_int_rst_n),
     .s0_wbd_ack_i(wbd_spim_ack_i),
+    .s0_wbd_bry_o(wbd_spim_bry_o),
     .s0_wbd_cyc_o(wbd_spim_cyc_o),
+    .s0_wbd_lack_i(wbd_spim_lack_i),
     .s0_wbd_stb_o(wbd_spim_stb_o),
     .s0_wbd_we_o(wbd_spim_we_o),
     .s1_wbd_ack_i(wbd_uart_ack_i),
@@ -1683,11 +2151,11 @@ module user_project_wrapper (user_clock2,
     .s2_wbd_stb_o(wbd_glbl_stb_o),
     .s2_wbd_we_o(wbd_glbl_we_o),
     .s3_wbd_ack_i(wbd_mbist_ack_i),
+    .s3_wbd_bry_o(wbd_mbist_bry_o),
     .s3_wbd_cyc_o(wbd_mbist_cyc_o),
+    .s3_wbd_lack_i(wbd_mbist_lack_i),
     .s3_wbd_stb_o(wbd_mbist_stb_o),
     .s3_wbd_we_o(wbd_mbist_we_o),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wbd_clk_int(wbd_clk_int),
     .wbd_clk_wi(wbd_clk_wi_skew),
     .boot_remap({\boot_remap[3] ,
@@ -1946,6 +2414,10 @@ module user_project_wrapper (user_clock2,
     \cfg_cska_riscv_rp[2] ,
     \cfg_cska_riscv_rp[1] ,
     \cfg_cska_riscv_rp[0] }),
+    .dcache_remap({\cfg_clk_ctrl2[27] ,
+    \cfg_clk_ctrl2[26] ,
+    \cfg_clk_ctrl2[25] ,
+    \cfg_clk_ctrl2[24] }),
     .m0_wbd_adr_i({\wbd_int_adr_i[31] ,
     \wbd_int_adr_i[30] ,
     \wbd_int_adr_i[29] ,
@@ -2046,107 +2518,7 @@ module user_project_wrapper (user_clock2,
     \wbd_int_sel_i[2] ,
     \wbd_int_sel_i[1] ,
     \wbd_int_sel_i[0] }),
-    .m1_wbd_adr_i({\wbd_riscv_imem_adr_i[31] ,
-    \wbd_riscv_imem_adr_i[30] ,
-    \wbd_riscv_imem_adr_i[29] ,
-    \wbd_riscv_imem_adr_i[28] ,
-    \wbd_riscv_imem_adr_i[27] ,
-    \wbd_riscv_imem_adr_i[26] ,
-    \wbd_riscv_imem_adr_i[25] ,
-    \wbd_riscv_imem_adr_i[24] ,
-    \wbd_riscv_imem_adr_i[23] ,
-    \wbd_riscv_imem_adr_i[22] ,
-    \wbd_riscv_imem_adr_i[21] ,
-    \wbd_riscv_imem_adr_i[20] ,
-    \wbd_riscv_imem_adr_i[19] ,
-    \wbd_riscv_imem_adr_i[18] ,
-    \wbd_riscv_imem_adr_i[17] ,
-    \wbd_riscv_imem_adr_i[16] ,
-    \wbd_riscv_imem_adr_i[15] ,
-    \wbd_riscv_imem_adr_i[14] ,
-    \wbd_riscv_imem_adr_i[13] ,
-    \wbd_riscv_imem_adr_i[12] ,
-    \wbd_riscv_imem_adr_i[11] ,
-    \wbd_riscv_imem_adr_i[10] ,
-    \wbd_riscv_imem_adr_i[9] ,
-    \wbd_riscv_imem_adr_i[8] ,
-    \wbd_riscv_imem_adr_i[7] ,
-    \wbd_riscv_imem_adr_i[6] ,
-    \wbd_riscv_imem_adr_i[5] ,
-    \wbd_riscv_imem_adr_i[4] ,
-    \wbd_riscv_imem_adr_i[3] ,
-    \wbd_riscv_imem_adr_i[2] ,
-    \wbd_riscv_imem_adr_i[1] ,
-    \wbd_riscv_imem_adr_i[0] }),
-    .m1_wbd_dat_i({\wbd_riscv_imem_dat_i[31] ,
-    \wbd_riscv_imem_dat_i[30] ,
-    \wbd_riscv_imem_dat_i[29] ,
-    \wbd_riscv_imem_dat_i[28] ,
-    \wbd_riscv_imem_dat_i[27] ,
-    \wbd_riscv_imem_dat_i[26] ,
-    \wbd_riscv_imem_dat_i[25] ,
-    \wbd_riscv_imem_dat_i[24] ,
-    \wbd_riscv_imem_dat_i[23] ,
-    \wbd_riscv_imem_dat_i[22] ,
-    \wbd_riscv_imem_dat_i[21] ,
-    \wbd_riscv_imem_dat_i[20] ,
-    \wbd_riscv_imem_dat_i[19] ,
-    \wbd_riscv_imem_dat_i[18] ,
-    \wbd_riscv_imem_dat_i[17] ,
-    \wbd_riscv_imem_dat_i[16] ,
-    \wbd_riscv_imem_dat_i[15] ,
-    \wbd_riscv_imem_dat_i[14] ,
-    \wbd_riscv_imem_dat_i[13] ,
-    \wbd_riscv_imem_dat_i[12] ,
-    \wbd_riscv_imem_dat_i[11] ,
-    \wbd_riscv_imem_dat_i[10] ,
-    \wbd_riscv_imem_dat_i[9] ,
-    \wbd_riscv_imem_dat_i[8] ,
-    \wbd_riscv_imem_dat_i[7] ,
-    \wbd_riscv_imem_dat_i[6] ,
-    \wbd_riscv_imem_dat_i[5] ,
-    \wbd_riscv_imem_dat_i[4] ,
-    \wbd_riscv_imem_dat_i[3] ,
-    \wbd_riscv_imem_dat_i[2] ,
-    \wbd_riscv_imem_dat_i[1] ,
-    \wbd_riscv_imem_dat_i[0] }),
-    .m1_wbd_dat_o({\wbd_riscv_imem_dat_o[31] ,
-    \wbd_riscv_imem_dat_o[30] ,
-    \wbd_riscv_imem_dat_o[29] ,
-    \wbd_riscv_imem_dat_o[28] ,
-    \wbd_riscv_imem_dat_o[27] ,
-    \wbd_riscv_imem_dat_o[26] ,
-    \wbd_riscv_imem_dat_o[25] ,
-    \wbd_riscv_imem_dat_o[24] ,
-    \wbd_riscv_imem_dat_o[23] ,
-    \wbd_riscv_imem_dat_o[22] ,
-    \wbd_riscv_imem_dat_o[21] ,
-    \wbd_riscv_imem_dat_o[20] ,
-    \wbd_riscv_imem_dat_o[19] ,
-    \wbd_riscv_imem_dat_o[18] ,
-    \wbd_riscv_imem_dat_o[17] ,
-    \wbd_riscv_imem_dat_o[16] ,
-    \wbd_riscv_imem_dat_o[15] ,
-    \wbd_riscv_imem_dat_o[14] ,
-    \wbd_riscv_imem_dat_o[13] ,
-    \wbd_riscv_imem_dat_o[12] ,
-    \wbd_riscv_imem_dat_o[11] ,
-    \wbd_riscv_imem_dat_o[10] ,
-    \wbd_riscv_imem_dat_o[9] ,
-    \wbd_riscv_imem_dat_o[8] ,
-    \wbd_riscv_imem_dat_o[7] ,
-    \wbd_riscv_imem_dat_o[6] ,
-    \wbd_riscv_imem_dat_o[5] ,
-    \wbd_riscv_imem_dat_o[4] ,
-    \wbd_riscv_imem_dat_o[3] ,
-    \wbd_riscv_imem_dat_o[2] ,
-    \wbd_riscv_imem_dat_o[1] ,
-    \wbd_riscv_imem_dat_o[0] }),
-    .m1_wbd_sel_i({\wbd_riscv_imem_sel_i[3] ,
-    \wbd_riscv_imem_sel_i[2] ,
-    \wbd_riscv_imem_sel_i[1] ,
-    \wbd_riscv_imem_sel_i[0] }),
-    .m2_wbd_adr_i({\wbd_riscv_dmem_adr_i[31] ,
+    .m1_wbd_adr_i({\wbd_riscv_dmem_adr_i[31] ,
     \wbd_riscv_dmem_adr_i[30] ,
     \wbd_riscv_dmem_adr_i[29] ,
     \wbd_riscv_dmem_adr_i[28] ,
@@ -2178,7 +2550,7 @@ module user_project_wrapper (user_clock2,
     \wbd_riscv_dmem_adr_i[2] ,
     \wbd_riscv_dmem_adr_i[1] ,
     \wbd_riscv_dmem_adr_i[0] }),
-    .m2_wbd_dat_i({\wbd_riscv_dmem_dat_i[31] ,
+    .m1_wbd_dat_i({\wbd_riscv_dmem_dat_i[31] ,
     \wbd_riscv_dmem_dat_i[30] ,
     \wbd_riscv_dmem_dat_i[29] ,
     \wbd_riscv_dmem_dat_i[28] ,
@@ -2210,7 +2582,7 @@ module user_project_wrapper (user_clock2,
     \wbd_riscv_dmem_dat_i[2] ,
     \wbd_riscv_dmem_dat_i[1] ,
     \wbd_riscv_dmem_dat_i[0] }),
-    .m2_wbd_dat_o({\wbd_riscv_dmem_dat_o[31] ,
+    .m1_wbd_dat_o({\wbd_riscv_dmem_dat_o[31] ,
     \wbd_riscv_dmem_dat_o[30] ,
     \wbd_riscv_dmem_dat_o[29] ,
     \wbd_riscv_dmem_dat_o[28] ,
@@ -2242,10 +2614,198 @@ module user_project_wrapper (user_clock2,
     \wbd_riscv_dmem_dat_o[2] ,
     \wbd_riscv_dmem_dat_o[1] ,
     \wbd_riscv_dmem_dat_o[0] }),
-    .m2_wbd_sel_i({\wbd_riscv_dmem_sel_i[3] ,
+    .m1_wbd_sel_i({\wbd_riscv_dmem_sel_i[3] ,
     \wbd_riscv_dmem_sel_i[2] ,
     \wbd_riscv_dmem_sel_i[1] ,
     \wbd_riscv_dmem_sel_i[0] }),
+    .m2_wbd_adr_i({\wbd_riscv_dcache_adr_i[31] ,
+    \wbd_riscv_dcache_adr_i[30] ,
+    \wbd_riscv_dcache_adr_i[29] ,
+    \wbd_riscv_dcache_adr_i[28] ,
+    \wbd_riscv_dcache_adr_i[27] ,
+    \wbd_riscv_dcache_adr_i[26] ,
+    \wbd_riscv_dcache_adr_i[25] ,
+    \wbd_riscv_dcache_adr_i[24] ,
+    \wbd_riscv_dcache_adr_i[23] ,
+    \wbd_riscv_dcache_adr_i[22] ,
+    \wbd_riscv_dcache_adr_i[21] ,
+    \wbd_riscv_dcache_adr_i[20] ,
+    \wbd_riscv_dcache_adr_i[19] ,
+    \wbd_riscv_dcache_adr_i[18] ,
+    \wbd_riscv_dcache_adr_i[17] ,
+    \wbd_riscv_dcache_adr_i[16] ,
+    \wbd_riscv_dcache_adr_i[15] ,
+    \wbd_riscv_dcache_adr_i[14] ,
+    \wbd_riscv_dcache_adr_i[13] ,
+    \wbd_riscv_dcache_adr_i[12] ,
+    \wbd_riscv_dcache_adr_i[11] ,
+    \wbd_riscv_dcache_adr_i[10] ,
+    \wbd_riscv_dcache_adr_i[9] ,
+    \wbd_riscv_dcache_adr_i[8] ,
+    \wbd_riscv_dcache_adr_i[7] ,
+    \wbd_riscv_dcache_adr_i[6] ,
+    \wbd_riscv_dcache_adr_i[5] ,
+    \wbd_riscv_dcache_adr_i[4] ,
+    \wbd_riscv_dcache_adr_i[3] ,
+    \wbd_riscv_dcache_adr_i[2] ,
+    \wbd_riscv_dcache_adr_i[1] ,
+    \wbd_riscv_dcache_adr_i[0] }),
+    .m2_wbd_bl_i({\wbd_riscv_dcache_bl_i[9] ,
+    \wbd_riscv_dcache_bl_i[8] ,
+    \wbd_riscv_dcache_bl_i[7] ,
+    \wbd_riscv_dcache_bl_i[6] ,
+    \wbd_riscv_dcache_bl_i[5] ,
+    \wbd_riscv_dcache_bl_i[4] ,
+    \wbd_riscv_dcache_bl_i[3] ,
+    \wbd_riscv_dcache_bl_i[2] ,
+    \wbd_riscv_dcache_bl_i[1] ,
+    \wbd_riscv_dcache_bl_i[0] }),
+    .m2_wbd_dat_i({\wbd_riscv_dcache_dat_i[31] ,
+    \wbd_riscv_dcache_dat_i[30] ,
+    \wbd_riscv_dcache_dat_i[29] ,
+    \wbd_riscv_dcache_dat_i[28] ,
+    \wbd_riscv_dcache_dat_i[27] ,
+    \wbd_riscv_dcache_dat_i[26] ,
+    \wbd_riscv_dcache_dat_i[25] ,
+    \wbd_riscv_dcache_dat_i[24] ,
+    \wbd_riscv_dcache_dat_i[23] ,
+    \wbd_riscv_dcache_dat_i[22] ,
+    \wbd_riscv_dcache_dat_i[21] ,
+    \wbd_riscv_dcache_dat_i[20] ,
+    \wbd_riscv_dcache_dat_i[19] ,
+    \wbd_riscv_dcache_dat_i[18] ,
+    \wbd_riscv_dcache_dat_i[17] ,
+    \wbd_riscv_dcache_dat_i[16] ,
+    \wbd_riscv_dcache_dat_i[15] ,
+    \wbd_riscv_dcache_dat_i[14] ,
+    \wbd_riscv_dcache_dat_i[13] ,
+    \wbd_riscv_dcache_dat_i[12] ,
+    \wbd_riscv_dcache_dat_i[11] ,
+    \wbd_riscv_dcache_dat_i[10] ,
+    \wbd_riscv_dcache_dat_i[9] ,
+    \wbd_riscv_dcache_dat_i[8] ,
+    \wbd_riscv_dcache_dat_i[7] ,
+    \wbd_riscv_dcache_dat_i[6] ,
+    \wbd_riscv_dcache_dat_i[5] ,
+    \wbd_riscv_dcache_dat_i[4] ,
+    \wbd_riscv_dcache_dat_i[3] ,
+    \wbd_riscv_dcache_dat_i[2] ,
+    \wbd_riscv_dcache_dat_i[1] ,
+    \wbd_riscv_dcache_dat_i[0] }),
+    .m2_wbd_dat_o({\wbd_riscv_dcache_dat_o[31] ,
+    \wbd_riscv_dcache_dat_o[30] ,
+    \wbd_riscv_dcache_dat_o[29] ,
+    \wbd_riscv_dcache_dat_o[28] ,
+    \wbd_riscv_dcache_dat_o[27] ,
+    \wbd_riscv_dcache_dat_o[26] ,
+    \wbd_riscv_dcache_dat_o[25] ,
+    \wbd_riscv_dcache_dat_o[24] ,
+    \wbd_riscv_dcache_dat_o[23] ,
+    \wbd_riscv_dcache_dat_o[22] ,
+    \wbd_riscv_dcache_dat_o[21] ,
+    \wbd_riscv_dcache_dat_o[20] ,
+    \wbd_riscv_dcache_dat_o[19] ,
+    \wbd_riscv_dcache_dat_o[18] ,
+    \wbd_riscv_dcache_dat_o[17] ,
+    \wbd_riscv_dcache_dat_o[16] ,
+    \wbd_riscv_dcache_dat_o[15] ,
+    \wbd_riscv_dcache_dat_o[14] ,
+    \wbd_riscv_dcache_dat_o[13] ,
+    \wbd_riscv_dcache_dat_o[12] ,
+    \wbd_riscv_dcache_dat_o[11] ,
+    \wbd_riscv_dcache_dat_o[10] ,
+    \wbd_riscv_dcache_dat_o[9] ,
+    \wbd_riscv_dcache_dat_o[8] ,
+    \wbd_riscv_dcache_dat_o[7] ,
+    \wbd_riscv_dcache_dat_o[6] ,
+    \wbd_riscv_dcache_dat_o[5] ,
+    \wbd_riscv_dcache_dat_o[4] ,
+    \wbd_riscv_dcache_dat_o[3] ,
+    \wbd_riscv_dcache_dat_o[2] ,
+    \wbd_riscv_dcache_dat_o[1] ,
+    \wbd_riscv_dcache_dat_o[0] }),
+    .m2_wbd_sel_i({\wbd_riscv_dcache_sel_i[3] ,
+    \wbd_riscv_dcache_sel_i[2] ,
+    \wbd_riscv_dcache_sel_i[1] ,
+    \wbd_riscv_dcache_sel_i[0] }),
+    .m3_wbd_adr_i({\wbd_riscv_icache_adr_i[31] ,
+    \wbd_riscv_icache_adr_i[30] ,
+    \wbd_riscv_icache_adr_i[29] ,
+    \wbd_riscv_icache_adr_i[28] ,
+    \wbd_riscv_icache_adr_i[27] ,
+    \wbd_riscv_icache_adr_i[26] ,
+    \wbd_riscv_icache_adr_i[25] ,
+    \wbd_riscv_icache_adr_i[24] ,
+    \wbd_riscv_icache_adr_i[23] ,
+    \wbd_riscv_icache_adr_i[22] ,
+    \wbd_riscv_icache_adr_i[21] ,
+    \wbd_riscv_icache_adr_i[20] ,
+    \wbd_riscv_icache_adr_i[19] ,
+    \wbd_riscv_icache_adr_i[18] ,
+    \wbd_riscv_icache_adr_i[17] ,
+    \wbd_riscv_icache_adr_i[16] ,
+    \wbd_riscv_icache_adr_i[15] ,
+    \wbd_riscv_icache_adr_i[14] ,
+    \wbd_riscv_icache_adr_i[13] ,
+    \wbd_riscv_icache_adr_i[12] ,
+    \wbd_riscv_icache_adr_i[11] ,
+    \wbd_riscv_icache_adr_i[10] ,
+    \wbd_riscv_icache_adr_i[9] ,
+    \wbd_riscv_icache_adr_i[8] ,
+    \wbd_riscv_icache_adr_i[7] ,
+    \wbd_riscv_icache_adr_i[6] ,
+    \wbd_riscv_icache_adr_i[5] ,
+    \wbd_riscv_icache_adr_i[4] ,
+    \wbd_riscv_icache_adr_i[3] ,
+    \wbd_riscv_icache_adr_i[2] ,
+    \wbd_riscv_icache_adr_i[1] ,
+    \wbd_riscv_icache_adr_i[0] }),
+    .m3_wbd_bl_i({\wbd_riscv_icache_bl_i[9] ,
+    \wbd_riscv_icache_bl_i[8] ,
+    \wbd_riscv_icache_bl_i[7] ,
+    \wbd_riscv_icache_bl_i[6] ,
+    \wbd_riscv_icache_bl_i[5] ,
+    \wbd_riscv_icache_bl_i[4] ,
+    \wbd_riscv_icache_bl_i[3] ,
+    \wbd_riscv_icache_bl_i[2] ,
+    \wbd_riscv_icache_bl_i[1] ,
+    \wbd_riscv_icache_bl_i[0] }),
+    .m3_wbd_dat_o({\wbd_riscv_icache_dat_o[31] ,
+    \wbd_riscv_icache_dat_o[30] ,
+    \wbd_riscv_icache_dat_o[29] ,
+    \wbd_riscv_icache_dat_o[28] ,
+    \wbd_riscv_icache_dat_o[27] ,
+    \wbd_riscv_icache_dat_o[26] ,
+    \wbd_riscv_icache_dat_o[25] ,
+    \wbd_riscv_icache_dat_o[24] ,
+    \wbd_riscv_icache_dat_o[23] ,
+    \wbd_riscv_icache_dat_o[22] ,
+    \wbd_riscv_icache_dat_o[21] ,
+    \wbd_riscv_icache_dat_o[20] ,
+    \wbd_riscv_icache_dat_o[19] ,
+    \wbd_riscv_icache_dat_o[18] ,
+    \wbd_riscv_icache_dat_o[17] ,
+    \wbd_riscv_icache_dat_o[16] ,
+    \wbd_riscv_icache_dat_o[15] ,
+    \wbd_riscv_icache_dat_o[14] ,
+    \wbd_riscv_icache_dat_o[13] ,
+    \wbd_riscv_icache_dat_o[12] ,
+    \wbd_riscv_icache_dat_o[11] ,
+    \wbd_riscv_icache_dat_o[10] ,
+    \wbd_riscv_icache_dat_o[9] ,
+    \wbd_riscv_icache_dat_o[8] ,
+    \wbd_riscv_icache_dat_o[7] ,
+    \wbd_riscv_icache_dat_o[6] ,
+    \wbd_riscv_icache_dat_o[5] ,
+    \wbd_riscv_icache_dat_o[4] ,
+    \wbd_riscv_icache_dat_o[3] ,
+    \wbd_riscv_icache_dat_o[2] ,
+    \wbd_riscv_icache_dat_o[1] ,
+    \wbd_riscv_icache_dat_o[0] }),
+    .m3_wbd_sel_i({\wbd_riscv_icache_sel_i[3] ,
+    \wbd_riscv_icache_sel_i[2] ,
+    \wbd_riscv_icache_sel_i[1] ,
+    \wbd_riscv_icache_sel_i[0] }),
     .s0_wbd_adr_o({\wbd_spim_adr_o[31] ,
     \wbd_spim_adr_o[30] ,
     \wbd_spim_adr_o[29] ,
@@ -2278,6 +2838,16 @@ module user_project_wrapper (user_clock2,
     \wbd_spim_adr_o[2] ,
     \wbd_spim_adr_o[1] ,
     \wbd_spim_adr_o[0] }),
+    .s0_wbd_bl_o({\wbd_spim_bl_o[9] ,
+    \wbd_spim_bl_o[8] ,
+    \wbd_spim_bl_o[7] ,
+    \wbd_spim_bl_o[6] ,
+    \wbd_spim_bl_o[5] ,
+    \wbd_spim_bl_o[4] ,
+    \wbd_spim_bl_o[3] ,
+    \wbd_spim_bl_o[2] ,
+    \wbd_spim_bl_o[1] ,
+    \wbd_spim_bl_o[0] }),
     .s0_wbd_dat_i({\wbd_spim_dat_i[31] ,
     \wbd_spim_dat_i[30] ,
     \wbd_spim_dat_i[29] ,
@@ -2511,6 +3081,16 @@ module user_project_wrapper (user_clock2,
     \wbd_mbist_adr_o[2] ,
     \wbd_mbist_adr_o[1] ,
     \wbd_mbist_adr_o[0] }),
+    .s3_wbd_bl_o({\wbd_mbist_bl_o[9] ,
+    \wbd_mbist_bl_o[8] ,
+    \wbd_mbist_bl_o[7] ,
+    \wbd_mbist_bl_o[6] ,
+    \wbd_mbist_bl_o[5] ,
+    \wbd_mbist_bl_o[4] ,
+    \wbd_mbist_bl_o[3] ,
+    \wbd_mbist_bl_o[2] ,
+    \wbd_mbist_bl_o[1] ,
+    \wbd_mbist_bl_o[0] }),
     .s3_wbd_dat_i({\wbd_mbist_dat_i[31] ,
     \wbd_mbist_dat_i[30] ,
     \wbd_mbist_dat_i[29] ,
@@ -2579,7 +3159,7 @@ module user_project_wrapper (user_clock2,
     \wbd_mbist_sel_o[2] ,
     \wbd_mbist_sel_o[1] ,
     \wbd_mbist_sel_o[0] }));
- mbist_top u_mbist (.bist_done(bist_done),
+ mbist_wrapper u_mbist (.bist_done(bist_done),
     .bist_en(bist_en_rp),
     .bist_load(bist_load_rp),
     .bist_run(bist_run_rp),
@@ -2587,12 +3167,11 @@ module user_project_wrapper (user_clock2,
     .bist_sdo(bist_sdo),
     .bist_shift(bist_shift_rp),
     .rst_n(bist_rst_n),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wb_ack_o(wbd_mbist_ack_i),
+    .wb_bry_i(wbd_mbist_bry_o),
     .wb_clk2_i(wbd_clk_mbist_skew),
     .wb_clk_i(wbd_clk_mbist_skew),
-    .wb_cyc_i(wbd_mbist_cyc_o),
+    .wb_lack_o(wbd_mbist_lack_i),
     .wb_stb_i(wbd_mbist_stb_o),
     .wb_we_i(wbd_mbist_we_o),
     .wbd_clk_int(wbd_clk_mbist1_rp),
@@ -2998,6 +3577,16 @@ module user_project_wrapper (user_clock2,
     \wbd_mbist_adr_o[4] ,
     \wbd_mbist_adr_o[3] ,
     \wbd_mbist_adr_o[2] }),
+    .wb_bl_i({\wbd_mbist_bl_o[9] ,
+    \wbd_mbist_bl_o[8] ,
+    \wbd_mbist_bl_o[7] ,
+    \wbd_mbist_bl_o[6] ,
+    \wbd_mbist_bl_o[5] ,
+    \wbd_mbist_bl_o[4] ,
+    \wbd_mbist_bl_o[3] ,
+    \wbd_mbist_bl_o[2] ,
+    \wbd_mbist_bl_o[1] ,
+    \wbd_mbist_bl_o[0] }),
     .wb_cs_i({\wbd_mbist_adr_o[12] ,
     \wbd_mbist_adr_o[11] }),
     .wb_dat_i({\wbd_mbist_dat_o[31] ,
@@ -3105,8 +3694,6 @@ module user_project_wrapper (user_clock2,
     .usb_dp_o(usb_dp_o),
     .usb_intr(usb_intr_o),
     .usb_oen(usb_oen),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wbd_clk_int(wbd_clk_pinmux_rp),
     .wbd_clk_pinmux(wbd_clk_pinmux_skew),
     .bist_correct({\bist_correct_rp[3] ,
@@ -3425,12 +4012,12 @@ module user_project_wrapper (user_clock2,
  qspim_top u_qspi_master (.mclk(wbd_clk_spi),
     .rst_n(qspim_rst_n),
     .spi_clk(sflash_sck),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wbd_ack_o(wbd_spim_ack_i),
+    .wbd_bry_i(wbd_spim_bry_o),
     .wbd_clk_int(wbd_clk_qspi_rp),
     .wbd_clk_spi(wbd_clk_spi),
     .wbd_err_o(wbd_spim_err_i),
+    .wbd_lack_o(wbd_spim_lack_i),
     .wbd_stb_i(wbd_spim_stb_o),
     .wbd_we_i(wbd_spim_we_o),
     .cfg_cska_sp_co({\cfg_cska_qspi_co_rp[3] ,
@@ -3521,6 +4108,16 @@ module user_project_wrapper (user_clock2,
     \wbd_spim_adr_o[2] ,
     \wbd_spim_adr_o[1] ,
     \wbd_spim_adr_o[0] }),
+    .wbd_bl_i({\wbd_spim_bl_o[9] ,
+    \wbd_spim_bl_o[8] ,
+    \wbd_spim_bl_o[7] ,
+    \wbd_spim_bl_o[6] ,
+    \wbd_spim_bl_o[5] ,
+    \wbd_spim_bl_o[4] ,
+    \wbd_spim_bl_o[3] ,
+    \wbd_spim_bl_o[2] ,
+    \wbd_spim_bl_o[1] ,
+    \wbd_spim_bl_o[0] }),
     .wbd_dat_i({\wbd_spim_dat_o[31] ,
     \wbd_spim_dat_o[30] ,
     \wbd_spim_dat_o[29] ,
@@ -3591,6 +4188,16 @@ module user_project_wrapper (user_clock2,
     \wbd_spim_sel_o[0] }));
  ycr1_top_wb u_riscv_top (.core_clk(cpu_clk),
     .cpu_rst_n(cpu_rst_n),
+    .dcache_mem_clk0(dcache_mem_clk0),
+    .dcache_mem_clk1(dcache_mem_clk1),
+    .dcache_mem_csb0(dcache_mem_csb0),
+    .dcache_mem_csb1(dcache_mem_csb1),
+    .dcache_mem_web0(dcache_mem_web0),
+    .icache_mem_clk0(icache_mem_clk0),
+    .icache_mem_clk1(icache_mem_clk1),
+    .icache_mem_csb0(icache_mem_csb0),
+    .icache_mem_csb1(icache_mem_csb1),
+    .icache_mem_web0(icache_mem_web0),
     .pwrup_rst_n(wbd_int_rst_n),
     .rst_n(wbd_int_rst_n),
     .rtc_clk(rtc_clk),
@@ -3600,14 +4207,19 @@ module user_project_wrapper (user_clock2,
     .sram0_csb0(sram0_csb0),
     .sram0_csb1(sram0_csb1),
     .sram0_web0(sram0_web0),
-    .sram1_clk0(sram1_clk0),
-    .sram1_clk1(sram1_clk1),
-    .sram1_csb0(sram1_csb0),
-    .sram1_csb1(sram1_csb1),
-    .sram1_web0(sram1_web0),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wb_clk(wbd_clk_riscv_skew),
+    .wb_dcache_ack_i(wbd_riscv_dcache_ack_o),
+    .wb_dcache_bry_o(wbd_riscv_dcache_bry_i),
+    .wb_dcache_err_i(wbd_riscv_dcache_err_o),
+    .wb_dcache_lack_i(wbd_riscv_dcache_lack_o),
+    .wb_dcache_stb_o(wbd_riscv_dcache_stb_i),
+    .wb_dcache_we_o(wbd_riscv_dcache_we_i),
+    .wb_icache_ack_i(wbd_riscv_icache_ack_o),
+    .wb_icache_bry_o(wbd_riscv_icache_bry_i),
+    .wb_icache_err_i(wbd_riscv_icache_err_o),
+    .wb_icache_lack_i(wbd_riscv_icache_lack_o),
+    .wb_icache_stb_o(wbd_riscv_icache_stb_i),
+    .wb_icache_we_o(wbd_riscv_icache_we_i),
     .wb_rst_n(wbd_int_rst_n),
     .wbd_clk_int(wbd_clk_risc_rp),
     .wbd_clk_riscv(wbd_clk_riscv_skew),
@@ -3615,14 +4227,128 @@ module user_project_wrapper (user_clock2,
     .wbd_dmem_err_i(wbd_riscv_dmem_err_o),
     .wbd_dmem_stb_o(wbd_riscv_dmem_stb_i),
     .wbd_dmem_we_o(wbd_riscv_dmem_we_i),
-    .wbd_imem_ack_i(wbd_riscv_imem_ack_o),
-    .wbd_imem_err_i(wbd_riscv_imem_err_o),
-    .wbd_imem_stb_o(wbd_riscv_imem_stb_i),
-    .wbd_imem_we_o(wbd_riscv_imem_we_i),
     .cfg_cska_riscv({\cfg_cska_riscv_rp[3] ,
     \cfg_cska_riscv_rp[2] ,
     \cfg_cska_riscv_rp[1] ,
     \cfg_cska_riscv_rp[0] }),
+    .dcache_mem_addr0({\dcache_mem_addr0[8] ,
+    \dcache_mem_addr0[7] ,
+    \dcache_mem_addr0[6] ,
+    \dcache_mem_addr0[5] ,
+    \dcache_mem_addr0[4] ,
+    \dcache_mem_addr0[3] ,
+    \dcache_mem_addr0[2] ,
+    \dcache_mem_addr0[1] ,
+    \dcache_mem_addr0[0] }),
+    .dcache_mem_addr1({\dcache_mem_addr1[8] ,
+    \dcache_mem_addr1[7] ,
+    \dcache_mem_addr1[6] ,
+    \dcache_mem_addr1[5] ,
+    \dcache_mem_addr1[4] ,
+    \dcache_mem_addr1[3] ,
+    \dcache_mem_addr1[2] ,
+    \dcache_mem_addr1[1] ,
+    \dcache_mem_addr1[0] }),
+    .dcache_mem_din0({\dcache_mem_din0[31] ,
+    \dcache_mem_din0[30] ,
+    \dcache_mem_din0[29] ,
+    \dcache_mem_din0[28] ,
+    \dcache_mem_din0[27] ,
+    \dcache_mem_din0[26] ,
+    \dcache_mem_din0[25] ,
+    \dcache_mem_din0[24] ,
+    \dcache_mem_din0[23] ,
+    \dcache_mem_din0[22] ,
+    \dcache_mem_din0[21] ,
+    \dcache_mem_din0[20] ,
+    \dcache_mem_din0[19] ,
+    \dcache_mem_din0[18] ,
+    \dcache_mem_din0[17] ,
+    \dcache_mem_din0[16] ,
+    \dcache_mem_din0[15] ,
+    \dcache_mem_din0[14] ,
+    \dcache_mem_din0[13] ,
+    \dcache_mem_din0[12] ,
+    \dcache_mem_din0[11] ,
+    \dcache_mem_din0[10] ,
+    \dcache_mem_din0[9] ,
+    \dcache_mem_din0[8] ,
+    \dcache_mem_din0[7] ,
+    \dcache_mem_din0[6] ,
+    \dcache_mem_din0[5] ,
+    \dcache_mem_din0[4] ,
+    \dcache_mem_din0[3] ,
+    \dcache_mem_din0[2] ,
+    \dcache_mem_din0[1] ,
+    \dcache_mem_din0[0] }),
+    .dcache_mem_dout0({\dcache_mem_dout0[31] ,
+    \dcache_mem_dout0[30] ,
+    \dcache_mem_dout0[29] ,
+    \dcache_mem_dout0[28] ,
+    \dcache_mem_dout0[27] ,
+    \dcache_mem_dout0[26] ,
+    \dcache_mem_dout0[25] ,
+    \dcache_mem_dout0[24] ,
+    \dcache_mem_dout0[23] ,
+    \dcache_mem_dout0[22] ,
+    \dcache_mem_dout0[21] ,
+    \dcache_mem_dout0[20] ,
+    \dcache_mem_dout0[19] ,
+    \dcache_mem_dout0[18] ,
+    \dcache_mem_dout0[17] ,
+    \dcache_mem_dout0[16] ,
+    \dcache_mem_dout0[15] ,
+    \dcache_mem_dout0[14] ,
+    \dcache_mem_dout0[13] ,
+    \dcache_mem_dout0[12] ,
+    \dcache_mem_dout0[11] ,
+    \dcache_mem_dout0[10] ,
+    \dcache_mem_dout0[9] ,
+    \dcache_mem_dout0[8] ,
+    \dcache_mem_dout0[7] ,
+    \dcache_mem_dout0[6] ,
+    \dcache_mem_dout0[5] ,
+    \dcache_mem_dout0[4] ,
+    \dcache_mem_dout0[3] ,
+    \dcache_mem_dout0[2] ,
+    \dcache_mem_dout0[1] ,
+    \dcache_mem_dout0[0] }),
+    .dcache_mem_dout1({\dcache_mem_dout1[31] ,
+    \dcache_mem_dout1[30] ,
+    \dcache_mem_dout1[29] ,
+    \dcache_mem_dout1[28] ,
+    \dcache_mem_dout1[27] ,
+    \dcache_mem_dout1[26] ,
+    \dcache_mem_dout1[25] ,
+    \dcache_mem_dout1[24] ,
+    \dcache_mem_dout1[23] ,
+    \dcache_mem_dout1[22] ,
+    \dcache_mem_dout1[21] ,
+    \dcache_mem_dout1[20] ,
+    \dcache_mem_dout1[19] ,
+    \dcache_mem_dout1[18] ,
+    \dcache_mem_dout1[17] ,
+    \dcache_mem_dout1[16] ,
+    \dcache_mem_dout1[15] ,
+    \dcache_mem_dout1[14] ,
+    \dcache_mem_dout1[13] ,
+    \dcache_mem_dout1[12] ,
+    \dcache_mem_dout1[11] ,
+    \dcache_mem_dout1[10] ,
+    \dcache_mem_dout1[9] ,
+    \dcache_mem_dout1[8] ,
+    \dcache_mem_dout1[7] ,
+    \dcache_mem_dout1[6] ,
+    \dcache_mem_dout1[5] ,
+    \dcache_mem_dout1[4] ,
+    \dcache_mem_dout1[3] ,
+    \dcache_mem_dout1[2] ,
+    \dcache_mem_dout1[1] ,
+    \dcache_mem_dout1[0] }),
+    .dcache_mem_wmask0({\dcache_mem_wmask0[3] ,
+    \dcache_mem_wmask0[2] ,
+    \dcache_mem_wmask0[1] ,
+    \dcache_mem_wmask0[0] }),
     .fuse_mhartid({\fuse_mhartid_rp[31] ,
     \fuse_mhartid_rp[30] ,
     \fuse_mhartid_rp[29] ,
@@ -3655,6 +4381,92 @@ module user_project_wrapper (user_clock2,
     \fuse_mhartid_rp[2] ,
     \fuse_mhartid_rp[1] ,
     \fuse_mhartid_rp[0] }),
+    .icache_mem_addr0({\icache_mem_addr0[8] ,
+    \icache_mem_addr0[7] ,
+    \icache_mem_addr0[6] ,
+    \icache_mem_addr0[5] ,
+    \icache_mem_addr0[4] ,
+    \icache_mem_addr0[3] ,
+    \icache_mem_addr0[2] ,
+    \icache_mem_addr0[1] ,
+    \icache_mem_addr0[0] }),
+    .icache_mem_addr1({\icache_mem_addr1[8] ,
+    \icache_mem_addr1[7] ,
+    \icache_mem_addr1[6] ,
+    \icache_mem_addr1[5] ,
+    \icache_mem_addr1[4] ,
+    \icache_mem_addr1[3] ,
+    \icache_mem_addr1[2] ,
+    \icache_mem_addr1[1] ,
+    \icache_mem_addr1[0] }),
+    .icache_mem_din0({\icache_mem_din0[31] ,
+    \icache_mem_din0[30] ,
+    \icache_mem_din0[29] ,
+    \icache_mem_din0[28] ,
+    \icache_mem_din0[27] ,
+    \icache_mem_din0[26] ,
+    \icache_mem_din0[25] ,
+    \icache_mem_din0[24] ,
+    \icache_mem_din0[23] ,
+    \icache_mem_din0[22] ,
+    \icache_mem_din0[21] ,
+    \icache_mem_din0[20] ,
+    \icache_mem_din0[19] ,
+    \icache_mem_din0[18] ,
+    \icache_mem_din0[17] ,
+    \icache_mem_din0[16] ,
+    \icache_mem_din0[15] ,
+    \icache_mem_din0[14] ,
+    \icache_mem_din0[13] ,
+    \icache_mem_din0[12] ,
+    \icache_mem_din0[11] ,
+    \icache_mem_din0[10] ,
+    \icache_mem_din0[9] ,
+    \icache_mem_din0[8] ,
+    \icache_mem_din0[7] ,
+    \icache_mem_din0[6] ,
+    \icache_mem_din0[5] ,
+    \icache_mem_din0[4] ,
+    \icache_mem_din0[3] ,
+    \icache_mem_din0[2] ,
+    \icache_mem_din0[1] ,
+    \icache_mem_din0[0] }),
+    .icache_mem_dout1({\icache_mem_dout1[31] ,
+    \icache_mem_dout1[30] ,
+    \icache_mem_dout1[29] ,
+    \icache_mem_dout1[28] ,
+    \icache_mem_dout1[27] ,
+    \icache_mem_dout1[26] ,
+    \icache_mem_dout1[25] ,
+    \icache_mem_dout1[24] ,
+    \icache_mem_dout1[23] ,
+    \icache_mem_dout1[22] ,
+    \icache_mem_dout1[21] ,
+    \icache_mem_dout1[20] ,
+    \icache_mem_dout1[19] ,
+    \icache_mem_dout1[18] ,
+    \icache_mem_dout1[17] ,
+    \icache_mem_dout1[16] ,
+    \icache_mem_dout1[15] ,
+    \icache_mem_dout1[14] ,
+    \icache_mem_dout1[13] ,
+    \icache_mem_dout1[12] ,
+    \icache_mem_dout1[11] ,
+    \icache_mem_dout1[10] ,
+    \icache_mem_dout1[9] ,
+    \icache_mem_dout1[8] ,
+    \icache_mem_dout1[7] ,
+    \icache_mem_dout1[6] ,
+    \icache_mem_dout1[5] ,
+    \icache_mem_dout1[4] ,
+    \icache_mem_dout1[3] ,
+    \icache_mem_dout1[2] ,
+    \icache_mem_dout1[1] ,
+    \icache_mem_dout1[0] }),
+    .icache_mem_wmask0({\icache_mem_wmask0[3] ,
+    \icache_mem_wmask0[2] ,
+    \icache_mem_wmask0[1] ,
+    \icache_mem_wmask0[0] }),
     .irq_lines({\irq_lines_rp[15] ,
     \irq_lines_rp[14] ,
     \irq_lines_rp[13] ,
@@ -3853,124 +4665,194 @@ module user_project_wrapper (user_clock2,
     \sram0_wmask0[2] ,
     \sram0_wmask0[1] ,
     \sram0_wmask0[0] }),
-    .sram1_addr0({\sram1_addr0[8] ,
-    \sram1_addr0[7] ,
-    \sram1_addr0[6] ,
-    \sram1_addr0[5] ,
-    \sram1_addr0[4] ,
-    \sram1_addr0[3] ,
-    \sram1_addr0[2] ,
-    \sram1_addr0[1] ,
-    \sram1_addr0[0] }),
-    .sram1_addr1({\sram1_addr1[8] ,
-    \sram1_addr1[7] ,
-    \sram1_addr1[6] ,
-    \sram1_addr1[5] ,
-    \sram1_addr1[4] ,
-    \sram1_addr1[3] ,
-    \sram1_addr1[2] ,
-    \sram1_addr1[1] ,
-    \sram1_addr1[0] }),
-    .sram1_din0({\sram1_din0[31] ,
-    \sram1_din0[30] ,
-    \sram1_din0[29] ,
-    \sram1_din0[28] ,
-    \sram1_din0[27] ,
-    \sram1_din0[26] ,
-    \sram1_din0[25] ,
-    \sram1_din0[24] ,
-    \sram1_din0[23] ,
-    \sram1_din0[22] ,
-    \sram1_din0[21] ,
-    \sram1_din0[20] ,
-    \sram1_din0[19] ,
-    \sram1_din0[18] ,
-    \sram1_din0[17] ,
-    \sram1_din0[16] ,
-    \sram1_din0[15] ,
-    \sram1_din0[14] ,
-    \sram1_din0[13] ,
-    \sram1_din0[12] ,
-    \sram1_din0[11] ,
-    \sram1_din0[10] ,
-    \sram1_din0[9] ,
-    \sram1_din0[8] ,
-    \sram1_din0[7] ,
-    \sram1_din0[6] ,
-    \sram1_din0[5] ,
-    \sram1_din0[4] ,
-    \sram1_din0[3] ,
-    \sram1_din0[2] ,
-    \sram1_din0[1] ,
-    \sram1_din0[0] }),
-    .sram1_dout0({\sram1_dout0[31] ,
-    \sram1_dout0[30] ,
-    \sram1_dout0[29] ,
-    \sram1_dout0[28] ,
-    \sram1_dout0[27] ,
-    \sram1_dout0[26] ,
-    \sram1_dout0[25] ,
-    \sram1_dout0[24] ,
-    \sram1_dout0[23] ,
-    \sram1_dout0[22] ,
-    \sram1_dout0[21] ,
-    \sram1_dout0[20] ,
-    \sram1_dout0[19] ,
-    \sram1_dout0[18] ,
-    \sram1_dout0[17] ,
-    \sram1_dout0[16] ,
-    \sram1_dout0[15] ,
-    \sram1_dout0[14] ,
-    \sram1_dout0[13] ,
-    \sram1_dout0[12] ,
-    \sram1_dout0[11] ,
-    \sram1_dout0[10] ,
-    \sram1_dout0[9] ,
-    \sram1_dout0[8] ,
-    \sram1_dout0[7] ,
-    \sram1_dout0[6] ,
-    \sram1_dout0[5] ,
-    \sram1_dout0[4] ,
-    \sram1_dout0[3] ,
-    \sram1_dout0[2] ,
-    \sram1_dout0[1] ,
-    \sram1_dout0[0] }),
-    .sram1_dout1({\sram1_dout1[31] ,
-    \sram1_dout1[30] ,
-    \sram1_dout1[29] ,
-    \sram1_dout1[28] ,
-    \sram1_dout1[27] ,
-    \sram1_dout1[26] ,
-    \sram1_dout1[25] ,
-    \sram1_dout1[24] ,
-    \sram1_dout1[23] ,
-    \sram1_dout1[22] ,
-    \sram1_dout1[21] ,
-    \sram1_dout1[20] ,
-    \sram1_dout1[19] ,
-    \sram1_dout1[18] ,
-    \sram1_dout1[17] ,
-    \sram1_dout1[16] ,
-    \sram1_dout1[15] ,
-    \sram1_dout1[14] ,
-    \sram1_dout1[13] ,
-    \sram1_dout1[12] ,
-    \sram1_dout1[11] ,
-    \sram1_dout1[10] ,
-    \sram1_dout1[9] ,
-    \sram1_dout1[8] ,
-    \sram1_dout1[7] ,
-    \sram1_dout1[6] ,
-    \sram1_dout1[5] ,
-    \sram1_dout1[4] ,
-    \sram1_dout1[3] ,
-    \sram1_dout1[2] ,
-    \sram1_dout1[1] ,
-    \sram1_dout1[0] }),
-    .sram1_wmask0({\sram1_wmask0[3] ,
-    \sram1_wmask0[2] ,
-    \sram1_wmask0[1] ,
-    \sram1_wmask0[0] }),
+    .wb_dcache_adr_o({\wbd_riscv_dcache_adr_i[31] ,
+    \wbd_riscv_dcache_adr_i[30] ,
+    \wbd_riscv_dcache_adr_i[29] ,
+    \wbd_riscv_dcache_adr_i[28] ,
+    \wbd_riscv_dcache_adr_i[27] ,
+    \wbd_riscv_dcache_adr_i[26] ,
+    \wbd_riscv_dcache_adr_i[25] ,
+    \wbd_riscv_dcache_adr_i[24] ,
+    \wbd_riscv_dcache_adr_i[23] ,
+    \wbd_riscv_dcache_adr_i[22] ,
+    \wbd_riscv_dcache_adr_i[21] ,
+    \wbd_riscv_dcache_adr_i[20] ,
+    \wbd_riscv_dcache_adr_i[19] ,
+    \wbd_riscv_dcache_adr_i[18] ,
+    \wbd_riscv_dcache_adr_i[17] ,
+    \wbd_riscv_dcache_adr_i[16] ,
+    \wbd_riscv_dcache_adr_i[15] ,
+    \wbd_riscv_dcache_adr_i[14] ,
+    \wbd_riscv_dcache_adr_i[13] ,
+    \wbd_riscv_dcache_adr_i[12] ,
+    \wbd_riscv_dcache_adr_i[11] ,
+    \wbd_riscv_dcache_adr_i[10] ,
+    \wbd_riscv_dcache_adr_i[9] ,
+    \wbd_riscv_dcache_adr_i[8] ,
+    \wbd_riscv_dcache_adr_i[7] ,
+    \wbd_riscv_dcache_adr_i[6] ,
+    \wbd_riscv_dcache_adr_i[5] ,
+    \wbd_riscv_dcache_adr_i[4] ,
+    \wbd_riscv_dcache_adr_i[3] ,
+    \wbd_riscv_dcache_adr_i[2] ,
+    \wbd_riscv_dcache_adr_i[1] ,
+    \wbd_riscv_dcache_adr_i[0] }),
+    .wb_dcache_bl_o({\wbd_riscv_dcache_bl_i[9] ,
+    \wbd_riscv_dcache_bl_i[8] ,
+    \wbd_riscv_dcache_bl_i[7] ,
+    \wbd_riscv_dcache_bl_i[6] ,
+    \wbd_riscv_dcache_bl_i[5] ,
+    \wbd_riscv_dcache_bl_i[4] ,
+    \wbd_riscv_dcache_bl_i[3] ,
+    \wbd_riscv_dcache_bl_i[2] ,
+    \wbd_riscv_dcache_bl_i[1] ,
+    \wbd_riscv_dcache_bl_i[0] }),
+    .wb_dcache_dat_i({\wbd_riscv_dcache_dat_o[31] ,
+    \wbd_riscv_dcache_dat_o[30] ,
+    \wbd_riscv_dcache_dat_o[29] ,
+    \wbd_riscv_dcache_dat_o[28] ,
+    \wbd_riscv_dcache_dat_o[27] ,
+    \wbd_riscv_dcache_dat_o[26] ,
+    \wbd_riscv_dcache_dat_o[25] ,
+    \wbd_riscv_dcache_dat_o[24] ,
+    \wbd_riscv_dcache_dat_o[23] ,
+    \wbd_riscv_dcache_dat_o[22] ,
+    \wbd_riscv_dcache_dat_o[21] ,
+    \wbd_riscv_dcache_dat_o[20] ,
+    \wbd_riscv_dcache_dat_o[19] ,
+    \wbd_riscv_dcache_dat_o[18] ,
+    \wbd_riscv_dcache_dat_o[17] ,
+    \wbd_riscv_dcache_dat_o[16] ,
+    \wbd_riscv_dcache_dat_o[15] ,
+    \wbd_riscv_dcache_dat_o[14] ,
+    \wbd_riscv_dcache_dat_o[13] ,
+    \wbd_riscv_dcache_dat_o[12] ,
+    \wbd_riscv_dcache_dat_o[11] ,
+    \wbd_riscv_dcache_dat_o[10] ,
+    \wbd_riscv_dcache_dat_o[9] ,
+    \wbd_riscv_dcache_dat_o[8] ,
+    \wbd_riscv_dcache_dat_o[7] ,
+    \wbd_riscv_dcache_dat_o[6] ,
+    \wbd_riscv_dcache_dat_o[5] ,
+    \wbd_riscv_dcache_dat_o[4] ,
+    \wbd_riscv_dcache_dat_o[3] ,
+    \wbd_riscv_dcache_dat_o[2] ,
+    \wbd_riscv_dcache_dat_o[1] ,
+    \wbd_riscv_dcache_dat_o[0] }),
+    .wb_dcache_dat_o({\wbd_riscv_dcache_dat_i[31] ,
+    \wbd_riscv_dcache_dat_i[30] ,
+    \wbd_riscv_dcache_dat_i[29] ,
+    \wbd_riscv_dcache_dat_i[28] ,
+    \wbd_riscv_dcache_dat_i[27] ,
+    \wbd_riscv_dcache_dat_i[26] ,
+    \wbd_riscv_dcache_dat_i[25] ,
+    \wbd_riscv_dcache_dat_i[24] ,
+    \wbd_riscv_dcache_dat_i[23] ,
+    \wbd_riscv_dcache_dat_i[22] ,
+    \wbd_riscv_dcache_dat_i[21] ,
+    \wbd_riscv_dcache_dat_i[20] ,
+    \wbd_riscv_dcache_dat_i[19] ,
+    \wbd_riscv_dcache_dat_i[18] ,
+    \wbd_riscv_dcache_dat_i[17] ,
+    \wbd_riscv_dcache_dat_i[16] ,
+    \wbd_riscv_dcache_dat_i[15] ,
+    \wbd_riscv_dcache_dat_i[14] ,
+    \wbd_riscv_dcache_dat_i[13] ,
+    \wbd_riscv_dcache_dat_i[12] ,
+    \wbd_riscv_dcache_dat_i[11] ,
+    \wbd_riscv_dcache_dat_i[10] ,
+    \wbd_riscv_dcache_dat_i[9] ,
+    \wbd_riscv_dcache_dat_i[8] ,
+    \wbd_riscv_dcache_dat_i[7] ,
+    \wbd_riscv_dcache_dat_i[6] ,
+    \wbd_riscv_dcache_dat_i[5] ,
+    \wbd_riscv_dcache_dat_i[4] ,
+    \wbd_riscv_dcache_dat_i[3] ,
+    \wbd_riscv_dcache_dat_i[2] ,
+    \wbd_riscv_dcache_dat_i[1] ,
+    \wbd_riscv_dcache_dat_i[0] }),
+    .wb_dcache_sel_o({\wbd_riscv_dcache_sel_i[3] ,
+    \wbd_riscv_dcache_sel_i[2] ,
+    \wbd_riscv_dcache_sel_i[1] ,
+    \wbd_riscv_dcache_sel_i[0] }),
+    .wb_icache_adr_o({\wbd_riscv_icache_adr_i[31] ,
+    \wbd_riscv_icache_adr_i[30] ,
+    \wbd_riscv_icache_adr_i[29] ,
+    \wbd_riscv_icache_adr_i[28] ,
+    \wbd_riscv_icache_adr_i[27] ,
+    \wbd_riscv_icache_adr_i[26] ,
+    \wbd_riscv_icache_adr_i[25] ,
+    \wbd_riscv_icache_adr_i[24] ,
+    \wbd_riscv_icache_adr_i[23] ,
+    \wbd_riscv_icache_adr_i[22] ,
+    \wbd_riscv_icache_adr_i[21] ,
+    \wbd_riscv_icache_adr_i[20] ,
+    \wbd_riscv_icache_adr_i[19] ,
+    \wbd_riscv_icache_adr_i[18] ,
+    \wbd_riscv_icache_adr_i[17] ,
+    \wbd_riscv_icache_adr_i[16] ,
+    \wbd_riscv_icache_adr_i[15] ,
+    \wbd_riscv_icache_adr_i[14] ,
+    \wbd_riscv_icache_adr_i[13] ,
+    \wbd_riscv_icache_adr_i[12] ,
+    \wbd_riscv_icache_adr_i[11] ,
+    \wbd_riscv_icache_adr_i[10] ,
+    \wbd_riscv_icache_adr_i[9] ,
+    \wbd_riscv_icache_adr_i[8] ,
+    \wbd_riscv_icache_adr_i[7] ,
+    \wbd_riscv_icache_adr_i[6] ,
+    \wbd_riscv_icache_adr_i[5] ,
+    \wbd_riscv_icache_adr_i[4] ,
+    \wbd_riscv_icache_adr_i[3] ,
+    \wbd_riscv_icache_adr_i[2] ,
+    \wbd_riscv_icache_adr_i[1] ,
+    \wbd_riscv_icache_adr_i[0] }),
+    .wb_icache_bl_o({\wbd_riscv_icache_bl_i[9] ,
+    \wbd_riscv_icache_bl_i[8] ,
+    \wbd_riscv_icache_bl_i[7] ,
+    \wbd_riscv_icache_bl_i[6] ,
+    \wbd_riscv_icache_bl_i[5] ,
+    \wbd_riscv_icache_bl_i[4] ,
+    \wbd_riscv_icache_bl_i[3] ,
+    \wbd_riscv_icache_bl_i[2] ,
+    \wbd_riscv_icache_bl_i[1] ,
+    \wbd_riscv_icache_bl_i[0] }),
+    .wb_icache_dat_i({\wbd_riscv_icache_dat_o[31] ,
+    \wbd_riscv_icache_dat_o[30] ,
+    \wbd_riscv_icache_dat_o[29] ,
+    \wbd_riscv_icache_dat_o[28] ,
+    \wbd_riscv_icache_dat_o[27] ,
+    \wbd_riscv_icache_dat_o[26] ,
+    \wbd_riscv_icache_dat_o[25] ,
+    \wbd_riscv_icache_dat_o[24] ,
+    \wbd_riscv_icache_dat_o[23] ,
+    \wbd_riscv_icache_dat_o[22] ,
+    \wbd_riscv_icache_dat_o[21] ,
+    \wbd_riscv_icache_dat_o[20] ,
+    \wbd_riscv_icache_dat_o[19] ,
+    \wbd_riscv_icache_dat_o[18] ,
+    \wbd_riscv_icache_dat_o[17] ,
+    \wbd_riscv_icache_dat_o[16] ,
+    \wbd_riscv_icache_dat_o[15] ,
+    \wbd_riscv_icache_dat_o[14] ,
+    \wbd_riscv_icache_dat_o[13] ,
+    \wbd_riscv_icache_dat_o[12] ,
+    \wbd_riscv_icache_dat_o[11] ,
+    \wbd_riscv_icache_dat_o[10] ,
+    \wbd_riscv_icache_dat_o[9] ,
+    \wbd_riscv_icache_dat_o[8] ,
+    \wbd_riscv_icache_dat_o[7] ,
+    \wbd_riscv_icache_dat_o[6] ,
+    \wbd_riscv_icache_dat_o[5] ,
+    \wbd_riscv_icache_dat_o[4] ,
+    \wbd_riscv_icache_dat_o[3] ,
+    \wbd_riscv_icache_dat_o[2] ,
+    \wbd_riscv_icache_dat_o[1] ,
+    \wbd_riscv_icache_dat_o[0] }),
+    .wb_icache_sel_o({\wbd_riscv_icache_sel_i[3] ,
+    \wbd_riscv_icache_sel_i[2] ,
+    \wbd_riscv_icache_sel_i[1] ,
+    \wbd_riscv_icache_sel_i[0] }),
     .wbd_dmem_adr_o({\wbd_riscv_dmem_adr_i[31] ,
     \wbd_riscv_dmem_adr_i[30] ,
     \wbd_riscv_dmem_adr_i[29] ,
@@ -4070,114 +4952,12 @@ module user_project_wrapper (user_clock2,
     .wbd_dmem_sel_o({\wbd_riscv_dmem_sel_i[3] ,
     \wbd_riscv_dmem_sel_i[2] ,
     \wbd_riscv_dmem_sel_i[1] ,
-    \wbd_riscv_dmem_sel_i[0] }),
-    .wbd_imem_adr_o({\wbd_riscv_imem_adr_i[31] ,
-    \wbd_riscv_imem_adr_i[30] ,
-    \wbd_riscv_imem_adr_i[29] ,
-    \wbd_riscv_imem_adr_i[28] ,
-    \wbd_riscv_imem_adr_i[27] ,
-    \wbd_riscv_imem_adr_i[26] ,
-    \wbd_riscv_imem_adr_i[25] ,
-    \wbd_riscv_imem_adr_i[24] ,
-    \wbd_riscv_imem_adr_i[23] ,
-    \wbd_riscv_imem_adr_i[22] ,
-    \wbd_riscv_imem_adr_i[21] ,
-    \wbd_riscv_imem_adr_i[20] ,
-    \wbd_riscv_imem_adr_i[19] ,
-    \wbd_riscv_imem_adr_i[18] ,
-    \wbd_riscv_imem_adr_i[17] ,
-    \wbd_riscv_imem_adr_i[16] ,
-    \wbd_riscv_imem_adr_i[15] ,
-    \wbd_riscv_imem_adr_i[14] ,
-    \wbd_riscv_imem_adr_i[13] ,
-    \wbd_riscv_imem_adr_i[12] ,
-    \wbd_riscv_imem_adr_i[11] ,
-    \wbd_riscv_imem_adr_i[10] ,
-    \wbd_riscv_imem_adr_i[9] ,
-    \wbd_riscv_imem_adr_i[8] ,
-    \wbd_riscv_imem_adr_i[7] ,
-    \wbd_riscv_imem_adr_i[6] ,
-    \wbd_riscv_imem_adr_i[5] ,
-    \wbd_riscv_imem_adr_i[4] ,
-    \wbd_riscv_imem_adr_i[3] ,
-    \wbd_riscv_imem_adr_i[2] ,
-    \wbd_riscv_imem_adr_i[1] ,
-    \wbd_riscv_imem_adr_i[0] }),
-    .wbd_imem_dat_i({\wbd_riscv_imem_dat_o[31] ,
-    \wbd_riscv_imem_dat_o[30] ,
-    \wbd_riscv_imem_dat_o[29] ,
-    \wbd_riscv_imem_dat_o[28] ,
-    \wbd_riscv_imem_dat_o[27] ,
-    \wbd_riscv_imem_dat_o[26] ,
-    \wbd_riscv_imem_dat_o[25] ,
-    \wbd_riscv_imem_dat_o[24] ,
-    \wbd_riscv_imem_dat_o[23] ,
-    \wbd_riscv_imem_dat_o[22] ,
-    \wbd_riscv_imem_dat_o[21] ,
-    \wbd_riscv_imem_dat_o[20] ,
-    \wbd_riscv_imem_dat_o[19] ,
-    \wbd_riscv_imem_dat_o[18] ,
-    \wbd_riscv_imem_dat_o[17] ,
-    \wbd_riscv_imem_dat_o[16] ,
-    \wbd_riscv_imem_dat_o[15] ,
-    \wbd_riscv_imem_dat_o[14] ,
-    \wbd_riscv_imem_dat_o[13] ,
-    \wbd_riscv_imem_dat_o[12] ,
-    \wbd_riscv_imem_dat_o[11] ,
-    \wbd_riscv_imem_dat_o[10] ,
-    \wbd_riscv_imem_dat_o[9] ,
-    \wbd_riscv_imem_dat_o[8] ,
-    \wbd_riscv_imem_dat_o[7] ,
-    \wbd_riscv_imem_dat_o[6] ,
-    \wbd_riscv_imem_dat_o[5] ,
-    \wbd_riscv_imem_dat_o[4] ,
-    \wbd_riscv_imem_dat_o[3] ,
-    \wbd_riscv_imem_dat_o[2] ,
-    \wbd_riscv_imem_dat_o[1] ,
-    \wbd_riscv_imem_dat_o[0] }),
-    .wbd_imem_dat_o({\wbd_riscv_imem_dat_i[31] ,
-    \wbd_riscv_imem_dat_i[30] ,
-    \wbd_riscv_imem_dat_i[29] ,
-    \wbd_riscv_imem_dat_i[28] ,
-    \wbd_riscv_imem_dat_i[27] ,
-    \wbd_riscv_imem_dat_i[26] ,
-    \wbd_riscv_imem_dat_i[25] ,
-    \wbd_riscv_imem_dat_i[24] ,
-    \wbd_riscv_imem_dat_i[23] ,
-    \wbd_riscv_imem_dat_i[22] ,
-    \wbd_riscv_imem_dat_i[21] ,
-    \wbd_riscv_imem_dat_i[20] ,
-    \wbd_riscv_imem_dat_i[19] ,
-    \wbd_riscv_imem_dat_i[18] ,
-    \wbd_riscv_imem_dat_i[17] ,
-    \wbd_riscv_imem_dat_i[16] ,
-    \wbd_riscv_imem_dat_i[15] ,
-    \wbd_riscv_imem_dat_i[14] ,
-    \wbd_riscv_imem_dat_i[13] ,
-    \wbd_riscv_imem_dat_i[12] ,
-    \wbd_riscv_imem_dat_i[11] ,
-    \wbd_riscv_imem_dat_i[10] ,
-    \wbd_riscv_imem_dat_i[9] ,
-    \wbd_riscv_imem_dat_i[8] ,
-    \wbd_riscv_imem_dat_i[7] ,
-    \wbd_riscv_imem_dat_i[6] ,
-    \wbd_riscv_imem_dat_i[5] ,
-    \wbd_riscv_imem_dat_i[4] ,
-    \wbd_riscv_imem_dat_i[3] ,
-    \wbd_riscv_imem_dat_i[2] ,
-    \wbd_riscv_imem_dat_i[1] ,
-    \wbd_riscv_imem_dat_i[0] }),
-    .wbd_imem_sel_o({\wbd_riscv_imem_sel_i[3] ,
-    \wbd_riscv_imem_sel_i[2] ,
-    \wbd_riscv_imem_sel_i[1] ,
-    \wbd_riscv_imem_sel_i[0] }));
+    \wbd_riscv_dmem_sel_i[0] }));
  sky130_sram_2kbyte_1rw1r_32x512_8 u_sram0_2kb (.csb0(\mem_cen_a[0] ),
     .csb1(\mem_cen_b[0] ),
     .web0(\mem_web_a[0] ),
     .clk0(\mem_clk_a[0] ),
     .clk1(\mem_clk_b[0] ),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .addr0({\mem0_addr_a[10] ,
     \mem0_addr_a[9] ,
     \mem0_addr_a[8] ,
@@ -4260,38 +5040,38 @@ module user_project_wrapper (user_clock2,
     \mem0_dout_a[2] ,
     \mem0_dout_a[1] ,
     \mem0_dout_a[0] }),
-    .dout1({_NC1,
-    _NC2,
-    _NC3,
-    _NC4,
-    _NC5,
-    _NC6,
-    _NC7,
-    _NC8,
-    _NC9,
-    _NC10,
-    _NC11,
-    _NC12,
-    _NC13,
-    _NC14,
-    _NC15,
-    _NC16,
-    _NC17,
-    _NC18,
-    _NC19,
-    _NC20,
-    _NC21,
-    _NC22,
-    _NC23,
-    _NC24,
-    _NC25,
-    _NC26,
-    _NC27,
-    _NC28,
-    _NC29,
-    _NC30,
-    _NC31,
-    _NC32}),
+    .dout1({_NC33,
+    _NC34,
+    _NC35,
+    _NC36,
+    _NC37,
+    _NC38,
+    _NC39,
+    _NC40,
+    _NC41,
+    _NC42,
+    _NC43,
+    _NC44,
+    _NC45,
+    _NC46,
+    _NC47,
+    _NC48,
+    _NC49,
+    _NC50,
+    _NC51,
+    _NC52,
+    _NC53,
+    _NC54,
+    _NC55,
+    _NC56,
+    _NC57,
+    _NC58,
+    _NC59,
+    _NC60,
+    _NC61,
+    _NC62,
+    _NC63,
+    _NC64}),
     .wmask0({\mem0_mask_a[3] ,
     \mem0_mask_a[2] ,
     \mem0_mask_a[1] ,
@@ -4301,8 +5081,6 @@ module user_project_wrapper (user_clock2,
     .web0(\mem_web_a[1] ),
     .clk0(\mem_clk_a[1] ),
     .clk1(\mem_clk_b[1] ),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .addr0({\mem1_addr_a[10] ,
     \mem1_addr_a[9] ,
     \mem1_addr_a[8] ,
@@ -4385,38 +5163,38 @@ module user_project_wrapper (user_clock2,
     \mem1_dout_a[2] ,
     \mem1_dout_a[1] ,
     \mem1_dout_a[0] }),
-    .dout1({_NC33,
-    _NC34,
-    _NC35,
-    _NC36,
-    _NC37,
-    _NC38,
-    _NC39,
-    _NC40,
-    _NC41,
-    _NC42,
-    _NC43,
-    _NC44,
-    _NC45,
-    _NC46,
-    _NC47,
-    _NC48,
-    _NC49,
-    _NC50,
-    _NC51,
-    _NC52,
-    _NC53,
-    _NC54,
-    _NC55,
-    _NC56,
-    _NC57,
-    _NC58,
-    _NC59,
-    _NC60,
-    _NC61,
-    _NC62,
-    _NC63,
-    _NC64}),
+    .dout1({_NC65,
+    _NC66,
+    _NC67,
+    _NC68,
+    _NC69,
+    _NC70,
+    _NC71,
+    _NC72,
+    _NC73,
+    _NC74,
+    _NC75,
+    _NC76,
+    _NC77,
+    _NC78,
+    _NC79,
+    _NC80,
+    _NC81,
+    _NC82,
+    _NC83,
+    _NC84,
+    _NC85,
+    _NC86,
+    _NC87,
+    _NC88,
+    _NC89,
+    _NC90,
+    _NC91,
+    _NC92,
+    _NC93,
+    _NC94,
+    _NC95,
+    _NC96}),
     .wmask0({\mem1_mask_a[3] ,
     \mem1_mask_a[2] ,
     \mem1_mask_a[1] ,
@@ -4426,8 +5204,6 @@ module user_project_wrapper (user_clock2,
     .web0(\mem_web_a[2] ),
     .clk0(\mem_clk_a[2] ),
     .clk1(\mem_clk_b[2] ),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .addr0({\mem2_addr_a[10] ,
     \mem2_addr_a[9] ,
     \mem2_addr_a[8] ,
@@ -4510,38 +5286,38 @@ module user_project_wrapper (user_clock2,
     \mem2_dout_a[2] ,
     \mem2_dout_a[1] ,
     \mem2_dout_a[0] }),
-    .dout1({_NC65,
-    _NC66,
-    _NC67,
-    _NC68,
-    _NC69,
-    _NC70,
-    _NC71,
-    _NC72,
-    _NC73,
-    _NC74,
-    _NC75,
-    _NC76,
-    _NC77,
-    _NC78,
-    _NC79,
-    _NC80,
-    _NC81,
-    _NC82,
-    _NC83,
-    _NC84,
-    _NC85,
-    _NC86,
-    _NC87,
-    _NC88,
-    _NC89,
-    _NC90,
-    _NC91,
-    _NC92,
-    _NC93,
-    _NC94,
-    _NC95,
-    _NC96}),
+    .dout1({_NC97,
+    _NC98,
+    _NC99,
+    _NC100,
+    _NC101,
+    _NC102,
+    _NC103,
+    _NC104,
+    _NC105,
+    _NC106,
+    _NC107,
+    _NC108,
+    _NC109,
+    _NC110,
+    _NC111,
+    _NC112,
+    _NC113,
+    _NC114,
+    _NC115,
+    _NC116,
+    _NC117,
+    _NC118,
+    _NC119,
+    _NC120,
+    _NC121,
+    _NC122,
+    _NC123,
+    _NC124,
+    _NC125,
+    _NC126,
+    _NC127,
+    _NC128}),
     .wmask0({\mem2_mask_a[3] ,
     \mem2_mask_a[2] ,
     \mem2_mask_a[1] ,
@@ -4551,8 +5327,6 @@ module user_project_wrapper (user_clock2,
     .web0(\mem_web_a[3] ),
     .clk0(\mem_clk_a[3] ),
     .clk1(\mem_clk_b[3] ),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .addr0({\mem3_addr_a[10] ,
     \mem3_addr_a[9] ,
     \mem3_addr_a[8] ,
@@ -4635,38 +5409,38 @@ module user_project_wrapper (user_clock2,
     \mem3_dout_a[2] ,
     \mem3_dout_a[1] ,
     \mem3_dout_a[0] }),
-    .dout1({_NC97,
-    _NC98,
-    _NC99,
-    _NC100,
-    _NC101,
-    _NC102,
-    _NC103,
-    _NC104,
-    _NC105,
-    _NC106,
-    _NC107,
-    _NC108,
-    _NC109,
-    _NC110,
-    _NC111,
-    _NC112,
-    _NC113,
-    _NC114,
-    _NC115,
-    _NC116,
-    _NC117,
-    _NC118,
-    _NC119,
-    _NC120,
-    _NC121,
-    _NC122,
-    _NC123,
-    _NC124,
-    _NC125,
-    _NC126,
-    _NC127,
-    _NC128}),
+    .dout1({_NC129,
+    _NC130,
+    _NC131,
+    _NC132,
+    _NC133,
+    _NC134,
+    _NC135,
+    _NC136,
+    _NC137,
+    _NC138,
+    _NC139,
+    _NC140,
+    _NC141,
+    _NC142,
+    _NC143,
+    _NC144,
+    _NC145,
+    _NC146,
+    _NC147,
+    _NC148,
+    _NC149,
+    _NC150,
+    _NC151,
+    _NC152,
+    _NC153,
+    _NC154,
+    _NC155,
+    _NC156,
+    _NC157,
+    _NC158,
+    _NC159,
+    _NC160}),
     .wmask0({\mem3_mask_a[3] ,
     \mem3_mask_a[2] ,
     \mem3_mask_a[1] ,
@@ -4676,8 +5450,6 @@ module user_project_wrapper (user_clock2,
     .web0(sram0_web0),
     .clk0(sram0_clk0),
     .clk1(sram0_clk1),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .addr0({\sram0_addr0[8] ,
     \sram0_addr0[7] ,
     \sram0_addr0[6] ,
@@ -4796,131 +5568,6 @@ module user_project_wrapper (user_clock2,
     \sram0_wmask0[2] ,
     \sram0_wmask0[1] ,
     \sram0_wmask0[0] }));
- sky130_sram_2kbyte_1rw1r_32x512_8 u_tsram1_2kb (.csb0(sram1_csb0),
-    .csb1(sram1_csb1),
-    .web0(sram1_web0),
-    .clk0(sram1_clk0),
-    .clk1(sram1_clk1),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
-    .addr0({\sram1_addr0[8] ,
-    \sram1_addr0[7] ,
-    \sram1_addr0[6] ,
-    \sram1_addr0[5] ,
-    \sram1_addr0[4] ,
-    \sram1_addr0[3] ,
-    \sram1_addr0[2] ,
-    \sram1_addr0[1] ,
-    \sram1_addr0[0] }),
-    .addr1({\sram1_addr1[8] ,
-    \sram1_addr1[7] ,
-    \sram1_addr1[6] ,
-    \sram1_addr1[5] ,
-    \sram1_addr1[4] ,
-    \sram1_addr1[3] ,
-    \sram1_addr1[2] ,
-    \sram1_addr1[1] ,
-    \sram1_addr1[0] }),
-    .din0({\sram1_din0[31] ,
-    \sram1_din0[30] ,
-    \sram1_din0[29] ,
-    \sram1_din0[28] ,
-    \sram1_din0[27] ,
-    \sram1_din0[26] ,
-    \sram1_din0[25] ,
-    \sram1_din0[24] ,
-    \sram1_din0[23] ,
-    \sram1_din0[22] ,
-    \sram1_din0[21] ,
-    \sram1_din0[20] ,
-    \sram1_din0[19] ,
-    \sram1_din0[18] ,
-    \sram1_din0[17] ,
-    \sram1_din0[16] ,
-    \sram1_din0[15] ,
-    \sram1_din0[14] ,
-    \sram1_din0[13] ,
-    \sram1_din0[12] ,
-    \sram1_din0[11] ,
-    \sram1_din0[10] ,
-    \sram1_din0[9] ,
-    \sram1_din0[8] ,
-    \sram1_din0[7] ,
-    \sram1_din0[6] ,
-    \sram1_din0[5] ,
-    \sram1_din0[4] ,
-    \sram1_din0[3] ,
-    \sram1_din0[2] ,
-    \sram1_din0[1] ,
-    \sram1_din0[0] }),
-    .dout0({\sram1_dout0[31] ,
-    \sram1_dout0[30] ,
-    \sram1_dout0[29] ,
-    \sram1_dout0[28] ,
-    \sram1_dout0[27] ,
-    \sram1_dout0[26] ,
-    \sram1_dout0[25] ,
-    \sram1_dout0[24] ,
-    \sram1_dout0[23] ,
-    \sram1_dout0[22] ,
-    \sram1_dout0[21] ,
-    \sram1_dout0[20] ,
-    \sram1_dout0[19] ,
-    \sram1_dout0[18] ,
-    \sram1_dout0[17] ,
-    \sram1_dout0[16] ,
-    \sram1_dout0[15] ,
-    \sram1_dout0[14] ,
-    \sram1_dout0[13] ,
-    \sram1_dout0[12] ,
-    \sram1_dout0[11] ,
-    \sram1_dout0[10] ,
-    \sram1_dout0[9] ,
-    \sram1_dout0[8] ,
-    \sram1_dout0[7] ,
-    \sram1_dout0[6] ,
-    \sram1_dout0[5] ,
-    \sram1_dout0[4] ,
-    \sram1_dout0[3] ,
-    \sram1_dout0[2] ,
-    \sram1_dout0[1] ,
-    \sram1_dout0[0] }),
-    .dout1({\sram1_dout1[31] ,
-    \sram1_dout1[30] ,
-    \sram1_dout1[29] ,
-    \sram1_dout1[28] ,
-    \sram1_dout1[27] ,
-    \sram1_dout1[26] ,
-    \sram1_dout1[25] ,
-    \sram1_dout1[24] ,
-    \sram1_dout1[23] ,
-    \sram1_dout1[22] ,
-    \sram1_dout1[21] ,
-    \sram1_dout1[20] ,
-    \sram1_dout1[19] ,
-    \sram1_dout1[18] ,
-    \sram1_dout1[17] ,
-    \sram1_dout1[16] ,
-    \sram1_dout1[15] ,
-    \sram1_dout1[14] ,
-    \sram1_dout1[13] ,
-    \sram1_dout1[12] ,
-    \sram1_dout1[11] ,
-    \sram1_dout1[10] ,
-    \sram1_dout1[9] ,
-    \sram1_dout1[8] ,
-    \sram1_dout1[7] ,
-    \sram1_dout1[6] ,
-    \sram1_dout1[5] ,
-    \sram1_dout1[4] ,
-    \sram1_dout1[3] ,
-    \sram1_dout1[2] ,
-    \sram1_dout1[1] ,
-    \sram1_dout1[0] }),
-    .wmask0({\sram1_wmask0[3] ,
-    \sram1_wmask0[2] ,
-    \sram1_wmask0[1] ,
-    \sram1_wmask0[0] }));
  uart_i2c_usb_spi_top u_uart_i2c_usb_spi (.app_clk(wbd_clk_uart_skew),
     .i2c_rstn(i2c_rst_n),
     .i2cm_intr_o(i2cm_intr_o),
@@ -4949,8 +5596,6 @@ module user_project_wrapper (user_clock2,
     .usb_out_dp(usb_dp_o),
     .usb_out_tx_oen(usb_oen),
     .usb_rstn(usb_rst_n),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wbd_clk_int(wbd_clk_uart_rp),
     .wbd_clk_uart(wbd_clk_uart_skew),
     .cfg_cska_uart({\cfg_cska_uart_rp[3] ,
@@ -5047,8 +5692,6 @@ module user_project_wrapper (user_clock2,
     .usb_rst_n(usb_rst_n),
     .user_clock1(wb_clk_i),
     .user_clock2(user_clock2),
-    .vccd1(vccd1),
-    .vssd1(vssd1),
     .wbd_clk_int(wbd_clk_int),
     .wbd_clk_wh(wbd_clk_wh),
     .wbd_int_rst_n(wbd_int_rst_n),
