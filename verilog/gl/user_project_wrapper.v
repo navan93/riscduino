@@ -53,7 +53,6 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
- wire bist_rst_n;
  wire \cfg_clk_ctrl1[0] ;
  wire \cfg_clk_ctrl1[10] ;
  wire \cfg_clk_ctrl1[11] ;
@@ -139,7 +138,9 @@ module user_project_wrapper (user_clock2,
  wire \cfg_cska_uart_rp[2] ;
  wire \cfg_cska_uart_rp[3] ;
  wire cpu_clk;
- wire cpu_rst_n;
+ wire \cpu_core_rst_n[0] ;
+ wire \cpu_core_rst_n[1] ;
+ wire cpu_intf_rst_n;
  wire \dcache_dffram_addr0[0] ;
  wire \dcache_dffram_addr0[1] ;
  wire \dcache_dffram_addr0[2] ;
@@ -2615,7 +2616,8 @@ module user_project_wrapper (user_clock2,
     \wbd_glbl_sel_o[2] ,
     \wbd_glbl_sel_o[1] ,
     \wbd_glbl_sel_o[0] }));
- pinmux u_pinmux (.h_reset_n(wbd_int_rst_n),
+ pinmux u_pinmux (.cpu_intf_rst_n(cpu_intf_rst_n),
+    .h_reset_n(wbd_int_rst_n),
     .i2cm_clk_i(i2cm_clk_i),
     .i2cm_clk_o(i2cm_clk_o),
     .i2cm_clk_oen(i2cm_clk_oen),
@@ -2623,8 +2625,10 @@ module user_project_wrapper (user_clock2,
     .i2cm_data_o(i2cm_data_o),
     .i2cm_data_oen(i2cm_data_oen),
     .i2cm_intr(i2cm_intr_o),
+    .i2cm_rst_n(i2c_rst_n),
     .mclk(wbd_clk_pinmux_skew),
     .pulse1m_mclk(pulse1m_mclk),
+    .qspim_rst_n(qspim_rst_n),
     .reg_ack(wbd_glbl_ack_i),
     .reg_cs(wbd_glbl_stb_o),
     .reg_wr(wbd_glbl_we_o),
@@ -2634,6 +2638,8 @@ module user_project_wrapper (user_clock2,
     .spim_mosi(sspim_si),
     .spim_sck(sspim_sck),
     .spim_ss(sspim_ssn),
+    .sspim_rst_n(sspim_rst_n),
+    .uart_rst_n(uart_rst_n),
     .uart_rxd(uart_rxd),
     .uart_txd(uart_txd),
     .uartm_rxd(uartm_rxd),
@@ -2644,6 +2650,7 @@ module user_project_wrapper (user_clock2,
     .usb_dp_o(usb_dp_o),
     .usb_intr(usb_intr_o),
     .usb_oen(usb_oen),
+    .usb_rst_n(usb_rst_n),
     .vccd1(vccd1),
     .vssd1(vssd1),
     .wbd_clk_int(wbd_clk_pinmux_rp),
@@ -2652,6 +2659,10 @@ module user_project_wrapper (user_clock2,
     \cfg_cska_pinmux_rp[2] ,
     \cfg_cska_pinmux_rp[1] ,
     \cfg_cska_pinmux_rp[0] }),
+    .cfg_riscv_debug_sel({_NC1,
+    _NC2}),
+    .cpu_core_rst_n({\cpu_core_rst_n[1] ,
+    \cpu_core_rst_n[0] }),
     .digital_io_in({io_in[37],
     io_in[36],
     io_in[35],
@@ -3122,7 +3133,7 @@ module user_project_wrapper (user_clock2,
     \wbd_spim_sel_o[0] }));
  ycr1_top_wb u_riscv_top (.core_clk(cpu_clk),
     .core_clk_mclk(cpu_clk),
-    .cpu_rst_n(cpu_rst_n),
+    .cpu_rst_n(\cpu_core_rst_n[0] ),
     .dcache_dffram_clk0(dcache_dffram_clk0),
     .dcache_dffram_clk1(dcache_dffram_clk1),
     .dcache_dffram_cs0(dcache_dffram_cs0),
@@ -4293,18 +4304,11 @@ module user_project_wrapper (user_clock2,
     \wbd_uart_dat_o[2] ,
     \wbd_uart_dat_o[1] ,
     \wbd_uart_dat_o[0] }));
- wb_host u_wb_host (.bist_rst_n(bist_rst_n),
-    .cpu_clk(cpu_clk),
-    .cpu_rst_n(cpu_rst_n),
-    .i2cm_rst_n(i2c_rst_n),
-    .qspim_rst_n(qspim_rst_n),
+ wb_host u_wb_host (.cpu_clk(cpu_clk),
     .rtc_clk(rtc_clk),
-    .sspim_rst_n(sspim_rst_n),
-    .uart_rst_n(uart_rst_n),
     .uartm_rxd(uartm_rxd),
     .uartm_txd(uartm_txd),
     .usb_clk(usb_clk),
-    .usb_rst_n(usb_rst_n),
     .user_clock1(wb_clk_i),
     .user_clock2(user_clock2),
     .vccd1(vccd1),

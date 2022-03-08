@@ -78,6 +78,9 @@
 `include "mt48lc8m8a2.v"
 `include "is62wvs1288.v"
 
+
+`define ADDR_SPACE_PINMUX  32'h3002_0000
+
 localparam [31:0]      YCR1_SIM_EXIT_ADDR      = 32'h0000_00F8;
 localparam [31:0]      YCR1_SIM_PRINT_ADDR     = 32'hF000_0000;
 localparam [31:0]      YCR1_SIM_EXT_IRQ_ADDR   = 32'hF000_0100;
@@ -289,7 +292,7 @@ parameter P_QDDR   = 2'b11;
 	        repeat (2) @(posedge clock);
 		#1;
 		// Remove WB and SPI Reset, Keep SDARM and CORE under Reset
-                wb_user_core_write('h3080_0000,'h5);
+                wb_user_core_write(`ADDR_SPACE_PINMUX+8'h8,'h11F);
 
 		// CS#2 Switch to QSPI Mode
                 wb_user_core_write('h3080_0004,'h10); // Change the Bank Sel 10
@@ -381,7 +384,7 @@ end
 //  ----------------------------------------------------
 
    wire flash_clk = io_out[24];
-   wire flash_csb = io_out[28];
+   wire flash_csb = io_out[25];
    // Creating Pad Delay
    wire #1 io_oeb_29 = io_oeb[29];
    wire #1 io_oeb_30 = io_oeb[30];
@@ -416,7 +419,7 @@ end
        );
 
 
-   wire spiram_csb = io_out[26];
+   wire spiram_csb = io_out[27];
 
    is62wvs1288 #(.mem_file_name("none"))
 	u_sram (
