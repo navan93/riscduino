@@ -24,20 +24,7 @@
 ////                                                              ////
 ////  Description                                                 ////
 ////   This is a standalone test bench to validate the            ////
-////   Digital core flash access through External WB i/F.         ////
-////   1.  Check SPI Read Identification                          ////
-////   2.  Check the Direct Memory Read (Qual/Single/Quad)        ////        
-////   3.  Direct SPI Memory Prefetch - 3DW                       ////
-////   4.  Direct SPI Memory Prefetch - 2DW                       ////
-////   5.  Direct SPI Memory Prefetch - 1DW                       ////
-////   6.  Direct SPI Memory Prefetch - 7DW                       ////
-////   7.  1DW  Indirect Read                                     ////
-////   8.  2DW  Indirect Read                                     ////
-////   9.  3DW  Indirect Read                                     ////
-////   10. 4DW  Indirect Read                                     ////
-////   11. 5DW  Indirect Read                                     ////
-////   12. 8DW  Indirect Read                                     ////
-////   13. Sector Erase command + Page Write & Read Back          ////
+////   sspi interfaface through External WB i/F.                  ////
 ////                                                              ////
 ////  To Do:                                                      ////
 ////    nothing                                                   ////
