@@ -297,70 +297,6 @@ module user_project_wrapper (user_clock2,
  wire \dcache_dffram_wmask1[1] ;
  wire \dcache_dffram_wmask1[2] ;
  wire \dcache_dffram_wmask1[3] ;
- wire \fuse_mhartid[0] ;
- wire \fuse_mhartid[10] ;
- wire \fuse_mhartid[11] ;
- wire \fuse_mhartid[12] ;
- wire \fuse_mhartid[13] ;
- wire \fuse_mhartid[14] ;
- wire \fuse_mhartid[15] ;
- wire \fuse_mhartid[16] ;
- wire \fuse_mhartid[17] ;
- wire \fuse_mhartid[18] ;
- wire \fuse_mhartid[19] ;
- wire \fuse_mhartid[1] ;
- wire \fuse_mhartid[20] ;
- wire \fuse_mhartid[21] ;
- wire \fuse_mhartid[22] ;
- wire \fuse_mhartid[23] ;
- wire \fuse_mhartid[24] ;
- wire \fuse_mhartid[25] ;
- wire \fuse_mhartid[26] ;
- wire \fuse_mhartid[27] ;
- wire \fuse_mhartid[28] ;
- wire \fuse_mhartid[29] ;
- wire \fuse_mhartid[2] ;
- wire \fuse_mhartid[30] ;
- wire \fuse_mhartid[31] ;
- wire \fuse_mhartid[3] ;
- wire \fuse_mhartid[4] ;
- wire \fuse_mhartid[5] ;
- wire \fuse_mhartid[6] ;
- wire \fuse_mhartid[7] ;
- wire \fuse_mhartid[8] ;
- wire \fuse_mhartid[9] ;
- wire \fuse_mhartid_rp[0] ;
- wire \fuse_mhartid_rp[10] ;
- wire \fuse_mhartid_rp[11] ;
- wire \fuse_mhartid_rp[12] ;
- wire \fuse_mhartid_rp[13] ;
- wire \fuse_mhartid_rp[14] ;
- wire \fuse_mhartid_rp[15] ;
- wire \fuse_mhartid_rp[16] ;
- wire \fuse_mhartid_rp[17] ;
- wire \fuse_mhartid_rp[18] ;
- wire \fuse_mhartid_rp[19] ;
- wire \fuse_mhartid_rp[1] ;
- wire \fuse_mhartid_rp[20] ;
- wire \fuse_mhartid_rp[21] ;
- wire \fuse_mhartid_rp[22] ;
- wire \fuse_mhartid_rp[23] ;
- wire \fuse_mhartid_rp[24] ;
- wire \fuse_mhartid_rp[25] ;
- wire \fuse_mhartid_rp[26] ;
- wire \fuse_mhartid_rp[27] ;
- wire \fuse_mhartid_rp[28] ;
- wire \fuse_mhartid_rp[29] ;
- wire \fuse_mhartid_rp[2] ;
- wire \fuse_mhartid_rp[30] ;
- wire \fuse_mhartid_rp[31] ;
- wire \fuse_mhartid_rp[3] ;
- wire \fuse_mhartid_rp[4] ;
- wire \fuse_mhartid_rp[5] ;
- wire \fuse_mhartid_rp[6] ;
- wire \fuse_mhartid_rp[7] ;
- wire \fuse_mhartid_rp[8] ;
- wire \fuse_mhartid_rp[9] ;
  wire i2c_rst_n;
  wire i2cm_clk_i;
  wire i2cm_clk_o;
@@ -1845,38 +1781,6 @@ module user_project_wrapper (user_clock2,
     \irq_lines[2] ,
     \irq_lines[1] ,
     \irq_lines[0] ,
-    \fuse_mhartid[31] ,
-    \fuse_mhartid[30] ,
-    \fuse_mhartid[29] ,
-    \fuse_mhartid[28] ,
-    \fuse_mhartid[27] ,
-    \fuse_mhartid[26] ,
-    \fuse_mhartid[25] ,
-    \fuse_mhartid[24] ,
-    \fuse_mhartid[23] ,
-    \fuse_mhartid[22] ,
-    \fuse_mhartid[21] ,
-    \fuse_mhartid[20] ,
-    \fuse_mhartid[19] ,
-    \fuse_mhartid[18] ,
-    \fuse_mhartid[17] ,
-    \fuse_mhartid[16] ,
-    \fuse_mhartid[15] ,
-    \fuse_mhartid[14] ,
-    \fuse_mhartid[13] ,
-    \fuse_mhartid[12] ,
-    \fuse_mhartid[11] ,
-    \fuse_mhartid[10] ,
-    \fuse_mhartid[9] ,
-    \fuse_mhartid[8] ,
-    \fuse_mhartid[7] ,
-    \fuse_mhartid[6] ,
-    \fuse_mhartid[5] ,
-    \fuse_mhartid[4] ,
-    \fuse_mhartid[3] ,
-    \fuse_mhartid[2] ,
-    \fuse_mhartid[1] ,
-    \fuse_mhartid[0] ,
     \cfg_clk_ctrl1[27] ,
     \cfg_clk_ctrl1[26] ,
     \cfg_clk_ctrl1[25] ,
@@ -1914,38 +1818,6 @@ module user_project_wrapper (user_clock2,
     \irq_lines_rp[2] ,
     \irq_lines_rp[1] ,
     \irq_lines_rp[0] ,
-    \fuse_mhartid_rp[31] ,
-    \fuse_mhartid_rp[30] ,
-    \fuse_mhartid_rp[29] ,
-    \fuse_mhartid_rp[28] ,
-    \fuse_mhartid_rp[27] ,
-    \fuse_mhartid_rp[26] ,
-    \fuse_mhartid_rp[25] ,
-    \fuse_mhartid_rp[24] ,
-    \fuse_mhartid_rp[23] ,
-    \fuse_mhartid_rp[22] ,
-    \fuse_mhartid_rp[21] ,
-    \fuse_mhartid_rp[20] ,
-    \fuse_mhartid_rp[19] ,
-    \fuse_mhartid_rp[18] ,
-    \fuse_mhartid_rp[17] ,
-    \fuse_mhartid_rp[16] ,
-    \fuse_mhartid_rp[15] ,
-    \fuse_mhartid_rp[14] ,
-    \fuse_mhartid_rp[13] ,
-    \fuse_mhartid_rp[12] ,
-    \fuse_mhartid_rp[11] ,
-    \fuse_mhartid_rp[10] ,
-    \fuse_mhartid_rp[9] ,
-    \fuse_mhartid_rp[8] ,
-    \fuse_mhartid_rp[7] ,
-    \fuse_mhartid_rp[6] ,
-    \fuse_mhartid_rp[5] ,
-    \fuse_mhartid_rp[4] ,
-    \fuse_mhartid_rp[3] ,
-    \fuse_mhartid_rp[2] ,
-    \fuse_mhartid_rp[1] ,
-    \fuse_mhartid_rp[0] ,
     \cfg_cska_qspi_co_rp[3] ,
     \cfg_cska_qspi_co_rp[2] ,
     \cfg_cska_qspi_co_rp[1] ,
@@ -2777,38 +2649,6 @@ module user_project_wrapper (user_clock2,
     io_out[2],
     io_out[1],
     io_out[0]}),
-    .fuse_mhartid({\fuse_mhartid[31] ,
-    \fuse_mhartid[30] ,
-    \fuse_mhartid[29] ,
-    \fuse_mhartid[28] ,
-    \fuse_mhartid[27] ,
-    \fuse_mhartid[26] ,
-    \fuse_mhartid[25] ,
-    \fuse_mhartid[24] ,
-    \fuse_mhartid[23] ,
-    \fuse_mhartid[22] ,
-    \fuse_mhartid[21] ,
-    \fuse_mhartid[20] ,
-    \fuse_mhartid[19] ,
-    \fuse_mhartid[18] ,
-    \fuse_mhartid[17] ,
-    \fuse_mhartid[16] ,
-    \fuse_mhartid[15] ,
-    \fuse_mhartid[14] ,
-    \fuse_mhartid[13] ,
-    \fuse_mhartid[12] ,
-    \fuse_mhartid[11] ,
-    \fuse_mhartid[10] ,
-    \fuse_mhartid[9] ,
-    \fuse_mhartid[8] ,
-    \fuse_mhartid[7] ,
-    \fuse_mhartid[6] ,
-    \fuse_mhartid[5] ,
-    \fuse_mhartid[4] ,
-    \fuse_mhartid[3] ,
-    \fuse_mhartid[2] ,
-    \fuse_mhartid[1] ,
-    \fuse_mhartid[0] }),
     .irq_lines({\irq_lines[15] ,
     \irq_lines[14] ,
     \irq_lines[13] ,
@@ -3328,38 +3168,6 @@ module user_project_wrapper (user_clock2,
     \dcache_dffram_wmask1[2] ,
     \dcache_dffram_wmask1[1] ,
     \dcache_dffram_wmask1[0] }),
-    .fuse_mhartid({\fuse_mhartid_rp[31] ,
-    \fuse_mhartid_rp[30] ,
-    \fuse_mhartid_rp[29] ,
-    \fuse_mhartid_rp[28] ,
-    \fuse_mhartid_rp[27] ,
-    \fuse_mhartid_rp[26] ,
-    \fuse_mhartid_rp[25] ,
-    \fuse_mhartid_rp[24] ,
-    \fuse_mhartid_rp[23] ,
-    \fuse_mhartid_rp[22] ,
-    \fuse_mhartid_rp[21] ,
-    \fuse_mhartid_rp[20] ,
-    \fuse_mhartid_rp[19] ,
-    \fuse_mhartid_rp[18] ,
-    \fuse_mhartid_rp[17] ,
-    \fuse_mhartid_rp[16] ,
-    \fuse_mhartid_rp[15] ,
-    \fuse_mhartid_rp[14] ,
-    \fuse_mhartid_rp[13] ,
-    \fuse_mhartid_rp[12] ,
-    \fuse_mhartid_rp[11] ,
-    \fuse_mhartid_rp[10] ,
-    \fuse_mhartid_rp[9] ,
-    \fuse_mhartid_rp[8] ,
-    \fuse_mhartid_rp[7] ,
-    \fuse_mhartid_rp[6] ,
-    \fuse_mhartid_rp[5] ,
-    \fuse_mhartid_rp[4] ,
-    \fuse_mhartid_rp[3] ,
-    \fuse_mhartid_rp[2] ,
-    \fuse_mhartid_rp[1] ,
-    \fuse_mhartid_rp[0] }),
     .icache_dffram_addr0({\icache_dffram_addr0[7] ,
     \icache_dffram_addr0[6] ,
     \icache_dffram_addr0[5] ,
