@@ -74,7 +74,6 @@
 `timescale 1 ns / 1 ns
 
 `include "uprj_netlists.v"
-`include "mt48lc8m8a2.v"
 `include "is62wvs1288.v"
 `include "user_reg_map.v"
 
@@ -473,6 +472,7 @@ begin
   wbd_ext_cyc_i ='h1;  // strobe/request
   wbd_ext_stb_i ='h1;  // strobe/request
   wait(wbd_ext_ack_o == 1);
+  repeat (1) @(negedge clock);
   data  = wbd_ext_dat_o;  
   repeat (1) @(posedge clock);
   #1;
