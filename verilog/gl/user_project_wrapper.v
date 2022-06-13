@@ -658,6 +658,9 @@ module user_project_wrapper (user_clock2,
  wire \u_riscv_top.core_dmem_addr[7] ;
  wire \u_riscv_top.core_dmem_addr[8] ;
  wire \u_riscv_top.core_dmem_addr[9] ;
+ wire \u_riscv_top.core_dmem_bl[0] ;
+ wire \u_riscv_top.core_dmem_bl[1] ;
+ wire \u_riscv_top.core_dmem_bl[2] ;
  wire \u_riscv_top.core_dmem_cmd ;
  wire \u_riscv_top.core_dmem_rdata[0] ;
  wire \u_riscv_top.core_dmem_rdata[10] ;
@@ -1397,6 +1400,10 @@ module user_project_wrapper (user_clock2,
  wire \u_riscv_top.wbd_dmem_adr_o[7] ;
  wire \u_riscv_top.wbd_dmem_adr_o[8] ;
  wire \u_riscv_top.wbd_dmem_adr_o[9] ;
+ wire \u_riscv_top.wbd_dmem_bl_o[0] ;
+ wire \u_riscv_top.wbd_dmem_bl_o[1] ;
+ wire \u_riscv_top.wbd_dmem_bl_o[2] ;
+ wire \u_riscv_top.wbd_dmem_bry_o ;
  wire \u_riscv_top.wbd_dmem_dat_i[0] ;
  wire \u_riscv_top.wbd_dmem_dat_i[10] ;
  wire \u_riscv_top.wbd_dmem_dat_i[11] ;
@@ -1462,6 +1469,7 @@ module user_project_wrapper (user_clock2,
  wire \u_riscv_top.wbd_dmem_dat_o[8] ;
  wire \u_riscv_top.wbd_dmem_dat_o[9] ;
  wire \u_riscv_top.wbd_dmem_err_i ;
+ wire \u_riscv_top.wbd_dmem_lack_i ;
  wire \u_riscv_top.wbd_dmem_sel_o[0] ;
  wire \u_riscv_top.wbd_dmem_sel_o[1] ;
  wire \u_riscv_top.wbd_dmem_sel_o[2] ;
@@ -2135,8 +2143,10 @@ module user_project_wrapper (user_clock2,
     .m0_wbd_stb_i(wbd_int_stb_i),
     .m0_wbd_we_i(wbd_int_we_i),
     .m1_wbd_ack_o(\u_riscv_top.wbd_dmem_ack_i ),
+    .m1_wbd_bry_i(\u_riscv_top.wbd_dmem_bry_o ),
     .m1_wbd_cyc_i(\u_riscv_top.wbd_dmem_stb_o ),
     .m1_wbd_err_o(\u_riscv_top.wbd_dmem_err_i ),
+    .m1_wbd_lack_o(\u_riscv_top.wbd_dmem_lack_i ),
     .m1_wbd_stb_i(\u_riscv_top.wbd_dmem_stb_o ),
     .m1_wbd_we_i(\u_riscv_top.wbd_dmem_we_o ),
     .m2_wbd_ack_o(\u_riscv_top.wb_dcache_ack_i ),
@@ -2390,6 +2400,9 @@ module user_project_wrapper (user_clock2,
     \u_riscv_top.wbd_dmem_adr_o[2] ,
     \u_riscv_top.wbd_dmem_adr_o[1] ,
     \u_riscv_top.wbd_dmem_adr_o[0] }),
+    .m1_wbd_bl_i({\u_riscv_top.wbd_dmem_bl_o[2] ,
+    \u_riscv_top.wbd_dmem_bl_o[1] ,
+    \u_riscv_top.wbd_dmem_bl_o[0] }),
     .m1_wbd_dat_i({\u_riscv_top.wbd_dmem_dat_o[31] ,
     \u_riscv_top.wbd_dmem_dat_o[30] ,
     \u_riscv_top.wbd_dmem_dat_o[29] ,
@@ -3769,6 +3782,8 @@ module user_project_wrapper (user_clock2,
     \u_riscv_top.core0_imem_resp[0] }));
  ycr_iconnect \u_riscv_top.u_connect  (.VGND(vssd1),
     .VPWR(vccd1),
+    .cfg_bypass_dcache(\cfg_riscv_ctrl[11] ),
+    .cfg_bypass_icache(\cfg_riscv_ctrl[10] ),
     .cfg_dcache_force_flush(\u_riscv_top.cfg_dcache_force_flush ),
     .core0_dmem_cmd(\u_riscv_top.core0_dmem_cmd ),
     .core0_dmem_req(\u_riscv_top.core0_dmem_req ),
@@ -4231,6 +4246,9 @@ module user_project_wrapper (user_clock2,
     \u_riscv_top.core_dmem_addr[2] ,
     \u_riscv_top.core_dmem_addr[1] ,
     \u_riscv_top.core_dmem_addr[0] }),
+    .core_dmem_bl({\u_riscv_top.core_dmem_bl[2] ,
+    \u_riscv_top.core_dmem_bl[1] ,
+    \u_riscv_top.core_dmem_bl[0] }),
     .core_dmem_rdata({\u_riscv_top.core_dmem_rdata[31] ,
     \u_riscv_top.core_dmem_rdata[30] ,
     \u_riscv_top.core_dmem_rdata[29] ,
@@ -4568,7 +4586,9 @@ module user_project_wrapper (user_clock2,
     \u_riscv_top.sram0_wmask0[2] ,
     \u_riscv_top.sram0_wmask0[1] ,
     \u_riscv_top.sram0_wmask0[0] }));
- ycr_intf \u_riscv_top.u_intf  (.cfg_dcache_force_flush(\u_riscv_top.cfg_dcache_force_flush ),
+ ycr_intf \u_riscv_top.u_intf  (.cfg_bypass_dcache(\cfg_riscv_ctrl[11] ),
+    .cfg_bypass_icache(\cfg_riscv_ctrl[10] ),
+    .cfg_dcache_force_flush(\u_riscv_top.cfg_dcache_force_flush ),
     .cfg_dcache_pfet_dis(\cfg_riscv_ctrl[6] ),
     .cfg_icache_ntag_pfet_dis(\cfg_riscv_ctrl[5] ),
     .cfg_icache_pfet_dis(\cfg_riscv_ctrl[4] ),
@@ -4615,7 +4635,9 @@ module user_project_wrapper (user_clock2,
     .wbd_clk_int(\u_riscv_top.wbd_clk_int ),
     .wbd_clk_riscv(\u_riscv_top.wb_clk ),
     .wbd_dmem_ack_i(\u_riscv_top.wbd_dmem_ack_i ),
+    .wbd_dmem_bry_o(\u_riscv_top.wbd_dmem_bry_o ),
     .wbd_dmem_err_i(\u_riscv_top.wbd_dmem_err_i ),
+    .wbd_dmem_lack_i(\u_riscv_top.wbd_dmem_lack_i ),
     .wbd_dmem_stb_o(\u_riscv_top.wbd_dmem_stb_o ),
     .wbd_dmem_we_o(\u_riscv_top.wbd_dmem_we_o ),
     .cfg_cska_riscv({\u_riscv_top.cfg_cska_riscv[3] ,
@@ -4756,6 +4778,9 @@ module user_project_wrapper (user_clock2,
     \u_riscv_top.core_dmem_addr[2] ,
     \u_riscv_top.core_dmem_addr[1] ,
     \u_riscv_top.core_dmem_addr[0] }),
+    .core_dmem_bl({\u_riscv_top.core_dmem_bl[2] ,
+    \u_riscv_top.core_dmem_bl[1] ,
+    \u_riscv_top.core_dmem_bl[0] }),
     .core_dmem_rdata({\u_riscv_top.core_dmem_rdata[31] ,
     \u_riscv_top.core_dmem_rdata[30] ,
     \u_riscv_top.core_dmem_rdata[29] ,
@@ -5319,6 +5344,9 @@ module user_project_wrapper (user_clock2,
     \u_riscv_top.wbd_dmem_adr_o[2] ,
     \u_riscv_top.wbd_dmem_adr_o[1] ,
     \u_riscv_top.wbd_dmem_adr_o[0] }),
+    .wbd_dmem_bl_o({\u_riscv_top.wbd_dmem_bl_o[2] ,
+    \u_riscv_top.wbd_dmem_bl_o[1] ,
+    \u_riscv_top.wbd_dmem_bl_o[0] }),
     .wbd_dmem_dat_i({\u_riscv_top.wbd_dmem_dat_i[31] ,
     \u_riscv_top.wbd_dmem_dat_i[30] ,
     \u_riscv_top.wbd_dmem_dat_i[29] ,
